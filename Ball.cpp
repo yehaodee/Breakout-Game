@@ -15,19 +15,23 @@ void Ball::Draw() {
     DrawCircleV(position, radius, RED);
 }
 
-void Ball::BounceEdge(int screenWidth, int screenHeight) {
+bool Ball::BounceEdge(int screenWidth, int screenHeight) {
+    bool hitBottom = false;
+    
     // 左右边界
-    if (position.x - radius <= 0 || position.x + radius >= screenWidth) {
+    if (position.x - radius<= 0 || position.x + radius >= screenWidth) {
         speed.x *= -1;
     }
     // 上边界
-    if (position.y - radius <= 0) {
+    if (position.y - radius<= 0) {
         speed.y *= -1;
     }
-    // 下边界（新增）
+    // 下边界（球掉落）
     if (position.y + radius >= screenHeight) {
-        speed.y *= -1;
+        hitBottom = true;
     }
+    
+    return hitBottom;
 }
 
 Vector2 Ball::GetPosition() { 

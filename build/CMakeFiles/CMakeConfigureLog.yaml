@@ -27,6 +27,9 @@ events:
     names:
       - "mingw32-make.exe"
     candidate_directories:
+      - "C:/Users/yehaodee/.trae-cn/tools/trae-gopls/current/"
+      - "C:/Users/yehaodee/.trae-cn/sdks/workspaces/1e85f9c3/versions/node/current/"
+      - "C:/Users/yehaodee/.trae-cn/sdks/versions/node/current/"
       - "D:/anaconda3/"
       - "D:/anaconda3/Library/mingw-w64/bin/"
       - "D:/anaconda3/Library/usr/bin/"
@@ -70,12 +73,18 @@ events:
       - "C:/Users/yehaodee/AppData/Local/Programs/Python/Python313/"
       - "C:/Users/yehaodee/AppData/Local/Programs/Python/Python313/Scripts/"
       - "C:/Users/yehaodee/AppData/Roaming/npm/"
-      - "D:/CS/CPP/DAYI_XIA/week2/build/"
+      - "D:/CS/CPP/DAYI_XIA/Breakout-Game/build/"
       - "/REGISTRY-NOTFOUND/bin/"
       - "c:/MinGW/bin/"
       - "/MinGW/bin/"
       - "/REGISTRY-NOTFOUND/MinGW/bin/"
     searched_directories:
+      - "C:/Users/yehaodee/.trae-cn/tools/trae-gopls/current/mingw32-make.exe.com"
+      - "C:/Users/yehaodee/.trae-cn/tools/trae-gopls/current/mingw32-make.exe"
+      - "C:/Users/yehaodee/.trae-cn/sdks/workspaces/1e85f9c3/versions/node/current/mingw32-make.exe.com"
+      - "C:/Users/yehaodee/.trae-cn/sdks/workspaces/1e85f9c3/versions/node/current/mingw32-make.exe"
+      - "C:/Users/yehaodee/.trae-cn/sdks/versions/node/current/mingw32-make.exe.com"
+      - "C:/Users/yehaodee/.trae-cn/sdks/versions/node/current/mingw32-make.exe"
       - "D:/anaconda3/mingw32-make.exe.com"
       - "D:/anaconda3/mingw32-make.exe"
       - "D:/anaconda3/Library/mingw-w64/bin/mingw32-make.exe.com"
@@ -154,6 +163,9 @@ events:
     found: "D:/mingw-w64/bin/mingw32-make.exe"
     search_context:
       ENV{PATH}:
+        - "c:\\\\Users\\\\yehaodee\\\\.trae-cn\\\\tools\\\\trae-gopls\\\\current"
+        - "c:\\\\Users\\\\yehaodee\\\\.trae-cn\\\\sdks\\\\workspaces\\\\1e85f9c3\\\\versions\\\\node\\\\current"
+        - "c:\\\\Users\\\\yehaodee\\\\.trae-cn\\\\sdks\\\\versions\\\\node\\\\current"
         - "D:\\anaconda3"
         - "D:\\anaconda3\\Library\\mingw-w64\\bin"
         - "D:\\anaconda3\\Library\\usr\\bin"
@@ -162,6 +174,9 @@ events:
         - "D:\\anaconda3\\bin"
         - "D:\\anaconda3\\condabin"
         - "c:\\Users\\yehaodee\\.trae-cn\\extensions\\vadimcn.vscode-lldb-1.12.1\\bin"
+        - "c:\\Users\\yehaodee\\.trae-cn\\tools\\trae-gopls\\current"
+        - "c:\\Users\\yehaodee\\.trae-cn\\sdks\\workspaces\\1e85f9c3\\versions\\node\\current"
+        - "c:\\Users\\yehaodee\\.trae-cn\\sdks\\versions\\node\\current"
         - "C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v12.1\\bin"
         - "C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v12.1\\libnvvp"
         - "C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v12.8\\bin"
@@ -244,6 +259,9 @@ events:
       - "icx"
       - "clang"
     candidate_directories:
+      - "C:/Users/yehaodee/.trae-cn/tools/trae-gopls/current/"
+      - "C:/Users/yehaodee/.trae-cn/sdks/workspaces/1e85f9c3/versions/node/current/"
+      - "C:/Users/yehaodee/.trae-cn/sdks/versions/node/current/"
       - "D:/anaconda3/"
       - "D:/anaconda3/Library/mingw-w64/bin/"
       - "D:/anaconda3/Library/usr/bin/"
@@ -287,8 +305,71 @@ events:
       - "C:/Users/yehaodee/AppData/Local/Programs/Python/Python313/"
       - "C:/Users/yehaodee/AppData/Local/Programs/Python/Python313/Scripts/"
       - "C:/Users/yehaodee/AppData/Roaming/npm/"
-      - "D:/CS/CPP/DAYI_XIA/week2/build/"
+      - "D:/CS/CPP/DAYI_XIA/Breakout-Game/build/"
     searched_directories:
+      - "C:/Users/yehaodee/.trae-cn/tools/trae-gopls/current/cc.com"
+      - "C:/Users/yehaodee/.trae-cn/tools/trae-gopls/current/cc.exe"
+      - "C:/Users/yehaodee/.trae-cn/tools/trae-gopls/current/cc"
+      - "C:/Users/yehaodee/.trae-cn/tools/trae-gopls/current/gcc.com"
+      - "C:/Users/yehaodee/.trae-cn/tools/trae-gopls/current/gcc.exe"
+      - "C:/Users/yehaodee/.trae-cn/tools/trae-gopls/current/gcc"
+      - "C:/Users/yehaodee/.trae-cn/tools/trae-gopls/current/cl.com"
+      - "C:/Users/yehaodee/.trae-cn/tools/trae-gopls/current/cl.exe"
+      - "C:/Users/yehaodee/.trae-cn/tools/trae-gopls/current/cl"
+      - "C:/Users/yehaodee/.trae-cn/tools/trae-gopls/current/bcc.com"
+      - "C:/Users/yehaodee/.trae-cn/tools/trae-gopls/current/bcc.exe"
+      - "C:/Users/yehaodee/.trae-cn/tools/trae-gopls/current/bcc"
+      - "C:/Users/yehaodee/.trae-cn/tools/trae-gopls/current/xlc.com"
+      - "C:/Users/yehaodee/.trae-cn/tools/trae-gopls/current/xlc.exe"
+      - "C:/Users/yehaodee/.trae-cn/tools/trae-gopls/current/xlc"
+      - "C:/Users/yehaodee/.trae-cn/tools/trae-gopls/current/icx.com"
+      - "C:/Users/yehaodee/.trae-cn/tools/trae-gopls/current/icx.exe"
+      - "C:/Users/yehaodee/.trae-cn/tools/trae-gopls/current/icx"
+      - "C:/Users/yehaodee/.trae-cn/tools/trae-gopls/current/clang.com"
+      - "C:/Users/yehaodee/.trae-cn/tools/trae-gopls/current/clang.exe"
+      - "C:/Users/yehaodee/.trae-cn/tools/trae-gopls/current/clang"
+      - "C:/Users/yehaodee/.trae-cn/sdks/workspaces/1e85f9c3/versions/node/current/cc.com"
+      - "C:/Users/yehaodee/.trae-cn/sdks/workspaces/1e85f9c3/versions/node/current/cc.exe"
+      - "C:/Users/yehaodee/.trae-cn/sdks/workspaces/1e85f9c3/versions/node/current/cc"
+      - "C:/Users/yehaodee/.trae-cn/sdks/workspaces/1e85f9c3/versions/node/current/gcc.com"
+      - "C:/Users/yehaodee/.trae-cn/sdks/workspaces/1e85f9c3/versions/node/current/gcc.exe"
+      - "C:/Users/yehaodee/.trae-cn/sdks/workspaces/1e85f9c3/versions/node/current/gcc"
+      - "C:/Users/yehaodee/.trae-cn/sdks/workspaces/1e85f9c3/versions/node/current/cl.com"
+      - "C:/Users/yehaodee/.trae-cn/sdks/workspaces/1e85f9c3/versions/node/current/cl.exe"
+      - "C:/Users/yehaodee/.trae-cn/sdks/workspaces/1e85f9c3/versions/node/current/cl"
+      - "C:/Users/yehaodee/.trae-cn/sdks/workspaces/1e85f9c3/versions/node/current/bcc.com"
+      - "C:/Users/yehaodee/.trae-cn/sdks/workspaces/1e85f9c3/versions/node/current/bcc.exe"
+      - "C:/Users/yehaodee/.trae-cn/sdks/workspaces/1e85f9c3/versions/node/current/bcc"
+      - "C:/Users/yehaodee/.trae-cn/sdks/workspaces/1e85f9c3/versions/node/current/xlc.com"
+      - "C:/Users/yehaodee/.trae-cn/sdks/workspaces/1e85f9c3/versions/node/current/xlc.exe"
+      - "C:/Users/yehaodee/.trae-cn/sdks/workspaces/1e85f9c3/versions/node/current/xlc"
+      - "C:/Users/yehaodee/.trae-cn/sdks/workspaces/1e85f9c3/versions/node/current/icx.com"
+      - "C:/Users/yehaodee/.trae-cn/sdks/workspaces/1e85f9c3/versions/node/current/icx.exe"
+      - "C:/Users/yehaodee/.trae-cn/sdks/workspaces/1e85f9c3/versions/node/current/icx"
+      - "C:/Users/yehaodee/.trae-cn/sdks/workspaces/1e85f9c3/versions/node/current/clang.com"
+      - "C:/Users/yehaodee/.trae-cn/sdks/workspaces/1e85f9c3/versions/node/current/clang.exe"
+      - "C:/Users/yehaodee/.trae-cn/sdks/workspaces/1e85f9c3/versions/node/current/clang"
+      - "C:/Users/yehaodee/.trae-cn/sdks/versions/node/current/cc.com"
+      - "C:/Users/yehaodee/.trae-cn/sdks/versions/node/current/cc.exe"
+      - "C:/Users/yehaodee/.trae-cn/sdks/versions/node/current/cc"
+      - "C:/Users/yehaodee/.trae-cn/sdks/versions/node/current/gcc.com"
+      - "C:/Users/yehaodee/.trae-cn/sdks/versions/node/current/gcc.exe"
+      - "C:/Users/yehaodee/.trae-cn/sdks/versions/node/current/gcc"
+      - "C:/Users/yehaodee/.trae-cn/sdks/versions/node/current/cl.com"
+      - "C:/Users/yehaodee/.trae-cn/sdks/versions/node/current/cl.exe"
+      - "C:/Users/yehaodee/.trae-cn/sdks/versions/node/current/cl"
+      - "C:/Users/yehaodee/.trae-cn/sdks/versions/node/current/bcc.com"
+      - "C:/Users/yehaodee/.trae-cn/sdks/versions/node/current/bcc.exe"
+      - "C:/Users/yehaodee/.trae-cn/sdks/versions/node/current/bcc"
+      - "C:/Users/yehaodee/.trae-cn/sdks/versions/node/current/xlc.com"
+      - "C:/Users/yehaodee/.trae-cn/sdks/versions/node/current/xlc.exe"
+      - "C:/Users/yehaodee/.trae-cn/sdks/versions/node/current/xlc"
+      - "C:/Users/yehaodee/.trae-cn/sdks/versions/node/current/icx.com"
+      - "C:/Users/yehaodee/.trae-cn/sdks/versions/node/current/icx.exe"
+      - "C:/Users/yehaodee/.trae-cn/sdks/versions/node/current/icx"
+      - "C:/Users/yehaodee/.trae-cn/sdks/versions/node/current/clang.com"
+      - "C:/Users/yehaodee/.trae-cn/sdks/versions/node/current/clang.exe"
+      - "C:/Users/yehaodee/.trae-cn/sdks/versions/node/current/clang"
       - "D:/anaconda3/cc.com"
       - "D:/anaconda3/cc.exe"
       - "D:/anaconda3/cc"
@@ -1073,6 +1154,9 @@ events:
     found: "D:/mingw-w64/bin/gcc.exe"
     search_context:
       ENV{PATH}:
+        - "c:\\\\Users\\\\yehaodee\\\\.trae-cn\\\\tools\\\\trae-gopls\\\\current"
+        - "c:\\\\Users\\\\yehaodee\\\\.trae-cn\\\\sdks\\\\workspaces\\\\1e85f9c3\\\\versions\\\\node\\\\current"
+        - "c:\\\\Users\\\\yehaodee\\\\.trae-cn\\\\sdks\\\\versions\\\\node\\\\current"
         - "D:\\anaconda3"
         - "D:\\anaconda3\\Library\\mingw-w64\\bin"
         - "D:\\anaconda3\\Library\\usr\\bin"
@@ -1081,6 +1165,9 @@ events:
         - "D:\\anaconda3\\bin"
         - "D:\\anaconda3\\condabin"
         - "c:\\Users\\yehaodee\\.trae-cn\\extensions\\vadimcn.vscode-lldb-1.12.1\\bin"
+        - "c:\\Users\\yehaodee\\.trae-cn\\tools\\trae-gopls\\current"
+        - "c:\\Users\\yehaodee\\.trae-cn\\sdks\\workspaces\\1e85f9c3\\versions\\node\\current"
+        - "c:\\Users\\yehaodee\\.trae-cn\\sdks\\versions\\node\\current"
         - "C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v12.1\\bin"
         - "C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v12.1\\libnvvp"
         - "C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v12.8\\bin"
@@ -1164,6 +1251,9 @@ events:
     found: "C:/Program Files/CMake/share/cmake-4.3/Modules/CMakeCCompilerId.c.in"
     search_context:
       ENV{PATH}:
+        - "c:\\\\Users\\\\yehaodee\\\\.trae-cn\\\\tools\\\\trae-gopls\\\\current"
+        - "c:\\\\Users\\\\yehaodee\\\\.trae-cn\\\\sdks\\\\workspaces\\\\1e85f9c3\\\\versions\\\\node\\\\current"
+        - "c:\\\\Users\\\\yehaodee\\\\.trae-cn\\\\sdks\\\\versions\\\\node\\\\current"
         - "D:\\anaconda3"
         - "D:\\anaconda3\\Library\\mingw-w64\\bin"
         - "D:\\anaconda3\\Library\\usr\\bin"
@@ -1172,6 +1262,9 @@ events:
         - "D:\\anaconda3\\bin"
         - "D:\\anaconda3\\condabin"
         - "c:\\Users\\yehaodee\\.trae-cn\\extensions\\vadimcn.vscode-lldb-1.12.1\\bin"
+        - "c:\\Users\\yehaodee\\.trae-cn\\tools\\trae-gopls\\current"
+        - "c:\\Users\\yehaodee\\.trae-cn\\sdks\\workspaces\\1e85f9c3\\versions\\node\\current"
+        - "c:\\Users\\yehaodee\\.trae-cn\\sdks\\versions\\node\\current"
         - "C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v12.1\\bin"
         - "C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v12.1\\libnvvp"
         - "C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v12.8\\bin"
@@ -1248,7 +1341,7 @@ events:
       Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "a.exe"
       
       The C compiler identification is GNU, found in:
-        D:/CS/CPP/DAYI_XIA/week2/build/CMakeFiles/4.3.0-rc3/CompilerIdC/a.exe
+        D:/CS/CPP/DAYI_XIA/Breakout-Game/build/CMakeFiles/4.3.0-rc3/CompilerIdC/a.exe
       
   -
     kind: "find-v1"
@@ -1271,6 +1364,9 @@ events:
       - "ar"
     candidate_directories:
       - "D:/mingw-w64/bin/"
+      - "C:/Users/yehaodee/.trae-cn/tools/trae-gopls/current/"
+      - "C:/Users/yehaodee/.trae-cn/sdks/workspaces/1e85f9c3/versions/node/current/"
+      - "C:/Users/yehaodee/.trae-cn/sdks/versions/node/current/"
       - "D:/anaconda3/"
       - "D:/anaconda3/Library/mingw-w64/bin/"
       - "D:/anaconda3/Library/usr/bin/"
@@ -1313,12 +1409,15 @@ events:
       - "C:/Users/yehaodee/AppData/Local/Programs/Python/Python313/"
       - "C:/Users/yehaodee/AppData/Local/Programs/Python/Python313/Scripts/"
       - "C:/Users/yehaodee/AppData/Roaming/npm/"
-      - "D:/CS/CPP/DAYI_XIA/week2/build/"
+      - "D:/CS/CPP/DAYI_XIA/Breakout-Game/build/"
     searched_directories:
       - "D:/mingw-w64/bin/ar.com"
     found: "D:/mingw-w64/bin/ar.exe"
     search_context:
       ENV{PATH}:
+        - "c:\\\\Users\\\\yehaodee\\\\.trae-cn\\\\tools\\\\trae-gopls\\\\current"
+        - "c:\\\\Users\\\\yehaodee\\\\.trae-cn\\\\sdks\\\\workspaces\\\\1e85f9c3\\\\versions\\\\node\\\\current"
+        - "c:\\\\Users\\\\yehaodee\\\\.trae-cn\\\\sdks\\\\versions\\\\node\\\\current"
         - "D:\\anaconda3"
         - "D:\\anaconda3\\Library\\mingw-w64\\bin"
         - "D:\\anaconda3\\Library\\usr\\bin"
@@ -1327,6 +1426,9 @@ events:
         - "D:\\anaconda3\\bin"
         - "D:\\anaconda3\\condabin"
         - "c:\\Users\\yehaodee\\.trae-cn\\extensions\\vadimcn.vscode-lldb-1.12.1\\bin"
+        - "c:\\Users\\yehaodee\\.trae-cn\\tools\\trae-gopls\\current"
+        - "c:\\Users\\yehaodee\\.trae-cn\\sdks\\workspaces\\1e85f9c3\\versions\\node\\current"
+        - "c:\\Users\\yehaodee\\.trae-cn\\sdks\\versions\\node\\current"
         - "C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v12.1\\bin"
         - "C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v12.1\\libnvvp"
         - "C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v12.8\\bin"
@@ -1404,6 +1506,9 @@ events:
       - "ranlib"
     candidate_directories:
       - "D:/mingw-w64/bin/"
+      - "C:/Users/yehaodee/.trae-cn/tools/trae-gopls/current/"
+      - "C:/Users/yehaodee/.trae-cn/sdks/workspaces/1e85f9c3/versions/node/current/"
+      - "C:/Users/yehaodee/.trae-cn/sdks/versions/node/current/"
       - "D:/anaconda3/"
       - "D:/anaconda3/Library/mingw-w64/bin/"
       - "D:/anaconda3/Library/usr/bin/"
@@ -1446,12 +1551,15 @@ events:
       - "C:/Users/yehaodee/AppData/Local/Programs/Python/Python313/"
       - "C:/Users/yehaodee/AppData/Local/Programs/Python/Python313/Scripts/"
       - "C:/Users/yehaodee/AppData/Roaming/npm/"
-      - "D:/CS/CPP/DAYI_XIA/week2/build/"
+      - "D:/CS/CPP/DAYI_XIA/Breakout-Game/build/"
     searched_directories:
       - "D:/mingw-w64/bin/ranlib.com"
     found: "D:/mingw-w64/bin/ranlib.exe"
     search_context:
       ENV{PATH}:
+        - "c:\\\\Users\\\\yehaodee\\\\.trae-cn\\\\tools\\\\trae-gopls\\\\current"
+        - "c:\\\\Users\\\\yehaodee\\\\.trae-cn\\\\sdks\\\\workspaces\\\\1e85f9c3\\\\versions\\\\node\\\\current"
+        - "c:\\\\Users\\\\yehaodee\\\\.trae-cn\\\\sdks\\\\versions\\\\node\\\\current"
         - "D:\\anaconda3"
         - "D:\\anaconda3\\Library\\mingw-w64\\bin"
         - "D:\\anaconda3\\Library\\usr\\bin"
@@ -1460,6 +1568,9 @@ events:
         - "D:\\anaconda3\\bin"
         - "D:\\anaconda3\\condabin"
         - "c:\\Users\\yehaodee\\.trae-cn\\extensions\\vadimcn.vscode-lldb-1.12.1\\bin"
+        - "c:\\Users\\yehaodee\\.trae-cn\\tools\\trae-gopls\\current"
+        - "c:\\Users\\yehaodee\\.trae-cn\\sdks\\workspaces\\1e85f9c3\\versions\\node\\current"
+        - "c:\\Users\\yehaodee\\.trae-cn\\sdks\\versions\\node\\current"
         - "C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v12.1\\bin"
         - "C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v12.1\\libnvvp"
         - "C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v12.8\\bin"
@@ -1537,6 +1648,9 @@ events:
       - "strip"
     candidate_directories:
       - "D:/mingw-w64/bin/"
+      - "C:/Users/yehaodee/.trae-cn/tools/trae-gopls/current/"
+      - "C:/Users/yehaodee/.trae-cn/sdks/workspaces/1e85f9c3/versions/node/current/"
+      - "C:/Users/yehaodee/.trae-cn/sdks/versions/node/current/"
       - "D:/anaconda3/"
       - "D:/anaconda3/Library/mingw-w64/bin/"
       - "D:/anaconda3/Library/usr/bin/"
@@ -1579,12 +1693,15 @@ events:
       - "C:/Users/yehaodee/AppData/Local/Programs/Python/Python313/"
       - "C:/Users/yehaodee/AppData/Local/Programs/Python/Python313/Scripts/"
       - "C:/Users/yehaodee/AppData/Roaming/npm/"
-      - "D:/CS/CPP/DAYI_XIA/week2/build/"
+      - "D:/CS/CPP/DAYI_XIA/Breakout-Game/build/"
     searched_directories:
       - "D:/mingw-w64/bin/strip.com"
     found: "D:/mingw-w64/bin/strip.exe"
     search_context:
       ENV{PATH}:
+        - "c:\\\\Users\\\\yehaodee\\\\.trae-cn\\\\tools\\\\trae-gopls\\\\current"
+        - "c:\\\\Users\\\\yehaodee\\\\.trae-cn\\\\sdks\\\\workspaces\\\\1e85f9c3\\\\versions\\\\node\\\\current"
+        - "c:\\\\Users\\\\yehaodee\\\\.trae-cn\\\\sdks\\\\versions\\\\node\\\\current"
         - "D:\\anaconda3"
         - "D:\\anaconda3\\Library\\mingw-w64\\bin"
         - "D:\\anaconda3\\Library\\usr\\bin"
@@ -1593,6 +1710,9 @@ events:
         - "D:\\anaconda3\\bin"
         - "D:\\anaconda3\\condabin"
         - "c:\\Users\\yehaodee\\.trae-cn\\extensions\\vadimcn.vscode-lldb-1.12.1\\bin"
+        - "c:\\Users\\yehaodee\\.trae-cn\\tools\\trae-gopls\\current"
+        - "c:\\Users\\yehaodee\\.trae-cn\\sdks\\workspaces\\1e85f9c3\\versions\\node\\current"
+        - "c:\\Users\\yehaodee\\.trae-cn\\sdks\\versions\\node\\current"
         - "C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v12.1\\bin"
         - "C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v12.1\\libnvvp"
         - "C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v12.8\\bin"
@@ -1670,6 +1790,9 @@ events:
       - "ld"
     candidate_directories:
       - "D:/mingw-w64/bin/"
+      - "C:/Users/yehaodee/.trae-cn/tools/trae-gopls/current/"
+      - "C:/Users/yehaodee/.trae-cn/sdks/workspaces/1e85f9c3/versions/node/current/"
+      - "C:/Users/yehaodee/.trae-cn/sdks/versions/node/current/"
       - "D:/anaconda3/"
       - "D:/anaconda3/Library/mingw-w64/bin/"
       - "D:/anaconda3/Library/usr/bin/"
@@ -1712,12 +1835,15 @@ events:
       - "C:/Users/yehaodee/AppData/Local/Programs/Python/Python313/"
       - "C:/Users/yehaodee/AppData/Local/Programs/Python/Python313/Scripts/"
       - "C:/Users/yehaodee/AppData/Roaming/npm/"
-      - "D:/CS/CPP/DAYI_XIA/week2/build/"
+      - "D:/CS/CPP/DAYI_XIA/Breakout-Game/build/"
     searched_directories:
       - "D:/mingw-w64/bin/ld.com"
     found: "D:/mingw-w64/bin/ld.exe"
     search_context:
       ENV{PATH}:
+        - "c:\\\\Users\\\\yehaodee\\\\.trae-cn\\\\tools\\\\trae-gopls\\\\current"
+        - "c:\\\\Users\\\\yehaodee\\\\.trae-cn\\\\sdks\\\\workspaces\\\\1e85f9c3\\\\versions\\\\node\\\\current"
+        - "c:\\\\Users\\\\yehaodee\\\\.trae-cn\\\\sdks\\\\versions\\\\node\\\\current"
         - "D:\\anaconda3"
         - "D:\\anaconda3\\Library\\mingw-w64\\bin"
         - "D:\\anaconda3\\Library\\usr\\bin"
@@ -1726,6 +1852,9 @@ events:
         - "D:\\anaconda3\\bin"
         - "D:\\anaconda3\\condabin"
         - "c:\\Users\\yehaodee\\.trae-cn\\extensions\\vadimcn.vscode-lldb-1.12.1\\bin"
+        - "c:\\Users\\yehaodee\\.trae-cn\\tools\\trae-gopls\\current"
+        - "c:\\Users\\yehaodee\\.trae-cn\\sdks\\workspaces\\1e85f9c3\\versions\\node\\current"
+        - "c:\\Users\\yehaodee\\.trae-cn\\sdks\\versions\\node\\current"
         - "C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v12.1\\bin"
         - "C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v12.1\\libnvvp"
         - "C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v12.8\\bin"
@@ -1803,6 +1932,9 @@ events:
       - "nm"
     candidate_directories:
       - "D:/mingw-w64/bin/"
+      - "C:/Users/yehaodee/.trae-cn/tools/trae-gopls/current/"
+      - "C:/Users/yehaodee/.trae-cn/sdks/workspaces/1e85f9c3/versions/node/current/"
+      - "C:/Users/yehaodee/.trae-cn/sdks/versions/node/current/"
       - "D:/anaconda3/"
       - "D:/anaconda3/Library/mingw-w64/bin/"
       - "D:/anaconda3/Library/usr/bin/"
@@ -1845,12 +1977,15 @@ events:
       - "C:/Users/yehaodee/AppData/Local/Programs/Python/Python313/"
       - "C:/Users/yehaodee/AppData/Local/Programs/Python/Python313/Scripts/"
       - "C:/Users/yehaodee/AppData/Roaming/npm/"
-      - "D:/CS/CPP/DAYI_XIA/week2/build/"
+      - "D:/CS/CPP/DAYI_XIA/Breakout-Game/build/"
     searched_directories:
       - "D:/mingw-w64/bin/nm.com"
     found: "D:/mingw-w64/bin/nm.exe"
     search_context:
       ENV{PATH}:
+        - "c:\\\\Users\\\\yehaodee\\\\.trae-cn\\\\tools\\\\trae-gopls\\\\current"
+        - "c:\\\\Users\\\\yehaodee\\\\.trae-cn\\\\sdks\\\\workspaces\\\\1e85f9c3\\\\versions\\\\node\\\\current"
+        - "c:\\\\Users\\\\yehaodee\\\\.trae-cn\\\\sdks\\\\versions\\\\node\\\\current"
         - "D:\\anaconda3"
         - "D:\\anaconda3\\Library\\mingw-w64\\bin"
         - "D:\\anaconda3\\Library\\usr\\bin"
@@ -1859,6 +1994,9 @@ events:
         - "D:\\anaconda3\\bin"
         - "D:\\anaconda3\\condabin"
         - "c:\\Users\\yehaodee\\.trae-cn\\extensions\\vadimcn.vscode-lldb-1.12.1\\bin"
+        - "c:\\Users\\yehaodee\\.trae-cn\\tools\\trae-gopls\\current"
+        - "c:\\Users\\yehaodee\\.trae-cn\\sdks\\workspaces\\1e85f9c3\\versions\\node\\current"
+        - "c:\\Users\\yehaodee\\.trae-cn\\sdks\\versions\\node\\current"
         - "C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v12.1\\bin"
         - "C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v12.1\\libnvvp"
         - "C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v12.8\\bin"
@@ -1936,6 +2074,9 @@ events:
       - "objdump"
     candidate_directories:
       - "D:/mingw-w64/bin/"
+      - "C:/Users/yehaodee/.trae-cn/tools/trae-gopls/current/"
+      - "C:/Users/yehaodee/.trae-cn/sdks/workspaces/1e85f9c3/versions/node/current/"
+      - "C:/Users/yehaodee/.trae-cn/sdks/versions/node/current/"
       - "D:/anaconda3/"
       - "D:/anaconda3/Library/mingw-w64/bin/"
       - "D:/anaconda3/Library/usr/bin/"
@@ -1978,12 +2119,15 @@ events:
       - "C:/Users/yehaodee/AppData/Local/Programs/Python/Python313/"
       - "C:/Users/yehaodee/AppData/Local/Programs/Python/Python313/Scripts/"
       - "C:/Users/yehaodee/AppData/Roaming/npm/"
-      - "D:/CS/CPP/DAYI_XIA/week2/build/"
+      - "D:/CS/CPP/DAYI_XIA/Breakout-Game/build/"
     searched_directories:
       - "D:/mingw-w64/bin/objdump.com"
     found: "D:/mingw-w64/bin/objdump.exe"
     search_context:
       ENV{PATH}:
+        - "c:\\\\Users\\\\yehaodee\\\\.trae-cn\\\\tools\\\\trae-gopls\\\\current"
+        - "c:\\\\Users\\\\yehaodee\\\\.trae-cn\\\\sdks\\\\workspaces\\\\1e85f9c3\\\\versions\\\\node\\\\current"
+        - "c:\\\\Users\\\\yehaodee\\\\.trae-cn\\\\sdks\\\\versions\\\\node\\\\current"
         - "D:\\anaconda3"
         - "D:\\anaconda3\\Library\\mingw-w64\\bin"
         - "D:\\anaconda3\\Library\\usr\\bin"
@@ -1992,6 +2136,9 @@ events:
         - "D:\\anaconda3\\bin"
         - "D:\\anaconda3\\condabin"
         - "c:\\Users\\yehaodee\\.trae-cn\\extensions\\vadimcn.vscode-lldb-1.12.1\\bin"
+        - "c:\\Users\\yehaodee\\.trae-cn\\tools\\trae-gopls\\current"
+        - "c:\\Users\\yehaodee\\.trae-cn\\sdks\\workspaces\\1e85f9c3\\versions\\node\\current"
+        - "c:\\Users\\yehaodee\\.trae-cn\\sdks\\versions\\node\\current"
         - "C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v12.1\\bin"
         - "C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v12.1\\libnvvp"
         - "C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v12.8\\bin"
@@ -2069,6 +2216,9 @@ events:
       - "objcopy"
     candidate_directories:
       - "D:/mingw-w64/bin/"
+      - "C:/Users/yehaodee/.trae-cn/tools/trae-gopls/current/"
+      - "C:/Users/yehaodee/.trae-cn/sdks/workspaces/1e85f9c3/versions/node/current/"
+      - "C:/Users/yehaodee/.trae-cn/sdks/versions/node/current/"
       - "D:/anaconda3/"
       - "D:/anaconda3/Library/mingw-w64/bin/"
       - "D:/anaconda3/Library/usr/bin/"
@@ -2111,12 +2261,15 @@ events:
       - "C:/Users/yehaodee/AppData/Local/Programs/Python/Python313/"
       - "C:/Users/yehaodee/AppData/Local/Programs/Python/Python313/Scripts/"
       - "C:/Users/yehaodee/AppData/Roaming/npm/"
-      - "D:/CS/CPP/DAYI_XIA/week2/build/"
+      - "D:/CS/CPP/DAYI_XIA/Breakout-Game/build/"
     searched_directories:
       - "D:/mingw-w64/bin/objcopy.com"
     found: "D:/mingw-w64/bin/objcopy.exe"
     search_context:
       ENV{PATH}:
+        - "c:\\\\Users\\\\yehaodee\\\\.trae-cn\\\\tools\\\\trae-gopls\\\\current"
+        - "c:\\\\Users\\\\yehaodee\\\\.trae-cn\\\\sdks\\\\workspaces\\\\1e85f9c3\\\\versions\\\\node\\\\current"
+        - "c:\\\\Users\\\\yehaodee\\\\.trae-cn\\\\sdks\\\\versions\\\\node\\\\current"
         - "D:\\anaconda3"
         - "D:\\anaconda3\\Library\\mingw-w64\\bin"
         - "D:\\anaconda3\\Library\\usr\\bin"
@@ -2125,6 +2278,9 @@ events:
         - "D:\\anaconda3\\bin"
         - "D:\\anaconda3\\condabin"
         - "c:\\Users\\yehaodee\\.trae-cn\\extensions\\vadimcn.vscode-lldb-1.12.1\\bin"
+        - "c:\\Users\\yehaodee\\.trae-cn\\tools\\trae-gopls\\current"
+        - "c:\\Users\\yehaodee\\.trae-cn\\sdks\\workspaces\\1e85f9c3\\versions\\node\\current"
+        - "c:\\Users\\yehaodee\\.trae-cn\\sdks\\versions\\node\\current"
         - "C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v12.1\\bin"
         - "C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v12.1\\libnvvp"
         - "C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v12.8\\bin"
@@ -2202,6 +2358,9 @@ events:
       - "readelf"
     candidate_directories:
       - "D:/mingw-w64/bin/"
+      - "C:/Users/yehaodee/.trae-cn/tools/trae-gopls/current/"
+      - "C:/Users/yehaodee/.trae-cn/sdks/workspaces/1e85f9c3/versions/node/current/"
+      - "C:/Users/yehaodee/.trae-cn/sdks/versions/node/current/"
       - "D:/anaconda3/"
       - "D:/anaconda3/Library/mingw-w64/bin/"
       - "D:/anaconda3/Library/usr/bin/"
@@ -2244,12 +2403,15 @@ events:
       - "C:/Users/yehaodee/AppData/Local/Programs/Python/Python313/"
       - "C:/Users/yehaodee/AppData/Local/Programs/Python/Python313/Scripts/"
       - "C:/Users/yehaodee/AppData/Roaming/npm/"
-      - "D:/CS/CPP/DAYI_XIA/week2/build/"
+      - "D:/CS/CPP/DAYI_XIA/Breakout-Game/build/"
     searched_directories:
       - "D:/mingw-w64/bin/readelf.com"
     found: "D:/mingw-w64/bin/readelf.exe"
     search_context:
       ENV{PATH}:
+        - "c:\\\\Users\\\\yehaodee\\\\.trae-cn\\\\tools\\\\trae-gopls\\\\current"
+        - "c:\\\\Users\\\\yehaodee\\\\.trae-cn\\\\sdks\\\\workspaces\\\\1e85f9c3\\\\versions\\\\node\\\\current"
+        - "c:\\\\Users\\\\yehaodee\\\\.trae-cn\\\\sdks\\\\versions\\\\node\\\\current"
         - "D:\\anaconda3"
         - "D:\\anaconda3\\Library\\mingw-w64\\bin"
         - "D:\\anaconda3\\Library\\usr\\bin"
@@ -2258,6 +2420,9 @@ events:
         - "D:\\anaconda3\\bin"
         - "D:\\anaconda3\\condabin"
         - "c:\\Users\\yehaodee\\.trae-cn\\extensions\\vadimcn.vscode-lldb-1.12.1\\bin"
+        - "c:\\Users\\yehaodee\\.trae-cn\\tools\\trae-gopls\\current"
+        - "c:\\Users\\yehaodee\\.trae-cn\\sdks\\workspaces\\1e85f9c3\\versions\\node\\current"
+        - "c:\\Users\\yehaodee\\.trae-cn\\sdks\\versions\\node\\current"
         - "C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v12.1\\bin"
         - "C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v12.1\\libnvvp"
         - "C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v12.8\\bin"
@@ -2335,6 +2500,9 @@ events:
       - "dlltool"
     candidate_directories:
       - "D:/mingw-w64/bin/"
+      - "C:/Users/yehaodee/.trae-cn/tools/trae-gopls/current/"
+      - "C:/Users/yehaodee/.trae-cn/sdks/workspaces/1e85f9c3/versions/node/current/"
+      - "C:/Users/yehaodee/.trae-cn/sdks/versions/node/current/"
       - "D:/anaconda3/"
       - "D:/anaconda3/Library/mingw-w64/bin/"
       - "D:/anaconda3/Library/usr/bin/"
@@ -2377,12 +2545,15 @@ events:
       - "C:/Users/yehaodee/AppData/Local/Programs/Python/Python313/"
       - "C:/Users/yehaodee/AppData/Local/Programs/Python/Python313/Scripts/"
       - "C:/Users/yehaodee/AppData/Roaming/npm/"
-      - "D:/CS/CPP/DAYI_XIA/week2/build/"
+      - "D:/CS/CPP/DAYI_XIA/Breakout-Game/build/"
     searched_directories:
       - "D:/mingw-w64/bin/dlltool.com"
     found: "D:/mingw-w64/bin/dlltool.exe"
     search_context:
       ENV{PATH}:
+        - "c:\\\\Users\\\\yehaodee\\\\.trae-cn\\\\tools\\\\trae-gopls\\\\current"
+        - "c:\\\\Users\\\\yehaodee\\\\.trae-cn\\\\sdks\\\\workspaces\\\\1e85f9c3\\\\versions\\\\node\\\\current"
+        - "c:\\\\Users\\\\yehaodee\\\\.trae-cn\\\\sdks\\\\versions\\\\node\\\\current"
         - "D:\\anaconda3"
         - "D:\\anaconda3\\Library\\mingw-w64\\bin"
         - "D:\\anaconda3\\Library\\usr\\bin"
@@ -2391,6 +2562,9 @@ events:
         - "D:\\anaconda3\\bin"
         - "D:\\anaconda3\\condabin"
         - "c:\\Users\\yehaodee\\.trae-cn\\extensions\\vadimcn.vscode-lldb-1.12.1\\bin"
+        - "c:\\Users\\yehaodee\\.trae-cn\\tools\\trae-gopls\\current"
+        - "c:\\Users\\yehaodee\\.trae-cn\\sdks\\workspaces\\1e85f9c3\\versions\\node\\current"
+        - "c:\\Users\\yehaodee\\.trae-cn\\sdks\\versions\\node\\current"
         - "C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v12.1\\bin"
         - "C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v12.1\\libnvvp"
         - "C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v12.8\\bin"
@@ -2468,6 +2642,9 @@ events:
       - "addr2line"
     candidate_directories:
       - "D:/mingw-w64/bin/"
+      - "C:/Users/yehaodee/.trae-cn/tools/trae-gopls/current/"
+      - "C:/Users/yehaodee/.trae-cn/sdks/workspaces/1e85f9c3/versions/node/current/"
+      - "C:/Users/yehaodee/.trae-cn/sdks/versions/node/current/"
       - "D:/anaconda3/"
       - "D:/anaconda3/Library/mingw-w64/bin/"
       - "D:/anaconda3/Library/usr/bin/"
@@ -2510,12 +2687,15 @@ events:
       - "C:/Users/yehaodee/AppData/Local/Programs/Python/Python313/"
       - "C:/Users/yehaodee/AppData/Local/Programs/Python/Python313/Scripts/"
       - "C:/Users/yehaodee/AppData/Roaming/npm/"
-      - "D:/CS/CPP/DAYI_XIA/week2/build/"
+      - "D:/CS/CPP/DAYI_XIA/Breakout-Game/build/"
     searched_directories:
       - "D:/mingw-w64/bin/addr2line.com"
     found: "D:/mingw-w64/bin/addr2line.exe"
     search_context:
       ENV{PATH}:
+        - "c:\\\\Users\\\\yehaodee\\\\.trae-cn\\\\tools\\\\trae-gopls\\\\current"
+        - "c:\\\\Users\\\\yehaodee\\\\.trae-cn\\\\sdks\\\\workspaces\\\\1e85f9c3\\\\versions\\\\node\\\\current"
+        - "c:\\\\Users\\\\yehaodee\\\\.trae-cn\\\\sdks\\\\versions\\\\node\\\\current"
         - "D:\\anaconda3"
         - "D:\\anaconda3\\Library\\mingw-w64\\bin"
         - "D:\\anaconda3\\Library\\usr\\bin"
@@ -2524,6 +2704,9 @@ events:
         - "D:\\anaconda3\\bin"
         - "D:\\anaconda3\\condabin"
         - "c:\\Users\\yehaodee\\.trae-cn\\extensions\\vadimcn.vscode-lldb-1.12.1\\bin"
+        - "c:\\Users\\yehaodee\\.trae-cn\\tools\\trae-gopls\\current"
+        - "c:\\Users\\yehaodee\\.trae-cn\\sdks\\workspaces\\1e85f9c3\\versions\\node\\current"
+        - "c:\\Users\\yehaodee\\.trae-cn\\sdks\\versions\\node\\current"
         - "C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v12.1\\bin"
         - "C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v12.1\\libnvvp"
         - "C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v12.8\\bin"
@@ -2601,6 +2784,9 @@ events:
       - "tapi"
     candidate_directories:
       - "D:/mingw-w64/bin/"
+      - "C:/Users/yehaodee/.trae-cn/tools/trae-gopls/current/"
+      - "C:/Users/yehaodee/.trae-cn/sdks/workspaces/1e85f9c3/versions/node/current/"
+      - "C:/Users/yehaodee/.trae-cn/sdks/versions/node/current/"
       - "D:/anaconda3/"
       - "D:/anaconda3/Library/mingw-w64/bin/"
       - "D:/anaconda3/Library/usr/bin/"
@@ -2643,11 +2829,20 @@ events:
       - "C:/Users/yehaodee/AppData/Local/Programs/Python/Python313/"
       - "C:/Users/yehaodee/AppData/Local/Programs/Python/Python313/Scripts/"
       - "C:/Users/yehaodee/AppData/Roaming/npm/"
-      - "D:/CS/CPP/DAYI_XIA/week2/build/"
+      - "D:/CS/CPP/DAYI_XIA/Breakout-Game/build/"
     searched_directories:
       - "D:/mingw-w64/bin/tapi.com"
       - "D:/mingw-w64/bin/tapi.exe"
       - "D:/mingw-w64/bin/tapi"
+      - "C:/Users/yehaodee/.trae-cn/tools/trae-gopls/current/tapi.com"
+      - "C:/Users/yehaodee/.trae-cn/tools/trae-gopls/current/tapi.exe"
+      - "C:/Users/yehaodee/.trae-cn/tools/trae-gopls/current/tapi"
+      - "C:/Users/yehaodee/.trae-cn/sdks/workspaces/1e85f9c3/versions/node/current/tapi.com"
+      - "C:/Users/yehaodee/.trae-cn/sdks/workspaces/1e85f9c3/versions/node/current/tapi.exe"
+      - "C:/Users/yehaodee/.trae-cn/sdks/workspaces/1e85f9c3/versions/node/current/tapi"
+      - "C:/Users/yehaodee/.trae-cn/sdks/versions/node/current/tapi.com"
+      - "C:/Users/yehaodee/.trae-cn/sdks/versions/node/current/tapi.exe"
+      - "C:/Users/yehaodee/.trae-cn/sdks/versions/node/current/tapi"
       - "D:/anaconda3/tapi.com"
       - "D:/anaconda3/tapi.exe"
       - "D:/anaconda3/tapi"
@@ -2774,12 +2969,15 @@ events:
       - "C:/Users/yehaodee/AppData/Roaming/npm/tapi.com"
       - "C:/Users/yehaodee/AppData/Roaming/npm/tapi.exe"
       - "C:/Users/yehaodee/AppData/Roaming/npm/tapi"
-      - "D:/CS/CPP/DAYI_XIA/week2/build/tapi.com"
-      - "D:/CS/CPP/DAYI_XIA/week2/build/tapi.exe"
-      - "D:/CS/CPP/DAYI_XIA/week2/build/tapi"
+      - "D:/CS/CPP/DAYI_XIA/Breakout-Game/build/tapi.com"
+      - "D:/CS/CPP/DAYI_XIA/Breakout-Game/build/tapi.exe"
+      - "D:/CS/CPP/DAYI_XIA/Breakout-Game/build/tapi"
     found: false
     search_context:
       ENV{PATH}:
+        - "c:\\\\Users\\\\yehaodee\\\\.trae-cn\\\\tools\\\\trae-gopls\\\\current"
+        - "c:\\\\Users\\\\yehaodee\\\\.trae-cn\\\\sdks\\\\workspaces\\\\1e85f9c3\\\\versions\\\\node\\\\current"
+        - "c:\\\\Users\\\\yehaodee\\\\.trae-cn\\\\sdks\\\\versions\\\\node\\\\current"
         - "D:\\anaconda3"
         - "D:\\anaconda3\\Library\\mingw-w64\\bin"
         - "D:\\anaconda3\\Library\\usr\\bin"
@@ -2788,6 +2986,9 @@ events:
         - "D:\\anaconda3\\bin"
         - "D:\\anaconda3\\condabin"
         - "c:\\Users\\yehaodee\\.trae-cn\\extensions\\vadimcn.vscode-lldb-1.12.1\\bin"
+        - "c:\\Users\\yehaodee\\.trae-cn\\tools\\trae-gopls\\current"
+        - "c:\\Users\\yehaodee\\.trae-cn\\sdks\\workspaces\\1e85f9c3\\versions\\node\\current"
+        - "c:\\Users\\yehaodee\\.trae-cn\\sdks\\versions\\node\\current"
         - "C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v12.1\\bin"
         - "C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v12.1\\libnvvp"
         - "C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v12.8\\bin"
@@ -2868,6 +3069,9 @@ events:
       - "gcc-ar"
     candidate_directories:
       - "D:/mingw-w64/bin/"
+      - "C:/Users/yehaodee/.trae-cn/tools/trae-gopls/current/"
+      - "C:/Users/yehaodee/.trae-cn/sdks/workspaces/1e85f9c3/versions/node/current/"
+      - "C:/Users/yehaodee/.trae-cn/sdks/versions/node/current/"
       - "D:/anaconda3/"
       - "D:/anaconda3/Library/mingw-w64/bin/"
       - "D:/anaconda3/Library/usr/bin/"
@@ -2910,11 +3114,20 @@ events:
       - "C:/Users/yehaodee/AppData/Local/Programs/Python/Python313/"
       - "C:/Users/yehaodee/AppData/Local/Programs/Python/Python313/Scripts/"
       - "C:/Users/yehaodee/AppData/Roaming/npm/"
-      - "D:/CS/CPP/DAYI_XIA/week2/build/"
+      - "D:/CS/CPP/DAYI_XIA/Breakout-Game/build/"
     searched_directories:
       - "D:/mingw-w64/bin/gcc-ar-13.2.com"
       - "D:/mingw-w64/bin/gcc-ar-13.2.exe"
       - "D:/mingw-w64/bin/gcc-ar-13.2"
+      - "C:/Users/yehaodee/.trae-cn/tools/trae-gopls/current/gcc-ar-13.2.com"
+      - "C:/Users/yehaodee/.trae-cn/tools/trae-gopls/current/gcc-ar-13.2.exe"
+      - "C:/Users/yehaodee/.trae-cn/tools/trae-gopls/current/gcc-ar-13.2"
+      - "C:/Users/yehaodee/.trae-cn/sdks/workspaces/1e85f9c3/versions/node/current/gcc-ar-13.2.com"
+      - "C:/Users/yehaodee/.trae-cn/sdks/workspaces/1e85f9c3/versions/node/current/gcc-ar-13.2.exe"
+      - "C:/Users/yehaodee/.trae-cn/sdks/workspaces/1e85f9c3/versions/node/current/gcc-ar-13.2"
+      - "C:/Users/yehaodee/.trae-cn/sdks/versions/node/current/gcc-ar-13.2.com"
+      - "C:/Users/yehaodee/.trae-cn/sdks/versions/node/current/gcc-ar-13.2.exe"
+      - "C:/Users/yehaodee/.trae-cn/sdks/versions/node/current/gcc-ar-13.2"
       - "D:/anaconda3/gcc-ar-13.2.com"
       - "D:/anaconda3/gcc-ar-13.2.exe"
       - "D:/anaconda3/gcc-ar-13.2"
@@ -3041,12 +3254,21 @@ events:
       - "C:/Users/yehaodee/AppData/Roaming/npm/gcc-ar-13.2.com"
       - "C:/Users/yehaodee/AppData/Roaming/npm/gcc-ar-13.2.exe"
       - "C:/Users/yehaodee/AppData/Roaming/npm/gcc-ar-13.2"
-      - "D:/CS/CPP/DAYI_XIA/week2/build/gcc-ar-13.2.com"
-      - "D:/CS/CPP/DAYI_XIA/week2/build/gcc-ar-13.2.exe"
-      - "D:/CS/CPP/DAYI_XIA/week2/build/gcc-ar-13.2"
+      - "D:/CS/CPP/DAYI_XIA/Breakout-Game/build/gcc-ar-13.2.com"
+      - "D:/CS/CPP/DAYI_XIA/Breakout-Game/build/gcc-ar-13.2.exe"
+      - "D:/CS/CPP/DAYI_XIA/Breakout-Game/build/gcc-ar-13.2"
       - "D:/mingw-w64/bin/gcc-ar-13.com"
       - "D:/mingw-w64/bin/gcc-ar-13.exe"
       - "D:/mingw-w64/bin/gcc-ar-13"
+      - "C:/Users/yehaodee/.trae-cn/tools/trae-gopls/current/gcc-ar-13.com"
+      - "C:/Users/yehaodee/.trae-cn/tools/trae-gopls/current/gcc-ar-13.exe"
+      - "C:/Users/yehaodee/.trae-cn/tools/trae-gopls/current/gcc-ar-13"
+      - "C:/Users/yehaodee/.trae-cn/sdks/workspaces/1e85f9c3/versions/node/current/gcc-ar-13.com"
+      - "C:/Users/yehaodee/.trae-cn/sdks/workspaces/1e85f9c3/versions/node/current/gcc-ar-13.exe"
+      - "C:/Users/yehaodee/.trae-cn/sdks/workspaces/1e85f9c3/versions/node/current/gcc-ar-13"
+      - "C:/Users/yehaodee/.trae-cn/sdks/versions/node/current/gcc-ar-13.com"
+      - "C:/Users/yehaodee/.trae-cn/sdks/versions/node/current/gcc-ar-13.exe"
+      - "C:/Users/yehaodee/.trae-cn/sdks/versions/node/current/gcc-ar-13"
       - "D:/anaconda3/gcc-ar-13.com"
       - "D:/anaconda3/gcc-ar-13.exe"
       - "D:/anaconda3/gcc-ar-13"
@@ -3173,12 +3395,21 @@ events:
       - "C:/Users/yehaodee/AppData/Roaming/npm/gcc-ar-13.com"
       - "C:/Users/yehaodee/AppData/Roaming/npm/gcc-ar-13.exe"
       - "C:/Users/yehaodee/AppData/Roaming/npm/gcc-ar-13"
-      - "D:/CS/CPP/DAYI_XIA/week2/build/gcc-ar-13.com"
-      - "D:/CS/CPP/DAYI_XIA/week2/build/gcc-ar-13.exe"
-      - "D:/CS/CPP/DAYI_XIA/week2/build/gcc-ar-13"
+      - "D:/CS/CPP/DAYI_XIA/Breakout-Game/build/gcc-ar-13.com"
+      - "D:/CS/CPP/DAYI_XIA/Breakout-Game/build/gcc-ar-13.exe"
+      - "D:/CS/CPP/DAYI_XIA/Breakout-Game/build/gcc-ar-13"
       - "D:/mingw-w64/bin/gcc-ar13.com"
       - "D:/mingw-w64/bin/gcc-ar13.exe"
       - "D:/mingw-w64/bin/gcc-ar13"
+      - "C:/Users/yehaodee/.trae-cn/tools/trae-gopls/current/gcc-ar13.com"
+      - "C:/Users/yehaodee/.trae-cn/tools/trae-gopls/current/gcc-ar13.exe"
+      - "C:/Users/yehaodee/.trae-cn/tools/trae-gopls/current/gcc-ar13"
+      - "C:/Users/yehaodee/.trae-cn/sdks/workspaces/1e85f9c3/versions/node/current/gcc-ar13.com"
+      - "C:/Users/yehaodee/.trae-cn/sdks/workspaces/1e85f9c3/versions/node/current/gcc-ar13.exe"
+      - "C:/Users/yehaodee/.trae-cn/sdks/workspaces/1e85f9c3/versions/node/current/gcc-ar13"
+      - "C:/Users/yehaodee/.trae-cn/sdks/versions/node/current/gcc-ar13.com"
+      - "C:/Users/yehaodee/.trae-cn/sdks/versions/node/current/gcc-ar13.exe"
+      - "C:/Users/yehaodee/.trae-cn/sdks/versions/node/current/gcc-ar13"
       - "D:/anaconda3/gcc-ar13.com"
       - "D:/anaconda3/gcc-ar13.exe"
       - "D:/anaconda3/gcc-ar13"
@@ -3305,13 +3536,16 @@ events:
       - "C:/Users/yehaodee/AppData/Roaming/npm/gcc-ar13.com"
       - "C:/Users/yehaodee/AppData/Roaming/npm/gcc-ar13.exe"
       - "C:/Users/yehaodee/AppData/Roaming/npm/gcc-ar13"
-      - "D:/CS/CPP/DAYI_XIA/week2/build/gcc-ar13.com"
-      - "D:/CS/CPP/DAYI_XIA/week2/build/gcc-ar13.exe"
-      - "D:/CS/CPP/DAYI_XIA/week2/build/gcc-ar13"
+      - "D:/CS/CPP/DAYI_XIA/Breakout-Game/build/gcc-ar13.com"
+      - "D:/CS/CPP/DAYI_XIA/Breakout-Game/build/gcc-ar13.exe"
+      - "D:/CS/CPP/DAYI_XIA/Breakout-Game/build/gcc-ar13"
       - "D:/mingw-w64/bin/gcc-ar.com"
     found: "D:/mingw-w64/bin/gcc-ar.exe"
     search_context:
       ENV{PATH}:
+        - "c:\\\\Users\\\\yehaodee\\\\.trae-cn\\\\tools\\\\trae-gopls\\\\current"
+        - "c:\\\\Users\\\\yehaodee\\\\.trae-cn\\\\sdks\\\\workspaces\\\\1e85f9c3\\\\versions\\\\node\\\\current"
+        - "c:\\\\Users\\\\yehaodee\\\\.trae-cn\\\\sdks\\\\versions\\\\node\\\\current"
         - "D:\\anaconda3"
         - "D:\\anaconda3\\Library\\mingw-w64\\bin"
         - "D:\\anaconda3\\Library\\usr\\bin"
@@ -3320,6 +3554,9 @@ events:
         - "D:\\anaconda3\\bin"
         - "D:\\anaconda3\\condabin"
         - "c:\\Users\\yehaodee\\.trae-cn\\extensions\\vadimcn.vscode-lldb-1.12.1\\bin"
+        - "c:\\Users\\yehaodee\\.trae-cn\\tools\\trae-gopls\\current"
+        - "c:\\Users\\yehaodee\\.trae-cn\\sdks\\workspaces\\1e85f9c3\\versions\\node\\current"
+        - "c:\\Users\\yehaodee\\.trae-cn\\sdks\\versions\\node\\current"
         - "C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v12.1\\bin"
         - "C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v12.1\\libnvvp"
         - "C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v12.8\\bin"
@@ -3400,6 +3637,9 @@ events:
       - "gcc-ranlib"
     candidate_directories:
       - "D:/mingw-w64/bin/"
+      - "C:/Users/yehaodee/.trae-cn/tools/trae-gopls/current/"
+      - "C:/Users/yehaodee/.trae-cn/sdks/workspaces/1e85f9c3/versions/node/current/"
+      - "C:/Users/yehaodee/.trae-cn/sdks/versions/node/current/"
       - "D:/anaconda3/"
       - "D:/anaconda3/Library/mingw-w64/bin/"
       - "D:/anaconda3/Library/usr/bin/"
@@ -3442,11 +3682,20 @@ events:
       - "C:/Users/yehaodee/AppData/Local/Programs/Python/Python313/"
       - "C:/Users/yehaodee/AppData/Local/Programs/Python/Python313/Scripts/"
       - "C:/Users/yehaodee/AppData/Roaming/npm/"
-      - "D:/CS/CPP/DAYI_XIA/week2/build/"
+      - "D:/CS/CPP/DAYI_XIA/Breakout-Game/build/"
     searched_directories:
       - "D:/mingw-w64/bin/gcc-ranlib-13.2.com"
       - "D:/mingw-w64/bin/gcc-ranlib-13.2.exe"
       - "D:/mingw-w64/bin/gcc-ranlib-13.2"
+      - "C:/Users/yehaodee/.trae-cn/tools/trae-gopls/current/gcc-ranlib-13.2.com"
+      - "C:/Users/yehaodee/.trae-cn/tools/trae-gopls/current/gcc-ranlib-13.2.exe"
+      - "C:/Users/yehaodee/.trae-cn/tools/trae-gopls/current/gcc-ranlib-13.2"
+      - "C:/Users/yehaodee/.trae-cn/sdks/workspaces/1e85f9c3/versions/node/current/gcc-ranlib-13.2.com"
+      - "C:/Users/yehaodee/.trae-cn/sdks/workspaces/1e85f9c3/versions/node/current/gcc-ranlib-13.2.exe"
+      - "C:/Users/yehaodee/.trae-cn/sdks/workspaces/1e85f9c3/versions/node/current/gcc-ranlib-13.2"
+      - "C:/Users/yehaodee/.trae-cn/sdks/versions/node/current/gcc-ranlib-13.2.com"
+      - "C:/Users/yehaodee/.trae-cn/sdks/versions/node/current/gcc-ranlib-13.2.exe"
+      - "C:/Users/yehaodee/.trae-cn/sdks/versions/node/current/gcc-ranlib-13.2"
       - "D:/anaconda3/gcc-ranlib-13.2.com"
       - "D:/anaconda3/gcc-ranlib-13.2.exe"
       - "D:/anaconda3/gcc-ranlib-13.2"
@@ -3573,12 +3822,21 @@ events:
       - "C:/Users/yehaodee/AppData/Roaming/npm/gcc-ranlib-13.2.com"
       - "C:/Users/yehaodee/AppData/Roaming/npm/gcc-ranlib-13.2.exe"
       - "C:/Users/yehaodee/AppData/Roaming/npm/gcc-ranlib-13.2"
-      - "D:/CS/CPP/DAYI_XIA/week2/build/gcc-ranlib-13.2.com"
-      - "D:/CS/CPP/DAYI_XIA/week2/build/gcc-ranlib-13.2.exe"
-      - "D:/CS/CPP/DAYI_XIA/week2/build/gcc-ranlib-13.2"
+      - "D:/CS/CPP/DAYI_XIA/Breakout-Game/build/gcc-ranlib-13.2.com"
+      - "D:/CS/CPP/DAYI_XIA/Breakout-Game/build/gcc-ranlib-13.2.exe"
+      - "D:/CS/CPP/DAYI_XIA/Breakout-Game/build/gcc-ranlib-13.2"
       - "D:/mingw-w64/bin/gcc-ranlib-13.com"
       - "D:/mingw-w64/bin/gcc-ranlib-13.exe"
       - "D:/mingw-w64/bin/gcc-ranlib-13"
+      - "C:/Users/yehaodee/.trae-cn/tools/trae-gopls/current/gcc-ranlib-13.com"
+      - "C:/Users/yehaodee/.trae-cn/tools/trae-gopls/current/gcc-ranlib-13.exe"
+      - "C:/Users/yehaodee/.trae-cn/tools/trae-gopls/current/gcc-ranlib-13"
+      - "C:/Users/yehaodee/.trae-cn/sdks/workspaces/1e85f9c3/versions/node/current/gcc-ranlib-13.com"
+      - "C:/Users/yehaodee/.trae-cn/sdks/workspaces/1e85f9c3/versions/node/current/gcc-ranlib-13.exe"
+      - "C:/Users/yehaodee/.trae-cn/sdks/workspaces/1e85f9c3/versions/node/current/gcc-ranlib-13"
+      - "C:/Users/yehaodee/.trae-cn/sdks/versions/node/current/gcc-ranlib-13.com"
+      - "C:/Users/yehaodee/.trae-cn/sdks/versions/node/current/gcc-ranlib-13.exe"
+      - "C:/Users/yehaodee/.trae-cn/sdks/versions/node/current/gcc-ranlib-13"
       - "D:/anaconda3/gcc-ranlib-13.com"
       - "D:/anaconda3/gcc-ranlib-13.exe"
       - "D:/anaconda3/gcc-ranlib-13"
@@ -3705,12 +3963,21 @@ events:
       - "C:/Users/yehaodee/AppData/Roaming/npm/gcc-ranlib-13.com"
       - "C:/Users/yehaodee/AppData/Roaming/npm/gcc-ranlib-13.exe"
       - "C:/Users/yehaodee/AppData/Roaming/npm/gcc-ranlib-13"
-      - "D:/CS/CPP/DAYI_XIA/week2/build/gcc-ranlib-13.com"
-      - "D:/CS/CPP/DAYI_XIA/week2/build/gcc-ranlib-13.exe"
-      - "D:/CS/CPP/DAYI_XIA/week2/build/gcc-ranlib-13"
+      - "D:/CS/CPP/DAYI_XIA/Breakout-Game/build/gcc-ranlib-13.com"
+      - "D:/CS/CPP/DAYI_XIA/Breakout-Game/build/gcc-ranlib-13.exe"
+      - "D:/CS/CPP/DAYI_XIA/Breakout-Game/build/gcc-ranlib-13"
       - "D:/mingw-w64/bin/gcc-ranlib13.com"
       - "D:/mingw-w64/bin/gcc-ranlib13.exe"
       - "D:/mingw-w64/bin/gcc-ranlib13"
+      - "C:/Users/yehaodee/.trae-cn/tools/trae-gopls/current/gcc-ranlib13.com"
+      - "C:/Users/yehaodee/.trae-cn/tools/trae-gopls/current/gcc-ranlib13.exe"
+      - "C:/Users/yehaodee/.trae-cn/tools/trae-gopls/current/gcc-ranlib13"
+      - "C:/Users/yehaodee/.trae-cn/sdks/workspaces/1e85f9c3/versions/node/current/gcc-ranlib13.com"
+      - "C:/Users/yehaodee/.trae-cn/sdks/workspaces/1e85f9c3/versions/node/current/gcc-ranlib13.exe"
+      - "C:/Users/yehaodee/.trae-cn/sdks/workspaces/1e85f9c3/versions/node/current/gcc-ranlib13"
+      - "C:/Users/yehaodee/.trae-cn/sdks/versions/node/current/gcc-ranlib13.com"
+      - "C:/Users/yehaodee/.trae-cn/sdks/versions/node/current/gcc-ranlib13.exe"
+      - "C:/Users/yehaodee/.trae-cn/sdks/versions/node/current/gcc-ranlib13"
       - "D:/anaconda3/gcc-ranlib13.com"
       - "D:/anaconda3/gcc-ranlib13.exe"
       - "D:/anaconda3/gcc-ranlib13"
@@ -3837,13 +4104,16 @@ events:
       - "C:/Users/yehaodee/AppData/Roaming/npm/gcc-ranlib13.com"
       - "C:/Users/yehaodee/AppData/Roaming/npm/gcc-ranlib13.exe"
       - "C:/Users/yehaodee/AppData/Roaming/npm/gcc-ranlib13"
-      - "D:/CS/CPP/DAYI_XIA/week2/build/gcc-ranlib13.com"
-      - "D:/CS/CPP/DAYI_XIA/week2/build/gcc-ranlib13.exe"
-      - "D:/CS/CPP/DAYI_XIA/week2/build/gcc-ranlib13"
+      - "D:/CS/CPP/DAYI_XIA/Breakout-Game/build/gcc-ranlib13.com"
+      - "D:/CS/CPP/DAYI_XIA/Breakout-Game/build/gcc-ranlib13.exe"
+      - "D:/CS/CPP/DAYI_XIA/Breakout-Game/build/gcc-ranlib13"
       - "D:/mingw-w64/bin/gcc-ranlib.com"
     found: "D:/mingw-w64/bin/gcc-ranlib.exe"
     search_context:
       ENV{PATH}:
+        - "c:\\\\Users\\\\yehaodee\\\\.trae-cn\\\\tools\\\\trae-gopls\\\\current"
+        - "c:\\\\Users\\\\yehaodee\\\\.trae-cn\\\\sdks\\\\workspaces\\\\1e85f9c3\\\\versions\\\\node\\\\current"
+        - "c:\\\\Users\\\\yehaodee\\\\.trae-cn\\\\sdks\\\\versions\\\\node\\\\current"
         - "D:\\anaconda3"
         - "D:\\anaconda3\\Library\\mingw-w64\\bin"
         - "D:\\anaconda3\\Library\\usr\\bin"
@@ -3852,6 +4122,9 @@ events:
         - "D:\\anaconda3\\bin"
         - "D:\\anaconda3\\condabin"
         - "c:\\Users\\yehaodee\\.trae-cn\\extensions\\vadimcn.vscode-lldb-1.12.1\\bin"
+        - "c:\\Users\\yehaodee\\.trae-cn\\tools\\trae-gopls\\current"
+        - "c:\\Users\\yehaodee\\.trae-cn\\sdks\\workspaces\\1e85f9c3\\versions\\node\\current"
+        - "c:\\Users\\yehaodee\\.trae-cn\\sdks\\versions\\node\\current"
         - "C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v12.1\\bin"
         - "C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v12.1\\libnvvp"
         - "C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v12.8\\bin"
@@ -3939,6 +4212,9 @@ events:
     found: "D:/mingw-w64/bin/c++.exe"
     search_context:
       ENV{PATH}:
+        - "c:\\\\Users\\\\yehaodee\\\\.trae-cn\\\\tools\\\\trae-gopls\\\\current"
+        - "c:\\\\Users\\\\yehaodee\\\\.trae-cn\\\\sdks\\\\workspaces\\\\1e85f9c3\\\\versions\\\\node\\\\current"
+        - "c:\\\\Users\\\\yehaodee\\\\.trae-cn\\\\sdks\\\\versions\\\\node\\\\current"
         - "D:\\anaconda3"
         - "D:\\anaconda3\\Library\\mingw-w64\\bin"
         - "D:\\anaconda3\\Library\\usr\\bin"
@@ -3947,6 +4223,9 @@ events:
         - "D:\\anaconda3\\bin"
         - "D:\\anaconda3\\condabin"
         - "c:\\Users\\yehaodee\\.trae-cn\\extensions\\vadimcn.vscode-lldb-1.12.1\\bin"
+        - "c:\\Users\\yehaodee\\.trae-cn\\tools\\trae-gopls\\current"
+        - "c:\\Users\\yehaodee\\.trae-cn\\sdks\\workspaces\\1e85f9c3\\versions\\node\\current"
+        - "c:\\Users\\yehaodee\\.trae-cn\\sdks\\versions\\node\\current"
         - "C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v12.1\\bin"
         - "C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v12.1\\libnvvp"
         - "C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v12.8\\bin"
@@ -4030,6 +4309,9 @@ events:
     found: "C:/Program Files/CMake/share/cmake-4.3/Modules/CMakeCXXCompilerId.cpp.in"
     search_context:
       ENV{PATH}:
+        - "c:\\\\Users\\\\yehaodee\\\\.trae-cn\\\\tools\\\\trae-gopls\\\\current"
+        - "c:\\\\Users\\\\yehaodee\\\\.trae-cn\\\\sdks\\\\workspaces\\\\1e85f9c3\\\\versions\\\\node\\\\current"
+        - "c:\\\\Users\\\\yehaodee\\\\.trae-cn\\\\sdks\\\\versions\\\\node\\\\current"
         - "D:\\anaconda3"
         - "D:\\anaconda3\\Library\\mingw-w64\\bin"
         - "D:\\anaconda3\\Library\\usr\\bin"
@@ -4038,6 +4320,9 @@ events:
         - "D:\\anaconda3\\bin"
         - "D:\\anaconda3\\condabin"
         - "c:\\Users\\yehaodee\\.trae-cn\\extensions\\vadimcn.vscode-lldb-1.12.1\\bin"
+        - "c:\\Users\\yehaodee\\.trae-cn\\tools\\trae-gopls\\current"
+        - "c:\\Users\\yehaodee\\.trae-cn\\sdks\\workspaces\\1e85f9c3\\versions\\node\\current"
+        - "c:\\Users\\yehaodee\\.trae-cn\\sdks\\versions\\node\\current"
         - "C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v12.1\\bin"
         - "C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v12.1\\libnvvp"
         - "C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v12.8\\bin"
@@ -4114,7 +4399,7 @@ events:
       Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "a.exe"
       
       The CXX compiler identification is GNU, found in:
-        D:/CS/CPP/DAYI_XIA/week2/build/CMakeFiles/4.3.0-rc3/CompilerIdCXX/a.exe
+        D:/CS/CPP/DAYI_XIA/Breakout-Game/build/CMakeFiles/4.3.0-rc3/CompilerIdCXX/a.exe
       
   -
     kind: "find-v1"
@@ -4140,6 +4425,9 @@ events:
       - "gcc-ar"
     candidate_directories:
       - "D:/mingw-w64/bin/"
+      - "C:/Users/yehaodee/.trae-cn/tools/trae-gopls/current/"
+      - "C:/Users/yehaodee/.trae-cn/sdks/workspaces/1e85f9c3/versions/node/current/"
+      - "C:/Users/yehaodee/.trae-cn/sdks/versions/node/current/"
       - "D:/anaconda3/"
       - "D:/anaconda3/Library/mingw-w64/bin/"
       - "D:/anaconda3/Library/usr/bin/"
@@ -4182,11 +4470,20 @@ events:
       - "C:/Users/yehaodee/AppData/Local/Programs/Python/Python313/"
       - "C:/Users/yehaodee/AppData/Local/Programs/Python/Python313/Scripts/"
       - "C:/Users/yehaodee/AppData/Roaming/npm/"
-      - "D:/CS/CPP/DAYI_XIA/week2/build/"
+      - "D:/CS/CPP/DAYI_XIA/Breakout-Game/build/"
     searched_directories:
       - "D:/mingw-w64/bin/gcc-ar-13.2.com"
       - "D:/mingw-w64/bin/gcc-ar-13.2.exe"
       - "D:/mingw-w64/bin/gcc-ar-13.2"
+      - "C:/Users/yehaodee/.trae-cn/tools/trae-gopls/current/gcc-ar-13.2.com"
+      - "C:/Users/yehaodee/.trae-cn/tools/trae-gopls/current/gcc-ar-13.2.exe"
+      - "C:/Users/yehaodee/.trae-cn/tools/trae-gopls/current/gcc-ar-13.2"
+      - "C:/Users/yehaodee/.trae-cn/sdks/workspaces/1e85f9c3/versions/node/current/gcc-ar-13.2.com"
+      - "C:/Users/yehaodee/.trae-cn/sdks/workspaces/1e85f9c3/versions/node/current/gcc-ar-13.2.exe"
+      - "C:/Users/yehaodee/.trae-cn/sdks/workspaces/1e85f9c3/versions/node/current/gcc-ar-13.2"
+      - "C:/Users/yehaodee/.trae-cn/sdks/versions/node/current/gcc-ar-13.2.com"
+      - "C:/Users/yehaodee/.trae-cn/sdks/versions/node/current/gcc-ar-13.2.exe"
+      - "C:/Users/yehaodee/.trae-cn/sdks/versions/node/current/gcc-ar-13.2"
       - "D:/anaconda3/gcc-ar-13.2.com"
       - "D:/anaconda3/gcc-ar-13.2.exe"
       - "D:/anaconda3/gcc-ar-13.2"
@@ -4313,12 +4610,21 @@ events:
       - "C:/Users/yehaodee/AppData/Roaming/npm/gcc-ar-13.2.com"
       - "C:/Users/yehaodee/AppData/Roaming/npm/gcc-ar-13.2.exe"
       - "C:/Users/yehaodee/AppData/Roaming/npm/gcc-ar-13.2"
-      - "D:/CS/CPP/DAYI_XIA/week2/build/gcc-ar-13.2.com"
-      - "D:/CS/CPP/DAYI_XIA/week2/build/gcc-ar-13.2.exe"
-      - "D:/CS/CPP/DAYI_XIA/week2/build/gcc-ar-13.2"
+      - "D:/CS/CPP/DAYI_XIA/Breakout-Game/build/gcc-ar-13.2.com"
+      - "D:/CS/CPP/DAYI_XIA/Breakout-Game/build/gcc-ar-13.2.exe"
+      - "D:/CS/CPP/DAYI_XIA/Breakout-Game/build/gcc-ar-13.2"
       - "D:/mingw-w64/bin/gcc-ar-13.com"
       - "D:/mingw-w64/bin/gcc-ar-13.exe"
       - "D:/mingw-w64/bin/gcc-ar-13"
+      - "C:/Users/yehaodee/.trae-cn/tools/trae-gopls/current/gcc-ar-13.com"
+      - "C:/Users/yehaodee/.trae-cn/tools/trae-gopls/current/gcc-ar-13.exe"
+      - "C:/Users/yehaodee/.trae-cn/tools/trae-gopls/current/gcc-ar-13"
+      - "C:/Users/yehaodee/.trae-cn/sdks/workspaces/1e85f9c3/versions/node/current/gcc-ar-13.com"
+      - "C:/Users/yehaodee/.trae-cn/sdks/workspaces/1e85f9c3/versions/node/current/gcc-ar-13.exe"
+      - "C:/Users/yehaodee/.trae-cn/sdks/workspaces/1e85f9c3/versions/node/current/gcc-ar-13"
+      - "C:/Users/yehaodee/.trae-cn/sdks/versions/node/current/gcc-ar-13.com"
+      - "C:/Users/yehaodee/.trae-cn/sdks/versions/node/current/gcc-ar-13.exe"
+      - "C:/Users/yehaodee/.trae-cn/sdks/versions/node/current/gcc-ar-13"
       - "D:/anaconda3/gcc-ar-13.com"
       - "D:/anaconda3/gcc-ar-13.exe"
       - "D:/anaconda3/gcc-ar-13"
@@ -4445,12 +4751,21 @@ events:
       - "C:/Users/yehaodee/AppData/Roaming/npm/gcc-ar-13.com"
       - "C:/Users/yehaodee/AppData/Roaming/npm/gcc-ar-13.exe"
       - "C:/Users/yehaodee/AppData/Roaming/npm/gcc-ar-13"
-      - "D:/CS/CPP/DAYI_XIA/week2/build/gcc-ar-13.com"
-      - "D:/CS/CPP/DAYI_XIA/week2/build/gcc-ar-13.exe"
-      - "D:/CS/CPP/DAYI_XIA/week2/build/gcc-ar-13"
+      - "D:/CS/CPP/DAYI_XIA/Breakout-Game/build/gcc-ar-13.com"
+      - "D:/CS/CPP/DAYI_XIA/Breakout-Game/build/gcc-ar-13.exe"
+      - "D:/CS/CPP/DAYI_XIA/Breakout-Game/build/gcc-ar-13"
       - "D:/mingw-w64/bin/gcc-ar13.com"
       - "D:/mingw-w64/bin/gcc-ar13.exe"
       - "D:/mingw-w64/bin/gcc-ar13"
+      - "C:/Users/yehaodee/.trae-cn/tools/trae-gopls/current/gcc-ar13.com"
+      - "C:/Users/yehaodee/.trae-cn/tools/trae-gopls/current/gcc-ar13.exe"
+      - "C:/Users/yehaodee/.trae-cn/tools/trae-gopls/current/gcc-ar13"
+      - "C:/Users/yehaodee/.trae-cn/sdks/workspaces/1e85f9c3/versions/node/current/gcc-ar13.com"
+      - "C:/Users/yehaodee/.trae-cn/sdks/workspaces/1e85f9c3/versions/node/current/gcc-ar13.exe"
+      - "C:/Users/yehaodee/.trae-cn/sdks/workspaces/1e85f9c3/versions/node/current/gcc-ar13"
+      - "C:/Users/yehaodee/.trae-cn/sdks/versions/node/current/gcc-ar13.com"
+      - "C:/Users/yehaodee/.trae-cn/sdks/versions/node/current/gcc-ar13.exe"
+      - "C:/Users/yehaodee/.trae-cn/sdks/versions/node/current/gcc-ar13"
       - "D:/anaconda3/gcc-ar13.com"
       - "D:/anaconda3/gcc-ar13.exe"
       - "D:/anaconda3/gcc-ar13"
@@ -4577,13 +4892,16 @@ events:
       - "C:/Users/yehaodee/AppData/Roaming/npm/gcc-ar13.com"
       - "C:/Users/yehaodee/AppData/Roaming/npm/gcc-ar13.exe"
       - "C:/Users/yehaodee/AppData/Roaming/npm/gcc-ar13"
-      - "D:/CS/CPP/DAYI_XIA/week2/build/gcc-ar13.com"
-      - "D:/CS/CPP/DAYI_XIA/week2/build/gcc-ar13.exe"
-      - "D:/CS/CPP/DAYI_XIA/week2/build/gcc-ar13"
+      - "D:/CS/CPP/DAYI_XIA/Breakout-Game/build/gcc-ar13.com"
+      - "D:/CS/CPP/DAYI_XIA/Breakout-Game/build/gcc-ar13.exe"
+      - "D:/CS/CPP/DAYI_XIA/Breakout-Game/build/gcc-ar13"
       - "D:/mingw-w64/bin/gcc-ar.com"
     found: "D:/mingw-w64/bin/gcc-ar.exe"
     search_context:
       ENV{PATH}:
+        - "c:\\\\Users\\\\yehaodee\\\\.trae-cn\\\\tools\\\\trae-gopls\\\\current"
+        - "c:\\\\Users\\\\yehaodee\\\\.trae-cn\\\\sdks\\\\workspaces\\\\1e85f9c3\\\\versions\\\\node\\\\current"
+        - "c:\\\\Users\\\\yehaodee\\\\.trae-cn\\\\sdks\\\\versions\\\\node\\\\current"
         - "D:\\anaconda3"
         - "D:\\anaconda3\\Library\\mingw-w64\\bin"
         - "D:\\anaconda3\\Library\\usr\\bin"
@@ -4592,6 +4910,9 @@ events:
         - "D:\\anaconda3\\bin"
         - "D:\\anaconda3\\condabin"
         - "c:\\Users\\yehaodee\\.trae-cn\\extensions\\vadimcn.vscode-lldb-1.12.1\\bin"
+        - "c:\\Users\\yehaodee\\.trae-cn\\tools\\trae-gopls\\current"
+        - "c:\\Users\\yehaodee\\.trae-cn\\sdks\\workspaces\\1e85f9c3\\versions\\node\\current"
+        - "c:\\Users\\yehaodee\\.trae-cn\\sdks\\versions\\node\\current"
         - "C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v12.1\\bin"
         - "C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v12.1\\libnvvp"
         - "C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v12.8\\bin"
@@ -4672,6 +4993,9 @@ events:
       - "gcc-ranlib"
     candidate_directories:
       - "D:/mingw-w64/bin/"
+      - "C:/Users/yehaodee/.trae-cn/tools/trae-gopls/current/"
+      - "C:/Users/yehaodee/.trae-cn/sdks/workspaces/1e85f9c3/versions/node/current/"
+      - "C:/Users/yehaodee/.trae-cn/sdks/versions/node/current/"
       - "D:/anaconda3/"
       - "D:/anaconda3/Library/mingw-w64/bin/"
       - "D:/anaconda3/Library/usr/bin/"
@@ -4714,11 +5038,20 @@ events:
       - "C:/Users/yehaodee/AppData/Local/Programs/Python/Python313/"
       - "C:/Users/yehaodee/AppData/Local/Programs/Python/Python313/Scripts/"
       - "C:/Users/yehaodee/AppData/Roaming/npm/"
-      - "D:/CS/CPP/DAYI_XIA/week2/build/"
+      - "D:/CS/CPP/DAYI_XIA/Breakout-Game/build/"
     searched_directories:
       - "D:/mingw-w64/bin/gcc-ranlib-13.2.com"
       - "D:/mingw-w64/bin/gcc-ranlib-13.2.exe"
       - "D:/mingw-w64/bin/gcc-ranlib-13.2"
+      - "C:/Users/yehaodee/.trae-cn/tools/trae-gopls/current/gcc-ranlib-13.2.com"
+      - "C:/Users/yehaodee/.trae-cn/tools/trae-gopls/current/gcc-ranlib-13.2.exe"
+      - "C:/Users/yehaodee/.trae-cn/tools/trae-gopls/current/gcc-ranlib-13.2"
+      - "C:/Users/yehaodee/.trae-cn/sdks/workspaces/1e85f9c3/versions/node/current/gcc-ranlib-13.2.com"
+      - "C:/Users/yehaodee/.trae-cn/sdks/workspaces/1e85f9c3/versions/node/current/gcc-ranlib-13.2.exe"
+      - "C:/Users/yehaodee/.trae-cn/sdks/workspaces/1e85f9c3/versions/node/current/gcc-ranlib-13.2"
+      - "C:/Users/yehaodee/.trae-cn/sdks/versions/node/current/gcc-ranlib-13.2.com"
+      - "C:/Users/yehaodee/.trae-cn/sdks/versions/node/current/gcc-ranlib-13.2.exe"
+      - "C:/Users/yehaodee/.trae-cn/sdks/versions/node/current/gcc-ranlib-13.2"
       - "D:/anaconda3/gcc-ranlib-13.2.com"
       - "D:/anaconda3/gcc-ranlib-13.2.exe"
       - "D:/anaconda3/gcc-ranlib-13.2"
@@ -4845,12 +5178,21 @@ events:
       - "C:/Users/yehaodee/AppData/Roaming/npm/gcc-ranlib-13.2.com"
       - "C:/Users/yehaodee/AppData/Roaming/npm/gcc-ranlib-13.2.exe"
       - "C:/Users/yehaodee/AppData/Roaming/npm/gcc-ranlib-13.2"
-      - "D:/CS/CPP/DAYI_XIA/week2/build/gcc-ranlib-13.2.com"
-      - "D:/CS/CPP/DAYI_XIA/week2/build/gcc-ranlib-13.2.exe"
-      - "D:/CS/CPP/DAYI_XIA/week2/build/gcc-ranlib-13.2"
+      - "D:/CS/CPP/DAYI_XIA/Breakout-Game/build/gcc-ranlib-13.2.com"
+      - "D:/CS/CPP/DAYI_XIA/Breakout-Game/build/gcc-ranlib-13.2.exe"
+      - "D:/CS/CPP/DAYI_XIA/Breakout-Game/build/gcc-ranlib-13.2"
       - "D:/mingw-w64/bin/gcc-ranlib-13.com"
       - "D:/mingw-w64/bin/gcc-ranlib-13.exe"
       - "D:/mingw-w64/bin/gcc-ranlib-13"
+      - "C:/Users/yehaodee/.trae-cn/tools/trae-gopls/current/gcc-ranlib-13.com"
+      - "C:/Users/yehaodee/.trae-cn/tools/trae-gopls/current/gcc-ranlib-13.exe"
+      - "C:/Users/yehaodee/.trae-cn/tools/trae-gopls/current/gcc-ranlib-13"
+      - "C:/Users/yehaodee/.trae-cn/sdks/workspaces/1e85f9c3/versions/node/current/gcc-ranlib-13.com"
+      - "C:/Users/yehaodee/.trae-cn/sdks/workspaces/1e85f9c3/versions/node/current/gcc-ranlib-13.exe"
+      - "C:/Users/yehaodee/.trae-cn/sdks/workspaces/1e85f9c3/versions/node/current/gcc-ranlib-13"
+      - "C:/Users/yehaodee/.trae-cn/sdks/versions/node/current/gcc-ranlib-13.com"
+      - "C:/Users/yehaodee/.trae-cn/sdks/versions/node/current/gcc-ranlib-13.exe"
+      - "C:/Users/yehaodee/.trae-cn/sdks/versions/node/current/gcc-ranlib-13"
       - "D:/anaconda3/gcc-ranlib-13.com"
       - "D:/anaconda3/gcc-ranlib-13.exe"
       - "D:/anaconda3/gcc-ranlib-13"
@@ -4977,12 +5319,21 @@ events:
       - "C:/Users/yehaodee/AppData/Roaming/npm/gcc-ranlib-13.com"
       - "C:/Users/yehaodee/AppData/Roaming/npm/gcc-ranlib-13.exe"
       - "C:/Users/yehaodee/AppData/Roaming/npm/gcc-ranlib-13"
-      - "D:/CS/CPP/DAYI_XIA/week2/build/gcc-ranlib-13.com"
-      - "D:/CS/CPP/DAYI_XIA/week2/build/gcc-ranlib-13.exe"
-      - "D:/CS/CPP/DAYI_XIA/week2/build/gcc-ranlib-13"
+      - "D:/CS/CPP/DAYI_XIA/Breakout-Game/build/gcc-ranlib-13.com"
+      - "D:/CS/CPP/DAYI_XIA/Breakout-Game/build/gcc-ranlib-13.exe"
+      - "D:/CS/CPP/DAYI_XIA/Breakout-Game/build/gcc-ranlib-13"
       - "D:/mingw-w64/bin/gcc-ranlib13.com"
       - "D:/mingw-w64/bin/gcc-ranlib13.exe"
       - "D:/mingw-w64/bin/gcc-ranlib13"
+      - "C:/Users/yehaodee/.trae-cn/tools/trae-gopls/current/gcc-ranlib13.com"
+      - "C:/Users/yehaodee/.trae-cn/tools/trae-gopls/current/gcc-ranlib13.exe"
+      - "C:/Users/yehaodee/.trae-cn/tools/trae-gopls/current/gcc-ranlib13"
+      - "C:/Users/yehaodee/.trae-cn/sdks/workspaces/1e85f9c3/versions/node/current/gcc-ranlib13.com"
+      - "C:/Users/yehaodee/.trae-cn/sdks/workspaces/1e85f9c3/versions/node/current/gcc-ranlib13.exe"
+      - "C:/Users/yehaodee/.trae-cn/sdks/workspaces/1e85f9c3/versions/node/current/gcc-ranlib13"
+      - "C:/Users/yehaodee/.trae-cn/sdks/versions/node/current/gcc-ranlib13.com"
+      - "C:/Users/yehaodee/.trae-cn/sdks/versions/node/current/gcc-ranlib13.exe"
+      - "C:/Users/yehaodee/.trae-cn/sdks/versions/node/current/gcc-ranlib13"
       - "D:/anaconda3/gcc-ranlib13.com"
       - "D:/anaconda3/gcc-ranlib13.exe"
       - "D:/anaconda3/gcc-ranlib13"
@@ -5109,13 +5460,16 @@ events:
       - "C:/Users/yehaodee/AppData/Roaming/npm/gcc-ranlib13.com"
       - "C:/Users/yehaodee/AppData/Roaming/npm/gcc-ranlib13.exe"
       - "C:/Users/yehaodee/AppData/Roaming/npm/gcc-ranlib13"
-      - "D:/CS/CPP/DAYI_XIA/week2/build/gcc-ranlib13.com"
-      - "D:/CS/CPP/DAYI_XIA/week2/build/gcc-ranlib13.exe"
-      - "D:/CS/CPP/DAYI_XIA/week2/build/gcc-ranlib13"
+      - "D:/CS/CPP/DAYI_XIA/Breakout-Game/build/gcc-ranlib13.com"
+      - "D:/CS/CPP/DAYI_XIA/Breakout-Game/build/gcc-ranlib13.exe"
+      - "D:/CS/CPP/DAYI_XIA/Breakout-Game/build/gcc-ranlib13"
       - "D:/mingw-w64/bin/gcc-ranlib.com"
     found: "D:/mingw-w64/bin/gcc-ranlib.exe"
     search_context:
       ENV{PATH}:
+        - "c:\\\\Users\\\\yehaodee\\\\.trae-cn\\\\tools\\\\trae-gopls\\\\current"
+        - "c:\\\\Users\\\\yehaodee\\\\.trae-cn\\\\sdks\\\\workspaces\\\\1e85f9c3\\\\versions\\\\node\\\\current"
+        - "c:\\\\Users\\\\yehaodee\\\\.trae-cn\\\\sdks\\\\versions\\\\node\\\\current"
         - "D:\\anaconda3"
         - "D:\\anaconda3\\Library\\mingw-w64\\bin"
         - "D:\\anaconda3\\Library\\usr\\bin"
@@ -5124,6 +5478,9 @@ events:
         - "D:\\anaconda3\\bin"
         - "D:\\anaconda3\\condabin"
         - "c:\\Users\\yehaodee\\.trae-cn\\extensions\\vadimcn.vscode-lldb-1.12.1\\bin"
+        - "c:\\Users\\yehaodee\\.trae-cn\\tools\\trae-gopls\\current"
+        - "c:\\Users\\yehaodee\\.trae-cn\\sdks\\workspaces\\1e85f9c3\\versions\\node\\current"
+        - "c:\\Users\\yehaodee\\.trae-cn\\sdks\\versions\\node\\current"
         - "C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v12.1\\bin"
         - "C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v12.1\\libnvvp"
         - "C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v12.8\\bin"
@@ -5203,6 +5560,9 @@ events:
       - "windres"
       - "windres"
     candidate_directories:
+      - "C:/Users/yehaodee/.trae-cn/tools/trae-gopls/current/"
+      - "C:/Users/yehaodee/.trae-cn/sdks/workspaces/1e85f9c3/versions/node/current/"
+      - "C:/Users/yehaodee/.trae-cn/sdks/versions/node/current/"
       - "D:/anaconda3/"
       - "D:/anaconda3/Library/mingw-w64/bin/"
       - "D:/anaconda3/Library/usr/bin/"
@@ -5246,7 +5606,7 @@ events:
       - "C:/Users/yehaodee/AppData/Local/Programs/Python/Python313/"
       - "C:/Users/yehaodee/AppData/Local/Programs/Python/Python313/Scripts/"
       - "C:/Users/yehaodee/AppData/Roaming/npm/"
-      - "D:/CS/CPP/DAYI_XIA/week2/build/"
+      - "D:/CS/CPP/DAYI_XIA/Breakout-Game/build/"
       - "C:/Program Files/bin/"
       - "C:/Program Files/sbin/"
       - "C:/Program Files/"
@@ -5256,10 +5616,19 @@ events:
       - "C:/Program Files/CMake/bin/"
       - "C:/Program Files/CMake/sbin/"
       - "C:/Program Files/CMake/"
-      - "C:/Program Files (x86)/breakout_week2/bin/"
-      - "C:/Program Files (x86)/breakout_week2/sbin/"
-      - "C:/Program Files (x86)/breakout_week2/"
+      - "C:/Program Files (x86)/breakout/bin/"
+      - "C:/Program Files (x86)/breakout/sbin/"
+      - "C:/Program Files (x86)/breakout/"
     searched_directories:
+      - "C:/Users/yehaodee/.trae-cn/tools/trae-gopls/current/windres.com"
+      - "C:/Users/yehaodee/.trae-cn/tools/trae-gopls/current/windres.exe"
+      - "C:/Users/yehaodee/.trae-cn/tools/trae-gopls/current/windres"
+      - "C:/Users/yehaodee/.trae-cn/sdks/workspaces/1e85f9c3/versions/node/current/windres.com"
+      - "C:/Users/yehaodee/.trae-cn/sdks/workspaces/1e85f9c3/versions/node/current/windres.exe"
+      - "C:/Users/yehaodee/.trae-cn/sdks/workspaces/1e85f9c3/versions/node/current/windres"
+      - "C:/Users/yehaodee/.trae-cn/sdks/versions/node/current/windres.com"
+      - "C:/Users/yehaodee/.trae-cn/sdks/versions/node/current/windres.exe"
+      - "C:/Users/yehaodee/.trae-cn/sdks/versions/node/current/windres"
       - "D:/anaconda3/windres.com"
       - "D:/anaconda3/windres.exe"
       - "D:/anaconda3/windres"
@@ -5375,6 +5744,9 @@ events:
     found: "D:/mingw-w64/bin/windres.exe"
     search_context:
       ENV{PATH}:
+        - "c:\\\\Users\\\\yehaodee\\\\.trae-cn\\\\tools\\\\trae-gopls\\\\current"
+        - "c:\\\\Users\\\\yehaodee\\\\.trae-cn\\\\sdks\\\\workspaces\\\\1e85f9c3\\\\versions\\\\node\\\\current"
+        - "c:\\\\Users\\\\yehaodee\\\\.trae-cn\\\\sdks\\\\versions\\\\node\\\\current"
         - "D:\\anaconda3"
         - "D:\\anaconda3\\Library\\mingw-w64\\bin"
         - "D:\\anaconda3\\Library\\usr\\bin"
@@ -5383,6 +5755,9 @@ events:
         - "D:\\anaconda3\\bin"
         - "D:\\anaconda3\\condabin"
         - "c:\\Users\\yehaodee\\.trae-cn\\extensions\\vadimcn.vscode-lldb-1.12.1\\bin"
+        - "c:\\Users\\yehaodee\\.trae-cn\\tools\\trae-gopls\\current"
+        - "c:\\Users\\yehaodee\\.trae-cn\\sdks\\workspaces\\1e85f9c3\\versions\\node\\current"
+        - "c:\\Users\\yehaodee\\.trae-cn\\sdks\\versions\\node\\current"
         - "C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v12.1\\bin"
         - "C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v12.1\\libnvvp"
         - "C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v12.8\\bin"
@@ -5439,12 +5814,12 @@ events:
         - "C:\\Users\\yehaodee\\AppData\\Local\\Programs\\Python\\Python313\\Scripts"
         - "C:\\Users\\yehaodee\\AppData\\Roaming\\npm"
         - "."
-      CMAKE_INSTALL_PREFIX: "C:/Program Files (x86)/breakout_week2"
+      CMAKE_INSTALL_PREFIX: "C:/Program Files (x86)/breakout"
       CMAKE_SYSTEM_PREFIX_PATH:
         - "C:/Program Files"
         - "C:/Program Files (x86)"
         - "C:/Program Files/CMake"
-        - "C:/Program Files (x86)/breakout_week2"
+        - "C:/Program Files (x86)/breakout"
   -
     kind: "try_compile-v1"
     backtrace:
@@ -5454,8 +5829,8 @@ events:
     checks:
       - "Detecting C compiler ABI info"
     directories:
-      source: "D:/CS/CPP/DAYI_XIA/week2/build/CMakeFiles/CMakeScratch/TryCompile-sluxek"
-      binary: "D:/CS/CPP/DAYI_XIA/week2/build/CMakeFiles/CMakeScratch/TryCompile-sluxek"
+      source: "D:/CS/CPP/DAYI_XIA/Breakout-Game/build/CMakeFiles/CMakeScratch/TryCompile-w3jbsz"
+      binary: "D:/CS/CPP/DAYI_XIA/Breakout-Game/build/CMakeFiles/CMakeScratch/TryCompile-w3jbsz"
     cmakeVariables:
       CMAKE_CXX_STDLIB_MODULES_JSON: ""
       CMAKE_C_FLAGS: ""
@@ -5465,13 +5840,13 @@ events:
       variable: "CMAKE_C_ABI_COMPILED"
       cached: true
       stdout: |
-        Change Dir: 'D:/CS/CPP/DAYI_XIA/week2/build/CMakeFiles/CMakeScratch/TryCompile-sluxek'
+        Change Dir: 'D:/CS/CPP/DAYI_XIA/Breakout-Game/build/CMakeFiles/CMakeScratch/TryCompile-w3jbsz'
         
-        Run Build Command(s): "C:/Program Files/CMake/bin/cmake.exe" -E env VERBOSE=1 D:/mingw-w64/bin/mingw32-make.exe -f Makefile cmTC_4bcd1/fast
-        D:/mingw-w64/bin/mingw32-make.exe  -f CMakeFiles\\cmTC_4bcd1.dir\\build.make CMakeFiles/cmTC_4bcd1.dir/build
-        mingw32-make[1]: Entering directory 'D:/CS/CPP/DAYI_XIA/week2/build/CMakeFiles/CMakeScratch/TryCompile-sluxek'
-        Building C object CMakeFiles/cmTC_4bcd1.dir/CMakeCCompilerABI.c.obj
-        D:\\mingw-w64\\bin\\gcc.exe   -v -o CMakeFiles\\cmTC_4bcd1.dir\\CMakeCCompilerABI.c.obj -c "C:\\Program Files\\CMake\\share\\cmake-4.3\\Modules\\CMakeCCompilerABI.c"
+        Run Build Command(s): "C:/Program Files/CMake/bin/cmake.exe" -E env VERBOSE=1 D:/mingw-w64/bin/mingw32-make.exe -f Makefile cmTC_1dccf/fast
+        D:/mingw-w64/bin/mingw32-make.exe  -f CMakeFiles\\cmTC_1dccf.dir\\build.make CMakeFiles/cmTC_1dccf.dir/build
+        mingw32-make[1]: Entering directory 'D:/CS/CPP/DAYI_XIA/Breakout-Game/build/CMakeFiles/CMakeScratch/TryCompile-w3jbsz'
+        Building C object CMakeFiles/cmTC_1dccf.dir/CMakeCCompilerABI.c.obj
+        D:\\mingw-w64\\bin\\gcc.exe   -v -o CMakeFiles\\cmTC_1dccf.dir\\CMakeCCompilerABI.c.obj -c "C:\\Program Files\\CMake\\share\\cmake-4.3\\Modules\\CMakeCCompilerABI.c"
         Using built-in specs.
         COLLECT_GCC=D:\\mingw-w64\\bin\\gcc.exe
         Target: x86_64-w64-mingw32
@@ -5479,8 +5854,8 @@ events:
         Thread model: win32
         Supported LTO compression algorithms: zlib
         gcc version 13.2.0 (x86_64-win32-seh-rev0, Built by MinGW-Builds project) 
-        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles\\cmTC_4bcd1.dir\\CMakeCCompilerABI.c.obj' '-c' '-mtune=core2' '-march=nocona' '-dumpdir' 'CMakeFiles\\cmTC_4bcd1.dir\\'
-         D:/mingw-w64/bin/../libexec/gcc/x86_64-w64-mingw32/13.2.0/cc1.exe -quiet -v -iprefix D:/mingw-w64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/ -U_REENTRANT C:\\Program Files\\CMake\\share\\cmake-4.3\\Modules\\CMakeCCompilerABI.c -quiet -dumpdir CMakeFiles\\cmTC_4bcd1.dir\\ -dumpbase CMakeCCompilerABI.c.c -dumpbase-ext .c -mtune=core2 -march=nocona -version -o C:\\Users\\yehaodee\\AppData\\Local\\Temp\\ccEDDCHr.s
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles\\cmTC_1dccf.dir\\CMakeCCompilerABI.c.obj' '-c' '-mtune=core2' '-march=nocona' '-dumpdir' 'CMakeFiles\\cmTC_1dccf.dir\\'
+         D:/mingw-w64/bin/../libexec/gcc/x86_64-w64-mingw32/13.2.0/cc1.exe -quiet -v -iprefix D:/mingw-w64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/ -U_REENTRANT C:\\Program Files\\CMake\\share\\cmake-4.3\\Modules\\CMakeCCompilerABI.c -quiet -dumpdir CMakeFiles\\cmTC_1dccf.dir\\ -dumpbase CMakeCCompilerABI.c.c -dumpbase-ext .c -mtune=core2 -march=nocona -version -o C:\\Users\\yehaodee\\AppData\\Local\\Temp\\ccyUSoFI.s
         GNU C17 (x86_64-win32-seh-rev0, Built by MinGW-Builds project) version 13.2.0 (x86_64-w64-mingw32)
         	compiled by GNU C version 13.2.0, GMP version 6.2.1, MPFR version 4.1.0, MPC version 1.2.1, isl version isl-0.25-GMP
         
@@ -5497,14 +5872,14 @@ events:
          D:/mingw-w64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/../../../../x86_64-w64-mingw32/include
         End of search list.
         Compiler executable checksum: ecb3ad3cf729dd01e6af0eb48116ef7a
-        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles\\cmTC_4bcd1.dir\\CMakeCCompilerABI.c.obj' '-c' '-mtune=core2' '-march=nocona' '-dumpdir' 'CMakeFiles\\cmTC_4bcd1.dir\\'
-         D:/mingw-w64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/../../../../x86_64-w64-mingw32/bin/as.exe -v -o CMakeFiles\\cmTC_4bcd1.dir\\CMakeCCompilerABI.c.obj C:\\Users\\yehaodee\\AppData\\Local\\Temp\\ccEDDCHr.s
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles\\cmTC_1dccf.dir\\CMakeCCompilerABI.c.obj' '-c' '-mtune=core2' '-march=nocona' '-dumpdir' 'CMakeFiles\\cmTC_1dccf.dir\\'
+         D:/mingw-w64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/../../../../x86_64-w64-mingw32/bin/as.exe -v -o CMakeFiles\\cmTC_1dccf.dir\\CMakeCCompilerABI.c.obj C:\\Users\\yehaodee\\AppData\\Local\\Temp\\ccyUSoFI.s
         GNU assembler version 2.39 (x86_64-w64-mingw32) using BFD version (GNU Binutils) 2.39
         COMPILER_PATH=D:/mingw-w64/bin/../libexec/gcc/x86_64-w64-mingw32/13.2.0/;D:/mingw-w64/bin/../libexec/gcc/;D:/mingw-w64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/../../../../x86_64-w64-mingw32/bin/
         LIBRARY_PATH=D:/mingw-w64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/;D:/mingw-w64/bin/../lib/gcc/;D:/mingw-w64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/../../../../x86_64-w64-mingw32/lib/../lib/;D:/mingw-w64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/../../../../lib/;D:/mingw-w64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/../../../../x86_64-w64-mingw32/lib/;D:/mingw-w64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/../../../
-        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles\\cmTC_4bcd1.dir\\CMakeCCompilerABI.c.obj' '-c' '-mtune=core2' '-march=nocona' '-dumpdir' 'CMakeFiles\\cmTC_4bcd1.dir\\CMakeCCompilerABI.c.'
-        Linking C executable cmTC_4bcd1.exe
-        "C:\\Program Files\\CMake\\bin\\cmake.exe" -E cmake_link_script CMakeFiles\\cmTC_4bcd1.dir\\link.txt --verbose=1
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles\\cmTC_1dccf.dir\\CMakeCCompilerABI.c.obj' '-c' '-mtune=core2' '-march=nocona' '-dumpdir' 'CMakeFiles\\cmTC_1dccf.dir\\CMakeCCompilerABI.c.'
+        Linking C executable cmTC_1dccf.exe
+        "C:\\Program Files\\CMake\\bin\\cmake.exe" -E cmake_link_script CMakeFiles\\cmTC_1dccf.dir\\link.txt --verbose=1
         Using built-in specs.
         COLLECT_GCC=D:\\mingw-w64\\bin\\gcc.exe
         COLLECT_LTO_WRAPPER=D:/mingw-w64/bin/../libexec/gcc/x86_64-w64-mingw32/13.2.0/lto-wrapper.exe
@@ -5515,16 +5890,16 @@ events:
         gcc version 13.2.0 (x86_64-win32-seh-rev0, Built by MinGW-Builds project) 
         COMPILER_PATH=D:/mingw-w64/bin/../libexec/gcc/x86_64-w64-mingw32/13.2.0/;D:/mingw-w64/bin/../libexec/gcc/;D:/mingw-w64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/../../../../x86_64-w64-mingw32/bin/
         LIBRARY_PATH=D:/mingw-w64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/;D:/mingw-w64/bin/../lib/gcc/;D:/mingw-w64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/../../../../x86_64-w64-mingw32/lib/../lib/;D:/mingw-w64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/../../../../lib/;D:/mingw-w64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/../../../../x86_64-w64-mingw32/lib/;D:/mingw-w64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/../../../
-        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_4bcd1.exe' '-mtune=core2' '-march=nocona' '-dumpdir' 'cmTC_4bcd1.'
-         D:/mingw-w64/bin/../libexec/gcc/x86_64-w64-mingw32/13.2.0/collect2.exe -plugin D:/mingw-w64/bin/../libexec/gcc/x86_64-w64-mingw32/13.2.0/liblto_plugin.dll -plugin-opt=D:/mingw-w64/bin/../libexec/gcc/x86_64-w64-mingw32/13.2.0/lto-wrapper.exe -plugin-opt=-fresolution=C:\\Users\\yehaodee\\AppData\\Local\\Temp\\ccKMrvl9.res -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_eh -plugin-opt=-pass-through=-lmoldname -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-ladvapi32 -plugin-opt=-pass-through=-lshell32 -plugin-opt=-pass-through=-luser32 -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-liconv -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_eh -plugin-opt=-pass-through=-lmoldname -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 --sysroot=C:/buildroot/x86_64-1320-win32-seh-msvcrt-rt_v11-rev0/mingw64 -m i386pep -Bdynamic -o cmTC_4bcd1.exe D:/mingw-w64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/../../../../x86_64-w64-mingw32/lib/../lib/crt2.o D:/mingw-w64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/crtbegin.o -LD:/mingw-w64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0 -LD:/mingw-w64/bin/../lib/gcc -LD:/mingw-w64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/../../../../x86_64-w64-mingw32/lib/../lib -LD:/mingw-w64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/../../../../lib -LD:/mingw-w64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/../../../../x86_64-w64-mingw32/lib -LD:/mingw-w64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/../../.. -v --whole-archive CMakeFiles\\cmTC_4bcd1.dir/objects.a --no-whole-archive --out-implib libcmTC_4bcd1.dll.a --major-image-version 0 --minor-image-version 0 -lmingw32 -lgcc -lgcc_eh -lmoldname -lmingwex -lmsvcrt -lkernel32 -ladvapi32 -lshell32 -luser32 -lkernel32 -liconv -lmingw32 -lgcc -lgcc_eh -lmoldname -lmingwex -lmsvcrt -lkernel32 D:/mingw-w64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/crtend.o
+        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_1dccf.exe' '-mtune=core2' '-march=nocona' '-dumpdir' 'cmTC_1dccf.'
+         D:/mingw-w64/bin/../libexec/gcc/x86_64-w64-mingw32/13.2.0/collect2.exe -plugin D:/mingw-w64/bin/../libexec/gcc/x86_64-w64-mingw32/13.2.0/liblto_plugin.dll -plugin-opt=D:/mingw-w64/bin/../libexec/gcc/x86_64-w64-mingw32/13.2.0/lto-wrapper.exe -plugin-opt=-fresolution=C:\\Users\\yehaodee\\AppData\\Local\\Temp\\ccDsJynv.res -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_eh -plugin-opt=-pass-through=-lmoldname -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-ladvapi32 -plugin-opt=-pass-through=-lshell32 -plugin-opt=-pass-through=-luser32 -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-liconv -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_eh -plugin-opt=-pass-through=-lmoldname -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 --sysroot=C:/buildroot/x86_64-1320-win32-seh-msvcrt-rt_v11-rev0/mingw64 -m i386pep -Bdynamic -o cmTC_1dccf.exe D:/mingw-w64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/../../../../x86_64-w64-mingw32/lib/../lib/crt2.o D:/mingw-w64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/crtbegin.o -LD:/mingw-w64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0 -LD:/mingw-w64/bin/../lib/gcc -LD:/mingw-w64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/../../../../x86_64-w64-mingw32/lib/../lib -LD:/mingw-w64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/../../../../lib -LD:/mingw-w64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/../../../../x86_64-w64-mingw32/lib -LD:/mingw-w64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/../../.. -v --whole-archive CMakeFiles\\cmTC_1dccf.dir/objects.a --no-whole-archive --out-implib libcmTC_1dccf.dll.a --major-image-version 0 --minor-image-version 0 -lmingw32 -lgcc -lgcc_eh -lmoldname -lmingwex -lmsvcrt -lkernel32 -ladvapi32 -lshell32 -luser32 -lkernel32 -liconv -lmingw32 -lgcc -lgcc_eh -lmoldname -lmingwex -lmsvcrt -lkernel32 D:/mingw-w64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/crtend.o
         collect2 version 13.2.0
-        D:/mingw-w64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/../../../../x86_64-w64-mingw32/bin/ld.exe -plugin D:/mingw-w64/bin/../libexec/gcc/x86_64-w64-mingw32/13.2.0/liblto_plugin.dll -plugin-opt=D:/mingw-w64/bin/../libexec/gcc/x86_64-w64-mingw32/13.2.0/lto-wrapper.exe -plugin-opt=-fresolution=C:\\Users\\yehaodee\\AppData\\Local\\Temp\\ccKMrvl9.res -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_eh -plugin-opt=-pass-through=-lmoldname -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-ladvapi32 -plugin-opt=-pass-through=-lshell32 -plugin-opt=-pass-through=-luser32 -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-liconv -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_eh -plugin-opt=-pass-through=-lmoldname -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 --sysroot=C:/buildroot/x86_64-1320-win32-seh-msvcrt-rt_v11-rev0/mingw64 -m i386pep -Bdynamic -o cmTC_4bcd1.exe D:/mingw-w64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/../../../../x86_64-w64-mingw32/lib/../lib/crt2.o D:/mingw-w64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/crtbegin.o -LD:/mingw-w64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0 -LD:/mingw-w64/bin/../lib/gcc -LD:/mingw-w64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/../../../../x86_64-w64-mingw32/lib/../lib -LD:/mingw-w64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/../../../../lib -LD:/mingw-w64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/../../../../x86_64-w64-mingw32/lib -LD:/mingw-w64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/../../.. -v --whole-archive CMakeFiles\\cmTC_4bcd1.dir/objects.a --no-whole-archive --out-implib libcmTC_4bcd1.dll.a --major-image-version 0 --minor-image-version 0 -lmingw32 -lgcc -lgcc_eh -lmoldname -lmingwex -lmsvcrt -lkernel32 -ladvapi32 -lshell32 -luser32 -lkernel32 -liconv -lmingw32 -lgcc -lgcc_eh -lmoldname -lmingwex -lmsvcrt -lkernel32 D:/mingw-w64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/crtend.o
+        D:/mingw-w64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/../../../../x86_64-w64-mingw32/bin/ld.exe -plugin D:/mingw-w64/bin/../libexec/gcc/x86_64-w64-mingw32/13.2.0/liblto_plugin.dll -plugin-opt=D:/mingw-w64/bin/../libexec/gcc/x86_64-w64-mingw32/13.2.0/lto-wrapper.exe -plugin-opt=-fresolution=C:\\Users\\yehaodee\\AppData\\Local\\Temp\\ccDsJynv.res -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_eh -plugin-opt=-pass-through=-lmoldname -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-ladvapi32 -plugin-opt=-pass-through=-lshell32 -plugin-opt=-pass-through=-luser32 -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-liconv -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_eh -plugin-opt=-pass-through=-lmoldname -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 --sysroot=C:/buildroot/x86_64-1320-win32-seh-msvcrt-rt_v11-rev0/mingw64 -m i386pep -Bdynamic -o cmTC_1dccf.exe D:/mingw-w64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/../../../../x86_64-w64-mingw32/lib/../lib/crt2.o D:/mingw-w64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/crtbegin.o -LD:/mingw-w64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0 -LD:/mingw-w64/bin/../lib/gcc -LD:/mingw-w64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/../../../../x86_64-w64-mingw32/lib/../lib -LD:/mingw-w64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/../../../../lib -LD:/mingw-w64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/../../../../x86_64-w64-mingw32/lib -LD:/mingw-w64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/../../.. -v --whole-archive CMakeFiles\\cmTC_1dccf.dir/objects.a --no-whole-archive --out-implib libcmTC_1dccf.dll.a --major-image-version 0 --minor-image-version 0 -lmingw32 -lgcc -lgcc_eh -lmoldname -lmingwex -lmsvcrt -lkernel32 -ladvapi32 -lshell32 -luser32 -lkernel32 -liconv -lmingw32 -lgcc -lgcc_eh -lmoldname -lmingwex -lmsvcrt -lkernel32 D:/mingw-w64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/crtend.o
         GNU ld (GNU Binutils) 2.39
-        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_4bcd1.exe' '-mtune=core2' '-march=nocona' '-dumpdir' 'cmTC_4bcd1.'
-        "C:\\Program Files\\CMake\\bin\\cmake.exe" -E rm -f CMakeFiles\\cmTC_4bcd1.dir/objects.a
-        D:\\mingw-w64\\bin\\ar.exe qc CMakeFiles\\cmTC_4bcd1.dir/objects.a @CMakeFiles\\cmTC_4bcd1.dir\\objects1.rsp
-        D:\\mingw-w64\\bin\\gcc.exe  -v -Wl,-v -Wl,--whole-archive CMakeFiles\\cmTC_4bcd1.dir/objects.a -Wl,--no-whole-archive -o cmTC_4bcd1.exe -Wl,--out-implib,libcmTC_4bcd1.dll.a -Wl,--major-image-version,0,--minor-image-version,0
-        mingw32-make[1]: Leaving directory 'D:/CS/CPP/DAYI_XIA/week2/build/CMakeFiles/CMakeScratch/TryCompile-sluxek'
+        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_1dccf.exe' '-mtune=core2' '-march=nocona' '-dumpdir' 'cmTC_1dccf.'
+        "C:\\Program Files\\CMake\\bin\\cmake.exe" -E rm -f CMakeFiles\\cmTC_1dccf.dir/objects.a
+        D:\\mingw-w64\\bin\\ar.exe qc CMakeFiles\\cmTC_1dccf.dir/objects.a @CMakeFiles\\cmTC_1dccf.dir\\objects1.rsp
+        D:\\mingw-w64\\bin\\gcc.exe  -v -Wl,-v -Wl,--whole-archive CMakeFiles\\cmTC_1dccf.dir/objects.a -Wl,--no-whole-archive -o cmTC_1dccf.exe -Wl,--out-implib,libcmTC_1dccf.dll.a -Wl,--major-image-version,0,--minor-image-version,0
+        mingw32-make[1]: Leaving directory 'D:/CS/CPP/DAYI_XIA/Breakout-Game/build/CMakeFiles/CMakeScratch/TryCompile-w3jbsz'
         
       exitCode: 0
   -
@@ -5557,13 +5932,13 @@ events:
       Parsed C implicit link information:
         link line regex: [^( *|.*[/\\])(ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
         linker tool regex: [^[ 	]*(->|"|[0-9]+>[ 	-]*Build:[ 	0-9]+ ms[ 	]*)?[ 	]*(([^"]*[/\\])?(ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)))("|,| |$)]
-        ignore line: [Change Dir: 'D:/CS/CPP/DAYI_XIA/week2/build/CMakeFiles/CMakeScratch/TryCompile-sluxek']
+        ignore line: [Change Dir: 'D:/CS/CPP/DAYI_XIA/Breakout-Game/build/CMakeFiles/CMakeScratch/TryCompile-w3jbsz']
         ignore line: []
-        ignore line: [Run Build Command(s): "C:/Program Files/CMake/bin/cmake.exe" -E env VERBOSE=1 D:/mingw-w64/bin/mingw32-make.exe -f Makefile cmTC_4bcd1/fast]
-        ignore line: [D:/mingw-w64/bin/mingw32-make.exe  -f CMakeFiles\\cmTC_4bcd1.dir\\build.make CMakeFiles/cmTC_4bcd1.dir/build]
-        ignore line: [mingw32-make[1]: Entering directory 'D:/CS/CPP/DAYI_XIA/week2/build/CMakeFiles/CMakeScratch/TryCompile-sluxek']
-        ignore line: [Building C object CMakeFiles/cmTC_4bcd1.dir/CMakeCCompilerABI.c.obj]
-        ignore line: [D:\\mingw-w64\\bin\\gcc.exe   -v -o CMakeFiles\\cmTC_4bcd1.dir\\CMakeCCompilerABI.c.obj -c "C:\\Program Files\\CMake\\share\\cmake-4.3\\Modules\\CMakeCCompilerABI.c"]
+        ignore line: [Run Build Command(s): "C:/Program Files/CMake/bin/cmake.exe" -E env VERBOSE=1 D:/mingw-w64/bin/mingw32-make.exe -f Makefile cmTC_1dccf/fast]
+        ignore line: [D:/mingw-w64/bin/mingw32-make.exe  -f CMakeFiles\\cmTC_1dccf.dir\\build.make CMakeFiles/cmTC_1dccf.dir/build]
+        ignore line: [mingw32-make[1]: Entering directory 'D:/CS/CPP/DAYI_XIA/Breakout-Game/build/CMakeFiles/CMakeScratch/TryCompile-w3jbsz']
+        ignore line: [Building C object CMakeFiles/cmTC_1dccf.dir/CMakeCCompilerABI.c.obj]
+        ignore line: [D:\\mingw-w64\\bin\\gcc.exe   -v -o CMakeFiles\\cmTC_1dccf.dir\\CMakeCCompilerABI.c.obj -c "C:\\Program Files\\CMake\\share\\cmake-4.3\\Modules\\CMakeCCompilerABI.c"]
         ignore line: [Using built-in specs.]
         ignore line: [COLLECT_GCC=D:\\mingw-w64\\bin\\gcc.exe]
         ignore line: [Target: x86_64-w64-mingw32]
@@ -5571,8 +5946,8 @@ events:
         ignore line: [Thread model: win32]
         ignore line: [Supported LTO compression algorithms: zlib]
         ignore line: [gcc version 13.2.0 (x86_64-win32-seh-rev0  Built by MinGW-Builds project) ]
-        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles\\cmTC_4bcd1.dir\\CMakeCCompilerABI.c.obj' '-c' '-mtune=core2' '-march=nocona' '-dumpdir' 'CMakeFiles\\cmTC_4bcd1.dir\\']
-        ignore line: [ D:/mingw-w64/bin/../libexec/gcc/x86_64-w64-mingw32/13.2.0/cc1.exe -quiet -v -iprefix D:/mingw-w64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/ -U_REENTRANT C:\\Program Files\\CMake\\share\\cmake-4.3\\Modules\\CMakeCCompilerABI.c -quiet -dumpdir CMakeFiles\\cmTC_4bcd1.dir\\ -dumpbase CMakeCCompilerABI.c.c -dumpbase-ext .c -mtune=core2 -march=nocona -version -o C:\\Users\\yehaodee\\AppData\\Local\\Temp\\ccEDDCHr.s]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles\\cmTC_1dccf.dir\\CMakeCCompilerABI.c.obj' '-c' '-mtune=core2' '-march=nocona' '-dumpdir' 'CMakeFiles\\cmTC_1dccf.dir\\']
+        ignore line: [ D:/mingw-w64/bin/../libexec/gcc/x86_64-w64-mingw32/13.2.0/cc1.exe -quiet -v -iprefix D:/mingw-w64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/ -U_REENTRANT C:\\Program Files\\CMake\\share\\cmake-4.3\\Modules\\CMakeCCompilerABI.c -quiet -dumpdir CMakeFiles\\cmTC_1dccf.dir\\ -dumpbase CMakeCCompilerABI.c.c -dumpbase-ext .c -mtune=core2 -march=nocona -version -o C:\\Users\\yehaodee\\AppData\\Local\\Temp\\ccyUSoFI.s]
         ignore line: [GNU C17 (x86_64-win32-seh-rev0  Built by MinGW-Builds project) version 13.2.0 (x86_64-w64-mingw32)]
         ignore line: [	compiled by GNU C version 13.2.0  GMP version 6.2.1  MPFR version 4.1.0  MPC version 1.2.1  isl version isl-0.25-GMP]
         ignore line: []
@@ -5589,8 +5964,8 @@ events:
         ignore line: [ D:/mingw-w64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/../../../../x86_64-w64-mingw32/include]
         ignore line: [End of search list.]
         ignore line: [Compiler executable checksum: ecb3ad3cf729dd01e6af0eb48116ef7a]
-        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles\\cmTC_4bcd1.dir\\CMakeCCompilerABI.c.obj' '-c' '-mtune=core2' '-march=nocona' '-dumpdir' 'CMakeFiles\\cmTC_4bcd1.dir\\']
-        ignore line: [ D:/mingw-w64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/../../../../x86_64-w64-mingw32/bin/as.exe -v -o CMakeFiles\\cmTC_4bcd1.dir\\CMakeCCompilerABI.c.obj C:\\Users\\yehaodee\\AppData\\Local\\Temp\\ccEDDCHr.s]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles\\cmTC_1dccf.dir\\CMakeCCompilerABI.c.obj' '-c' '-mtune=core2' '-march=nocona' '-dumpdir' 'CMakeFiles\\cmTC_1dccf.dir\\']
+        ignore line: [ D:/mingw-w64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/../../../../x86_64-w64-mingw32/bin/as.exe -v -o CMakeFiles\\cmTC_1dccf.dir\\CMakeCCompilerABI.c.obj C:\\Users\\yehaodee\\AppData\\Local\\Temp\\ccyUSoFI.s]
         ignore line: [GNU assembler version 2.39 (x86_64-w64-mingw32) using BFD version (GNU Binutils) 2.39]
         ignore line: [COMPILER_PATH=D:/mingw-w64/bin/../libexec/gcc/x86_64-w64-mingw32/13.2.0/]
         ignore line: [D:/mingw-w64/bin/../libexec/gcc/]
@@ -5601,9 +5976,9 @@ events:
         ignore line: [D:/mingw-w64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/../../../../lib/]
         ignore line: [D:/mingw-w64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/../../../../x86_64-w64-mingw32/lib/]
         ignore line: [D:/mingw-w64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/../../../]
-        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles\\cmTC_4bcd1.dir\\CMakeCCompilerABI.c.obj' '-c' '-mtune=core2' '-march=nocona' '-dumpdir' 'CMakeFiles\\cmTC_4bcd1.dir\\CMakeCCompilerABI.c.']
-        ignore line: [Linking C executable cmTC_4bcd1.exe]
-        ignore line: ["C:\\Program Files\\CMake\\bin\\cmake.exe" -E cmake_link_script CMakeFiles\\cmTC_4bcd1.dir\\link.txt --verbose=1]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles\\cmTC_1dccf.dir\\CMakeCCompilerABI.c.obj' '-c' '-mtune=core2' '-march=nocona' '-dumpdir' 'CMakeFiles\\cmTC_1dccf.dir\\CMakeCCompilerABI.c.']
+        ignore line: [Linking C executable cmTC_1dccf.exe]
+        ignore line: ["C:\\Program Files\\CMake\\bin\\cmake.exe" -E cmake_link_script CMakeFiles\\cmTC_1dccf.dir\\link.txt --verbose=1]
         ignore line: [Using built-in specs.]
         ignore line: [COLLECT_GCC=D:\\mingw-w64\\bin\\gcc.exe]
         ignore line: [COLLECT_LTO_WRAPPER=D:/mingw-w64/bin/../libexec/gcc/x86_64-w64-mingw32/13.2.0/lto-wrapper.exe]
@@ -5621,13 +5996,13 @@ events:
         ignore line: [D:/mingw-w64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/../../../../lib/]
         ignore line: [D:/mingw-w64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/../../../../x86_64-w64-mingw32/lib/]
         ignore line: [D:/mingw-w64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/../../../]
-        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_4bcd1.exe' '-mtune=core2' '-march=nocona' '-dumpdir' 'cmTC_4bcd1.']
-        link line: [ D:/mingw-w64/bin/../libexec/gcc/x86_64-w64-mingw32/13.2.0/collect2.exe -plugin D:/mingw-w64/bin/../libexec/gcc/x86_64-w64-mingw32/13.2.0/liblto_plugin.dll -plugin-opt=D:/mingw-w64/bin/../libexec/gcc/x86_64-w64-mingw32/13.2.0/lto-wrapper.exe -plugin-opt=-fresolution=C:\\Users\\yehaodee\\AppData\\Local\\Temp\\ccKMrvl9.res -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_eh -plugin-opt=-pass-through=-lmoldname -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-ladvapi32 -plugin-opt=-pass-through=-lshell32 -plugin-opt=-pass-through=-luser32 -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-liconv -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_eh -plugin-opt=-pass-through=-lmoldname -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 --sysroot=C:/buildroot/x86_64-1320-win32-seh-msvcrt-rt_v11-rev0/mingw64 -m i386pep -Bdynamic -o cmTC_4bcd1.exe D:/mingw-w64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/../../../../x86_64-w64-mingw32/lib/../lib/crt2.o D:/mingw-w64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/crtbegin.o -LD:/mingw-w64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0 -LD:/mingw-w64/bin/../lib/gcc -LD:/mingw-w64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/../../../../x86_64-w64-mingw32/lib/../lib -LD:/mingw-w64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/../../../../lib -LD:/mingw-w64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/../../../../x86_64-w64-mingw32/lib -LD:/mingw-w64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/../../.. -v --whole-archive CMakeFiles\\cmTC_4bcd1.dir/objects.a --no-whole-archive --out-implib libcmTC_4bcd1.dll.a --major-image-version 0 --minor-image-version 0 -lmingw32 -lgcc -lgcc_eh -lmoldname -lmingwex -lmsvcrt -lkernel32 -ladvapi32 -lshell32 -luser32 -lkernel32 -liconv -lmingw32 -lgcc -lgcc_eh -lmoldname -lmingwex -lmsvcrt -lkernel32 D:/mingw-w64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/crtend.o]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_1dccf.exe' '-mtune=core2' '-march=nocona' '-dumpdir' 'cmTC_1dccf.']
+        link line: [ D:/mingw-w64/bin/../libexec/gcc/x86_64-w64-mingw32/13.2.0/collect2.exe -plugin D:/mingw-w64/bin/../libexec/gcc/x86_64-w64-mingw32/13.2.0/liblto_plugin.dll -plugin-opt=D:/mingw-w64/bin/../libexec/gcc/x86_64-w64-mingw32/13.2.0/lto-wrapper.exe -plugin-opt=-fresolution=C:\\Users\\yehaodee\\AppData\\Local\\Temp\\ccDsJynv.res -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_eh -plugin-opt=-pass-through=-lmoldname -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-ladvapi32 -plugin-opt=-pass-through=-lshell32 -plugin-opt=-pass-through=-luser32 -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-liconv -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_eh -plugin-opt=-pass-through=-lmoldname -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 --sysroot=C:/buildroot/x86_64-1320-win32-seh-msvcrt-rt_v11-rev0/mingw64 -m i386pep -Bdynamic -o cmTC_1dccf.exe D:/mingw-w64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/../../../../x86_64-w64-mingw32/lib/../lib/crt2.o D:/mingw-w64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/crtbegin.o -LD:/mingw-w64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0 -LD:/mingw-w64/bin/../lib/gcc -LD:/mingw-w64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/../../../../x86_64-w64-mingw32/lib/../lib -LD:/mingw-w64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/../../../../lib -LD:/mingw-w64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/../../../../x86_64-w64-mingw32/lib -LD:/mingw-w64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/../../.. -v --whole-archive CMakeFiles\\cmTC_1dccf.dir/objects.a --no-whole-archive --out-implib libcmTC_1dccf.dll.a --major-image-version 0 --minor-image-version 0 -lmingw32 -lgcc -lgcc_eh -lmoldname -lmingwex -lmsvcrt -lkernel32 -ladvapi32 -lshell32 -luser32 -lkernel32 -liconv -lmingw32 -lgcc -lgcc_eh -lmoldname -lmingwex -lmsvcrt -lkernel32 D:/mingw-w64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/crtend.o]
           arg [D:/mingw-w64/bin/../libexec/gcc/x86_64-w64-mingw32/13.2.0/collect2.exe] ==> ignore
           arg [-plugin] ==> ignore
           arg [D:/mingw-w64/bin/../libexec/gcc/x86_64-w64-mingw32/13.2.0/liblto_plugin.dll] ==> ignore
           arg [-plugin-opt=D:/mingw-w64/bin/../libexec/gcc/x86_64-w64-mingw32/13.2.0/lto-wrapper.exe] ==> ignore
-          arg [-plugin-opt=-fresolution=C:\\Users\\yehaodee\\AppData\\Local\\Temp\\ccKMrvl9.res] ==> ignore
+          arg [-plugin-opt=-fresolution=C:\\Users\\yehaodee\\AppData\\Local\\Temp\\ccDsJynv.res] ==> ignore
           arg [-plugin-opt=-pass-through=-lmingw32] ==> ignore
           arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
           arg [-plugin-opt=-pass-through=-lgcc_eh] ==> ignore
@@ -5652,7 +6027,7 @@ events:
           arg [i386pep] ==> ignore
           arg [-Bdynamic] ==> search dynamic
           arg [-o] ==> ignore
-          arg [cmTC_4bcd1.exe] ==> ignore
+          arg [cmTC_1dccf.exe] ==> ignore
           arg [D:/mingw-w64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/../../../../x86_64-w64-mingw32/lib/../lib/crt2.o] ==> obj [D:/mingw-w64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/../../../../x86_64-w64-mingw32/lib/../lib/crt2.o]
           arg [D:/mingw-w64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/crtbegin.o] ==> obj [D:/mingw-w64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/crtbegin.o]
           arg [-LD:/mingw-w64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0] ==> dir [D:/mingw-w64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0]
@@ -5663,10 +6038,10 @@ events:
           arg [-LD:/mingw-w64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/../../..] ==> dir [D:/mingw-w64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/../../..]
           arg [-v] ==> ignore
           arg [--whole-archive] ==> ignore
-          arg [CMakeFiles\\cmTC_4bcd1.dir/objects.a] ==> ignore
+          arg [CMakeFiles\\cmTC_1dccf.dir/objects.a] ==> ignore
           arg [--no-whole-archive] ==> ignore
           arg [--out-implib] ==> ignore
-          arg [libcmTC_4bcd1.dll.a] ==> ignore
+          arg [libcmTC_1dccf.dll.a] ==> ignore
           arg [--major-image-version] ==> ignore
           arg [0] ==> ignore
           arg [--minor-image-version] ==> ignore
@@ -5750,8 +6125,8 @@ events:
     checks:
       - "Detecting CXX compiler ABI info"
     directories:
-      source: "D:/CS/CPP/DAYI_XIA/week2/build/CMakeFiles/CMakeScratch/TryCompile-61m544"
-      binary: "D:/CS/CPP/DAYI_XIA/week2/build/CMakeFiles/CMakeScratch/TryCompile-61m544"
+      source: "D:/CS/CPP/DAYI_XIA/Breakout-Game/build/CMakeFiles/CMakeScratch/TryCompile-80zum6"
+      binary: "D:/CS/CPP/DAYI_XIA/Breakout-Game/build/CMakeFiles/CMakeScratch/TryCompile-80zum6"
     cmakeVariables:
       CMAKE_CXX_FLAGS: ""
       CMAKE_CXX_FLAGS_DEBUG: "-g"
@@ -5762,13 +6137,13 @@ events:
       variable: "CMAKE_CXX_ABI_COMPILED"
       cached: true
       stdout: |
-        Change Dir: 'D:/CS/CPP/DAYI_XIA/week2/build/CMakeFiles/CMakeScratch/TryCompile-61m544'
+        Change Dir: 'D:/CS/CPP/DAYI_XIA/Breakout-Game/build/CMakeFiles/CMakeScratch/TryCompile-80zum6'
         
-        Run Build Command(s): "C:/Program Files/CMake/bin/cmake.exe" -E env VERBOSE=1 D:/mingw-w64/bin/mingw32-make.exe -f Makefile cmTC_df97c/fast
-        D:/mingw-w64/bin/mingw32-make.exe  -f CMakeFiles\\cmTC_df97c.dir\\build.make CMakeFiles/cmTC_df97c.dir/build
-        mingw32-make[1]: Entering directory 'D:/CS/CPP/DAYI_XIA/week2/build/CMakeFiles/CMakeScratch/TryCompile-61m544'
-        Building CXX object CMakeFiles/cmTC_df97c.dir/CMakeCXXCompilerABI.cpp.obj
-        D:\\mingw-w64\\bin\\c++.exe   -v -o CMakeFiles\\cmTC_df97c.dir\\CMakeCXXCompilerABI.cpp.obj -c "C:\\Program Files\\CMake\\share\\cmake-4.3\\Modules\\CMakeCXXCompilerABI.cpp"
+        Run Build Command(s): "C:/Program Files/CMake/bin/cmake.exe" -E env VERBOSE=1 D:/mingw-w64/bin/mingw32-make.exe -f Makefile cmTC_df1db/fast
+        D:/mingw-w64/bin/mingw32-make.exe  -f CMakeFiles\\cmTC_df1db.dir\\build.make CMakeFiles/cmTC_df1db.dir/build
+        mingw32-make[1]: Entering directory 'D:/CS/CPP/DAYI_XIA/Breakout-Game/build/CMakeFiles/CMakeScratch/TryCompile-80zum6'
+        Building CXX object CMakeFiles/cmTC_df1db.dir/CMakeCXXCompilerABI.cpp.obj
+        D:\\mingw-w64\\bin\\c++.exe   -v -o CMakeFiles\\cmTC_df1db.dir\\CMakeCXXCompilerABI.cpp.obj -c "C:\\Program Files\\CMake\\share\\cmake-4.3\\Modules\\CMakeCXXCompilerABI.cpp"
         Using built-in specs.
         COLLECT_GCC=D:\\mingw-w64\\bin\\c++.exe
         Target: x86_64-w64-mingw32
@@ -5776,8 +6151,8 @@ events:
         Thread model: win32
         Supported LTO compression algorithms: zlib
         gcc version 13.2.0 (x86_64-win32-seh-rev0, Built by MinGW-Builds project) 
-        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles\\cmTC_df97c.dir\\CMakeCXXCompilerABI.cpp.obj' '-c' '-shared-libgcc' '-mtune=core2' '-march=nocona' '-dumpdir' 'CMakeFiles\\cmTC_df97c.dir\\'
-         D:/mingw-w64/bin/../libexec/gcc/x86_64-w64-mingw32/13.2.0/cc1plus.exe -quiet -v -iprefix D:/mingw-w64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/ -U_REENTRANT C:\\Program Files\\CMake\\share\\cmake-4.3\\Modules\\CMakeCXXCompilerABI.cpp -quiet -dumpdir CMakeFiles\\cmTC_df97c.dir\\ -dumpbase CMakeCXXCompilerABI.cpp.cpp -dumpbase-ext .cpp -mtune=core2 -march=nocona -version -o C:\\Users\\yehaodee\\AppData\\Local\\Temp\\cc6jvEGN.s
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles\\cmTC_df1db.dir\\CMakeCXXCompilerABI.cpp.obj' '-c' '-shared-libgcc' '-mtune=core2' '-march=nocona' '-dumpdir' 'CMakeFiles\\cmTC_df1db.dir\\'
+         D:/mingw-w64/bin/../libexec/gcc/x86_64-w64-mingw32/13.2.0/cc1plus.exe -quiet -v -iprefix D:/mingw-w64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/ -U_REENTRANT C:\\Program Files\\CMake\\share\\cmake-4.3\\Modules\\CMakeCXXCompilerABI.cpp -quiet -dumpdir CMakeFiles\\cmTC_df1db.dir\\ -dumpbase CMakeCXXCompilerABI.cpp.cpp -dumpbase-ext .cpp -mtune=core2 -march=nocona -version -o C:\\Users\\yehaodee\\AppData\\Local\\Temp\\ccBNJoDe.s
         GNU C++17 (x86_64-win32-seh-rev0, Built by MinGW-Builds project) version 13.2.0 (x86_64-w64-mingw32)
         	compiled by GNU C version 13.2.0, GMP version 6.2.1, MPFR version 4.1.0, MPC version 1.2.1, isl version isl-0.25-GMP
         
@@ -5800,14 +6175,14 @@ events:
          D:/mingw-w64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/../../../../x86_64-w64-mingw32/include
         End of search list.
         Compiler executable checksum: f358ed413b645d0d8c4acb7d5452859f
-        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles\\cmTC_df97c.dir\\CMakeCXXCompilerABI.cpp.obj' '-c' '-shared-libgcc' '-mtune=core2' '-march=nocona' '-dumpdir' 'CMakeFiles\\cmTC_df97c.dir\\'
-         D:/mingw-w64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/../../../../x86_64-w64-mingw32/bin/as.exe -v -o CMakeFiles\\cmTC_df97c.dir\\CMakeCXXCompilerABI.cpp.obj C:\\Users\\yehaodee\\AppData\\Local\\Temp\\cc6jvEGN.s
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles\\cmTC_df1db.dir\\CMakeCXXCompilerABI.cpp.obj' '-c' '-shared-libgcc' '-mtune=core2' '-march=nocona' '-dumpdir' 'CMakeFiles\\cmTC_df1db.dir\\'
+         D:/mingw-w64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/../../../../x86_64-w64-mingw32/bin/as.exe -v -o CMakeFiles\\cmTC_df1db.dir\\CMakeCXXCompilerABI.cpp.obj C:\\Users\\yehaodee\\AppData\\Local\\Temp\\ccBNJoDe.s
         GNU assembler version 2.39 (x86_64-w64-mingw32) using BFD version (GNU Binutils) 2.39
         COMPILER_PATH=D:/mingw-w64/bin/../libexec/gcc/x86_64-w64-mingw32/13.2.0/;D:/mingw-w64/bin/../libexec/gcc/;D:/mingw-w64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/../../../../x86_64-w64-mingw32/bin/
         LIBRARY_PATH=D:/mingw-w64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/;D:/mingw-w64/bin/../lib/gcc/;D:/mingw-w64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/../../../../x86_64-w64-mingw32/lib/../lib/;D:/mingw-w64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/../../../../lib/;D:/mingw-w64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/../../../../x86_64-w64-mingw32/lib/;D:/mingw-w64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/../../../
-        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles\\cmTC_df97c.dir\\CMakeCXXCompilerABI.cpp.obj' '-c' '-shared-libgcc' '-mtune=core2' '-march=nocona' '-dumpdir' 'CMakeFiles\\cmTC_df97c.dir\\CMakeCXXCompilerABI.cpp.'
-        Linking CXX executable cmTC_df97c.exe
-        "C:\\Program Files\\CMake\\bin\\cmake.exe" -E cmake_link_script CMakeFiles\\cmTC_df97c.dir\\link.txt --verbose=1
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles\\cmTC_df1db.dir\\CMakeCXXCompilerABI.cpp.obj' '-c' '-shared-libgcc' '-mtune=core2' '-march=nocona' '-dumpdir' 'CMakeFiles\\cmTC_df1db.dir\\CMakeCXXCompilerABI.cpp.'
+        Linking CXX executable cmTC_df1db.exe
+        "C:\\Program Files\\CMake\\bin\\cmake.exe" -E cmake_link_script CMakeFiles\\cmTC_df1db.dir\\link.txt --verbose=1
         Using built-in specs.
         COLLECT_GCC=D:\\mingw-w64\\bin\\c++.exe
         COLLECT_LTO_WRAPPER=D:/mingw-w64/bin/../libexec/gcc/x86_64-w64-mingw32/13.2.0/lto-wrapper.exe
@@ -5818,16 +6193,16 @@ events:
         gcc version 13.2.0 (x86_64-win32-seh-rev0, Built by MinGW-Builds project) 
         COMPILER_PATH=D:/mingw-w64/bin/../libexec/gcc/x86_64-w64-mingw32/13.2.0/;D:/mingw-w64/bin/../libexec/gcc/;D:/mingw-w64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/../../../../x86_64-w64-mingw32/bin/
         LIBRARY_PATH=D:/mingw-w64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/;D:/mingw-w64/bin/../lib/gcc/;D:/mingw-w64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/../../../../x86_64-w64-mingw32/lib/../lib/;D:/mingw-w64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/../../../../lib/;D:/mingw-w64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/../../../../x86_64-w64-mingw32/lib/;D:/mingw-w64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/../../../
-        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_df97c.exe' '-shared-libgcc' '-mtune=core2' '-march=nocona' '-dumpdir' 'cmTC_df97c.'
-         D:/mingw-w64/bin/../libexec/gcc/x86_64-w64-mingw32/13.2.0/collect2.exe -plugin D:/mingw-w64/bin/../libexec/gcc/x86_64-w64-mingw32/13.2.0/liblto_plugin.dll -plugin-opt=D:/mingw-w64/bin/../libexec/gcc/x86_64-w64-mingw32/13.2.0/lto-wrapper.exe -plugin-opt=-fresolution=C:\\Users\\yehaodee\\AppData\\Local\\Temp\\cctHBNve.res -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lmoldname -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-ladvapi32 -plugin-opt=-pass-through=-lshell32 -plugin-opt=-pass-through=-luser32 -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-liconv -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lmoldname -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 --sysroot=C:/buildroot/x86_64-1320-win32-seh-msvcrt-rt_v11-rev0/mingw64 -m i386pep -Bdynamic -o cmTC_df97c.exe D:/mingw-w64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/../../../../x86_64-w64-mingw32/lib/../lib/crt2.o D:/mingw-w64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/crtbegin.o -LD:/mingw-w64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0 -LD:/mingw-w64/bin/../lib/gcc -LD:/mingw-w64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/../../../../x86_64-w64-mingw32/lib/../lib -LD:/mingw-w64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/../../../../lib -LD:/mingw-w64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/../../../../x86_64-w64-mingw32/lib -LD:/mingw-w64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/../../.. -v --whole-archive CMakeFiles\\cmTC_df97c.dir/objects.a --no-whole-archive --out-implib libcmTC_df97c.dll.a --major-image-version 0 --minor-image-version 0 -lstdc++ -lmingw32 -lgcc_s -lgcc -lmoldname -lmingwex -lmsvcrt -lkernel32 -ladvapi32 -lshell32 -luser32 -lkernel32 -liconv -lmingw32 -lgcc_s -lgcc -lmoldname -lmingwex -lmsvcrt -lkernel32 D:/mingw-w64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/crtend.o
+        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_df1db.exe' '-shared-libgcc' '-mtune=core2' '-march=nocona' '-dumpdir' 'cmTC_df1db.'
+         D:/mingw-w64/bin/../libexec/gcc/x86_64-w64-mingw32/13.2.0/collect2.exe -plugin D:/mingw-w64/bin/../libexec/gcc/x86_64-w64-mingw32/13.2.0/liblto_plugin.dll -plugin-opt=D:/mingw-w64/bin/../libexec/gcc/x86_64-w64-mingw32/13.2.0/lto-wrapper.exe -plugin-opt=-fresolution=C:\\Users\\yehaodee\\AppData\\Local\\Temp\\ccOPLWi2.res -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lmoldname -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-ladvapi32 -plugin-opt=-pass-through=-lshell32 -plugin-opt=-pass-through=-luser32 -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-liconv -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lmoldname -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 --sysroot=C:/buildroot/x86_64-1320-win32-seh-msvcrt-rt_v11-rev0/mingw64 -m i386pep -Bdynamic -o cmTC_df1db.exe D:/mingw-w64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/../../../../x86_64-w64-mingw32/lib/../lib/crt2.o D:/mingw-w64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/crtbegin.o -LD:/mingw-w64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0 -LD:/mingw-w64/bin/../lib/gcc -LD:/mingw-w64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/../../../../x86_64-w64-mingw32/lib/../lib -LD:/mingw-w64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/../../../../lib -LD:/mingw-w64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/../../../../x86_64-w64-mingw32/lib -LD:/mingw-w64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/../../.. -v --whole-archive CMakeFiles\\cmTC_df1db.dir/objects.a --no-whole-archive --out-implib libcmTC_df1db.dll.a --major-image-version 0 --minor-image-version 0 -lstdc++ -lmingw32 -lgcc_s -lgcc -lmoldname -lmingwex -lmsvcrt -lkernel32 -ladvapi32 -lshell32 -luser32 -lkernel32 -liconv -lmingw32 -lgcc_s -lgcc -lmoldname -lmingwex -lmsvcrt -lkernel32 D:/mingw-w64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/crtend.o
         collect2 version 13.2.0
-        D:/mingw-w64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/../../../../x86_64-w64-mingw32/bin/ld.exe -plugin D:/mingw-w64/bin/../libexec/gcc/x86_64-w64-mingw32/13.2.0/liblto_plugin.dll -plugin-opt=D:/mingw-w64/bin/../libexec/gcc/x86_64-w64-mingw32/13.2.0/lto-wrapper.exe -plugin-opt=-fresolution=C:\\Users\\yehaodee\\AppData\\Local\\Temp\\cctHBNve.res -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lmoldname -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-ladvapi32 -plugin-opt=-pass-through=-lshell32 -plugin-opt=-pass-through=-luser32 -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-liconv -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lmoldname -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 --sysroot=C:/buildroot/x86_64-1320-win32-seh-msvcrt-rt_v11-rev0/mingw64 -m i386pep -Bdynamic -o cmTC_df97c.exe D:/mingw-w64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/../../../../x86_64-w64-mingw32/lib/../lib/crt2.o D:/mingw-w64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/crtbegin.o -LD:/mingw-w64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0 -LD:/mingw-w64/bin/../lib/gcc -LD:/mingw-w64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/../../../../x86_64-w64-mingw32/lib/../lib -LD:/mingw-w64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/../../../../lib -LD:/mingw-w64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/../../../../x86_64-w64-mingw32/lib -LD:/mingw-w64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/../../.. -v --whole-archive CMakeFiles\\cmTC_df97c.dir/objects.a --no-whole-archive --out-implib libcmTC_df97c.dll.a --major-image-version 0 --minor-image-version 0 -lstdc++ -lmingw32 -lgcc_s -lgcc -lmoldname -lmingwex -lmsvcrt -lkernel32 -ladvapi32 -lshell32 -luser32 -lkernel32 -liconv -lmingw32 -lgcc_s -lgcc -lmoldname -lmingwex -lmsvcrt -lkernel32 D:/mingw-w64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/crtend.o
+        D:/mingw-w64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/../../../../x86_64-w64-mingw32/bin/ld.exe -plugin D:/mingw-w64/bin/../libexec/gcc/x86_64-w64-mingw32/13.2.0/liblto_plugin.dll -plugin-opt=D:/mingw-w64/bin/../libexec/gcc/x86_64-w64-mingw32/13.2.0/lto-wrapper.exe -plugin-opt=-fresolution=C:\\Users\\yehaodee\\AppData\\Local\\Temp\\ccOPLWi2.res -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lmoldname -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-ladvapi32 -plugin-opt=-pass-through=-lshell32 -plugin-opt=-pass-through=-luser32 -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-liconv -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lmoldname -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 --sysroot=C:/buildroot/x86_64-1320-win32-seh-msvcrt-rt_v11-rev0/mingw64 -m i386pep -Bdynamic -o cmTC_df1db.exe D:/mingw-w64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/../../../../x86_64-w64-mingw32/lib/../lib/crt2.o D:/mingw-w64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/crtbegin.o -LD:/mingw-w64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0 -LD:/mingw-w64/bin/../lib/gcc -LD:/mingw-w64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/../../../../x86_64-w64-mingw32/lib/../lib -LD:/mingw-w64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/../../../../lib -LD:/mingw-w64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/../../../../x86_64-w64-mingw32/lib -LD:/mingw-w64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/../../.. -v --whole-archive CMakeFiles\\cmTC_df1db.dir/objects.a --no-whole-archive --out-implib libcmTC_df1db.dll.a --major-image-version 0 --minor-image-version 0 -lstdc++ -lmingw32 -lgcc_s -lgcc -lmoldname -lmingwex -lmsvcrt -lkernel32 -ladvapi32 -lshell32 -luser32 -lkernel32 -liconv -lmingw32 -lgcc_s -lgcc -lmoldname -lmingwex -lmsvcrt -lkernel32 D:/mingw-w64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/crtend.o
         GNU ld (GNU Binutils) 2.39
-        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_df97c.exe' '-shared-libgcc' '-mtune=core2' '-march=nocona' '-dumpdir' 'cmTC_df97c.'
-        "C:\\Program Files\\CMake\\bin\\cmake.exe" -E rm -f CMakeFiles\\cmTC_df97c.dir/objects.a
-        D:\\mingw-w64\\bin\\ar.exe qc CMakeFiles\\cmTC_df97c.dir/objects.a @CMakeFiles\\cmTC_df97c.dir\\objects1.rsp
-        D:\\mingw-w64\\bin\\c++.exe  -v -Wl,-v -Wl,--whole-archive CMakeFiles\\cmTC_df97c.dir/objects.a -Wl,--no-whole-archive -o cmTC_df97c.exe -Wl,--out-implib,libcmTC_df97c.dll.a -Wl,--major-image-version,0,--minor-image-version,0
-        mingw32-make[1]: Leaving directory 'D:/CS/CPP/DAYI_XIA/week2/build/CMakeFiles/CMakeScratch/TryCompile-61m544'
+        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_df1db.exe' '-shared-libgcc' '-mtune=core2' '-march=nocona' '-dumpdir' 'cmTC_df1db.'
+        "C:\\Program Files\\CMake\\bin\\cmake.exe" -E rm -f CMakeFiles\\cmTC_df1db.dir/objects.a
+        D:\\mingw-w64\\bin\\ar.exe qc CMakeFiles\\cmTC_df1db.dir/objects.a @CMakeFiles\\cmTC_df1db.dir\\objects1.rsp
+        D:\\mingw-w64\\bin\\c++.exe  -v -Wl,-v -Wl,--whole-archive CMakeFiles\\cmTC_df1db.dir/objects.a -Wl,--no-whole-archive -o cmTC_df1db.exe -Wl,--out-implib,libcmTC_df1db.dll.a -Wl,--major-image-version,0,--minor-image-version,0
+        mingw32-make[1]: Leaving directory 'D:/CS/CPP/DAYI_XIA/Breakout-Game/build/CMakeFiles/CMakeScratch/TryCompile-80zum6'
         
       exitCode: 0
   -
@@ -5866,13 +6241,13 @@ events:
       Parsed CXX implicit link information:
         link line regex: [^( *|.*[/\\])(ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
         linker tool regex: [^[ 	]*(->|"|[0-9]+>[ 	-]*Build:[ 	0-9]+ ms[ 	]*)?[ 	]*(([^"]*[/\\])?(ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)))("|,| |$)]
-        ignore line: [Change Dir: 'D:/CS/CPP/DAYI_XIA/week2/build/CMakeFiles/CMakeScratch/TryCompile-61m544']
+        ignore line: [Change Dir: 'D:/CS/CPP/DAYI_XIA/Breakout-Game/build/CMakeFiles/CMakeScratch/TryCompile-80zum6']
         ignore line: []
-        ignore line: [Run Build Command(s): "C:/Program Files/CMake/bin/cmake.exe" -E env VERBOSE=1 D:/mingw-w64/bin/mingw32-make.exe -f Makefile cmTC_df97c/fast]
-        ignore line: [D:/mingw-w64/bin/mingw32-make.exe  -f CMakeFiles\\cmTC_df97c.dir\\build.make CMakeFiles/cmTC_df97c.dir/build]
-        ignore line: [mingw32-make[1]: Entering directory 'D:/CS/CPP/DAYI_XIA/week2/build/CMakeFiles/CMakeScratch/TryCompile-61m544']
-        ignore line: [Building CXX object CMakeFiles/cmTC_df97c.dir/CMakeCXXCompilerABI.cpp.obj]
-        ignore line: [D:\\mingw-w64\\bin\\c++.exe   -v -o CMakeFiles\\cmTC_df97c.dir\\CMakeCXXCompilerABI.cpp.obj -c "C:\\Program Files\\CMake\\share\\cmake-4.3\\Modules\\CMakeCXXCompilerABI.cpp"]
+        ignore line: [Run Build Command(s): "C:/Program Files/CMake/bin/cmake.exe" -E env VERBOSE=1 D:/mingw-w64/bin/mingw32-make.exe -f Makefile cmTC_df1db/fast]
+        ignore line: [D:/mingw-w64/bin/mingw32-make.exe  -f CMakeFiles\\cmTC_df1db.dir\\build.make CMakeFiles/cmTC_df1db.dir/build]
+        ignore line: [mingw32-make[1]: Entering directory 'D:/CS/CPP/DAYI_XIA/Breakout-Game/build/CMakeFiles/CMakeScratch/TryCompile-80zum6']
+        ignore line: [Building CXX object CMakeFiles/cmTC_df1db.dir/CMakeCXXCompilerABI.cpp.obj]
+        ignore line: [D:\\mingw-w64\\bin\\c++.exe   -v -o CMakeFiles\\cmTC_df1db.dir\\CMakeCXXCompilerABI.cpp.obj -c "C:\\Program Files\\CMake\\share\\cmake-4.3\\Modules\\CMakeCXXCompilerABI.cpp"]
         ignore line: [Using built-in specs.]
         ignore line: [COLLECT_GCC=D:\\mingw-w64\\bin\\c++.exe]
         ignore line: [Target: x86_64-w64-mingw32]
@@ -5880,8 +6255,8 @@ events:
         ignore line: [Thread model: win32]
         ignore line: [Supported LTO compression algorithms: zlib]
         ignore line: [gcc version 13.2.0 (x86_64-win32-seh-rev0  Built by MinGW-Builds project) ]
-        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles\\cmTC_df97c.dir\\CMakeCXXCompilerABI.cpp.obj' '-c' '-shared-libgcc' '-mtune=core2' '-march=nocona' '-dumpdir' 'CMakeFiles\\cmTC_df97c.dir\\']
-        ignore line: [ D:/mingw-w64/bin/../libexec/gcc/x86_64-w64-mingw32/13.2.0/cc1plus.exe -quiet -v -iprefix D:/mingw-w64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/ -U_REENTRANT C:\\Program Files\\CMake\\share\\cmake-4.3\\Modules\\CMakeCXXCompilerABI.cpp -quiet -dumpdir CMakeFiles\\cmTC_df97c.dir\\ -dumpbase CMakeCXXCompilerABI.cpp.cpp -dumpbase-ext .cpp -mtune=core2 -march=nocona -version -o C:\\Users\\yehaodee\\AppData\\Local\\Temp\\cc6jvEGN.s]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles\\cmTC_df1db.dir\\CMakeCXXCompilerABI.cpp.obj' '-c' '-shared-libgcc' '-mtune=core2' '-march=nocona' '-dumpdir' 'CMakeFiles\\cmTC_df1db.dir\\']
+        ignore line: [ D:/mingw-w64/bin/../libexec/gcc/x86_64-w64-mingw32/13.2.0/cc1plus.exe -quiet -v -iprefix D:/mingw-w64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/ -U_REENTRANT C:\\Program Files\\CMake\\share\\cmake-4.3\\Modules\\CMakeCXXCompilerABI.cpp -quiet -dumpdir CMakeFiles\\cmTC_df1db.dir\\ -dumpbase CMakeCXXCompilerABI.cpp.cpp -dumpbase-ext .cpp -mtune=core2 -march=nocona -version -o C:\\Users\\yehaodee\\AppData\\Local\\Temp\\ccBNJoDe.s]
         ignore line: [GNU C++17 (x86_64-win32-seh-rev0  Built by MinGW-Builds project) version 13.2.0 (x86_64-w64-mingw32)]
         ignore line: [	compiled by GNU C version 13.2.0  GMP version 6.2.1  MPFR version 4.1.0  MPC version 1.2.1  isl version isl-0.25-GMP]
         ignore line: []
@@ -5904,8 +6279,8 @@ events:
         ignore line: [ D:/mingw-w64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/../../../../x86_64-w64-mingw32/include]
         ignore line: [End of search list.]
         ignore line: [Compiler executable checksum: f358ed413b645d0d8c4acb7d5452859f]
-        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles\\cmTC_df97c.dir\\CMakeCXXCompilerABI.cpp.obj' '-c' '-shared-libgcc' '-mtune=core2' '-march=nocona' '-dumpdir' 'CMakeFiles\\cmTC_df97c.dir\\']
-        ignore line: [ D:/mingw-w64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/../../../../x86_64-w64-mingw32/bin/as.exe -v -o CMakeFiles\\cmTC_df97c.dir\\CMakeCXXCompilerABI.cpp.obj C:\\Users\\yehaodee\\AppData\\Local\\Temp\\cc6jvEGN.s]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles\\cmTC_df1db.dir\\CMakeCXXCompilerABI.cpp.obj' '-c' '-shared-libgcc' '-mtune=core2' '-march=nocona' '-dumpdir' 'CMakeFiles\\cmTC_df1db.dir\\']
+        ignore line: [ D:/mingw-w64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/../../../../x86_64-w64-mingw32/bin/as.exe -v -o CMakeFiles\\cmTC_df1db.dir\\CMakeCXXCompilerABI.cpp.obj C:\\Users\\yehaodee\\AppData\\Local\\Temp\\ccBNJoDe.s]
         ignore line: [GNU assembler version 2.39 (x86_64-w64-mingw32) using BFD version (GNU Binutils) 2.39]
         ignore line: [COMPILER_PATH=D:/mingw-w64/bin/../libexec/gcc/x86_64-w64-mingw32/13.2.0/]
         ignore line: [D:/mingw-w64/bin/../libexec/gcc/]
@@ -5916,9 +6291,9 @@ events:
         ignore line: [D:/mingw-w64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/../../../../lib/]
         ignore line: [D:/mingw-w64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/../../../../x86_64-w64-mingw32/lib/]
         ignore line: [D:/mingw-w64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/../../../]
-        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles\\cmTC_df97c.dir\\CMakeCXXCompilerABI.cpp.obj' '-c' '-shared-libgcc' '-mtune=core2' '-march=nocona' '-dumpdir' 'CMakeFiles\\cmTC_df97c.dir\\CMakeCXXCompilerABI.cpp.']
-        ignore line: [Linking CXX executable cmTC_df97c.exe]
-        ignore line: ["C:\\Program Files\\CMake\\bin\\cmake.exe" -E cmake_link_script CMakeFiles\\cmTC_df97c.dir\\link.txt --verbose=1]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles\\cmTC_df1db.dir\\CMakeCXXCompilerABI.cpp.obj' '-c' '-shared-libgcc' '-mtune=core2' '-march=nocona' '-dumpdir' 'CMakeFiles\\cmTC_df1db.dir\\CMakeCXXCompilerABI.cpp.']
+        ignore line: [Linking CXX executable cmTC_df1db.exe]
+        ignore line: ["C:\\Program Files\\CMake\\bin\\cmake.exe" -E cmake_link_script CMakeFiles\\cmTC_df1db.dir\\link.txt --verbose=1]
         ignore line: [Using built-in specs.]
         ignore line: [COLLECT_GCC=D:\\mingw-w64\\bin\\c++.exe]
         ignore line: [COLLECT_LTO_WRAPPER=D:/mingw-w64/bin/../libexec/gcc/x86_64-w64-mingw32/13.2.0/lto-wrapper.exe]
@@ -5936,13 +6311,13 @@ events:
         ignore line: [D:/mingw-w64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/../../../../lib/]
         ignore line: [D:/mingw-w64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/../../../../x86_64-w64-mingw32/lib/]
         ignore line: [D:/mingw-w64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/../../../]
-        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_df97c.exe' '-shared-libgcc' '-mtune=core2' '-march=nocona' '-dumpdir' 'cmTC_df97c.']
-        link line: [ D:/mingw-w64/bin/../libexec/gcc/x86_64-w64-mingw32/13.2.0/collect2.exe -plugin D:/mingw-w64/bin/../libexec/gcc/x86_64-w64-mingw32/13.2.0/liblto_plugin.dll -plugin-opt=D:/mingw-w64/bin/../libexec/gcc/x86_64-w64-mingw32/13.2.0/lto-wrapper.exe -plugin-opt=-fresolution=C:\\Users\\yehaodee\\AppData\\Local\\Temp\\cctHBNve.res -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lmoldname -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-ladvapi32 -plugin-opt=-pass-through=-lshell32 -plugin-opt=-pass-through=-luser32 -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-liconv -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lmoldname -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 --sysroot=C:/buildroot/x86_64-1320-win32-seh-msvcrt-rt_v11-rev0/mingw64 -m i386pep -Bdynamic -o cmTC_df97c.exe D:/mingw-w64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/../../../../x86_64-w64-mingw32/lib/../lib/crt2.o D:/mingw-w64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/crtbegin.o -LD:/mingw-w64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0 -LD:/mingw-w64/bin/../lib/gcc -LD:/mingw-w64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/../../../../x86_64-w64-mingw32/lib/../lib -LD:/mingw-w64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/../../../../lib -LD:/mingw-w64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/../../../../x86_64-w64-mingw32/lib -LD:/mingw-w64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/../../.. -v --whole-archive CMakeFiles\\cmTC_df97c.dir/objects.a --no-whole-archive --out-implib libcmTC_df97c.dll.a --major-image-version 0 --minor-image-version 0 -lstdc++ -lmingw32 -lgcc_s -lgcc -lmoldname -lmingwex -lmsvcrt -lkernel32 -ladvapi32 -lshell32 -luser32 -lkernel32 -liconv -lmingw32 -lgcc_s -lgcc -lmoldname -lmingwex -lmsvcrt -lkernel32 D:/mingw-w64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/crtend.o]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_df1db.exe' '-shared-libgcc' '-mtune=core2' '-march=nocona' '-dumpdir' 'cmTC_df1db.']
+        link line: [ D:/mingw-w64/bin/../libexec/gcc/x86_64-w64-mingw32/13.2.0/collect2.exe -plugin D:/mingw-w64/bin/../libexec/gcc/x86_64-w64-mingw32/13.2.0/liblto_plugin.dll -plugin-opt=D:/mingw-w64/bin/../libexec/gcc/x86_64-w64-mingw32/13.2.0/lto-wrapper.exe -plugin-opt=-fresolution=C:\\Users\\yehaodee\\AppData\\Local\\Temp\\ccOPLWi2.res -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lmoldname -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-ladvapi32 -plugin-opt=-pass-through=-lshell32 -plugin-opt=-pass-through=-luser32 -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-liconv -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lmoldname -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 --sysroot=C:/buildroot/x86_64-1320-win32-seh-msvcrt-rt_v11-rev0/mingw64 -m i386pep -Bdynamic -o cmTC_df1db.exe D:/mingw-w64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/../../../../x86_64-w64-mingw32/lib/../lib/crt2.o D:/mingw-w64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/crtbegin.o -LD:/mingw-w64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0 -LD:/mingw-w64/bin/../lib/gcc -LD:/mingw-w64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/../../../../x86_64-w64-mingw32/lib/../lib -LD:/mingw-w64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/../../../../lib -LD:/mingw-w64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/../../../../x86_64-w64-mingw32/lib -LD:/mingw-w64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/../../.. -v --whole-archive CMakeFiles\\cmTC_df1db.dir/objects.a --no-whole-archive --out-implib libcmTC_df1db.dll.a --major-image-version 0 --minor-image-version 0 -lstdc++ -lmingw32 -lgcc_s -lgcc -lmoldname -lmingwex -lmsvcrt -lkernel32 -ladvapi32 -lshell32 -luser32 -lkernel32 -liconv -lmingw32 -lgcc_s -lgcc -lmoldname -lmingwex -lmsvcrt -lkernel32 D:/mingw-w64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/crtend.o]
           arg [D:/mingw-w64/bin/../libexec/gcc/x86_64-w64-mingw32/13.2.0/collect2.exe] ==> ignore
           arg [-plugin] ==> ignore
           arg [D:/mingw-w64/bin/../libexec/gcc/x86_64-w64-mingw32/13.2.0/liblto_plugin.dll] ==> ignore
           arg [-plugin-opt=D:/mingw-w64/bin/../libexec/gcc/x86_64-w64-mingw32/13.2.0/lto-wrapper.exe] ==> ignore
-          arg [-plugin-opt=-fresolution=C:\\Users\\yehaodee\\AppData\\Local\\Temp\\cctHBNve.res] ==> ignore
+          arg [-plugin-opt=-fresolution=C:\\Users\\yehaodee\\AppData\\Local\\Temp\\ccOPLWi2.res] ==> ignore
           arg [-plugin-opt=-pass-through=-lmingw32] ==> ignore
           arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
           arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
@@ -5967,7 +6342,7 @@ events:
           arg [i386pep] ==> ignore
           arg [-Bdynamic] ==> search dynamic
           arg [-o] ==> ignore
-          arg [cmTC_df97c.exe] ==> ignore
+          arg [cmTC_df1db.exe] ==> ignore
           arg [D:/mingw-w64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/../../../../x86_64-w64-mingw32/lib/../lib/crt2.o] ==> obj [D:/mingw-w64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/../../../../x86_64-w64-mingw32/lib/../lib/crt2.o]
           arg [D:/mingw-w64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/crtbegin.o] ==> obj [D:/mingw-w64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/crtbegin.o]
           arg [-LD:/mingw-w64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0] ==> dir [D:/mingw-w64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0]
@@ -5978,10 +6353,10 @@ events:
           arg [-LD:/mingw-w64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/../../..] ==> dir [D:/mingw-w64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/../../..]
           arg [-v] ==> ignore
           arg [--whole-archive] ==> ignore
-          arg [CMakeFiles\\cmTC_df97c.dir/objects.a] ==> ignore
+          arg [CMakeFiles\\cmTC_df1db.dir/objects.a] ==> ignore
           arg [--no-whole-archive] ==> ignore
           arg [--out-implib] ==> ignore
-          arg [libcmTC_df97c.dll.a] ==> ignore
+          arg [libcmTC_df1db.dll.a] ==> ignore
           arg [--major-image-version] ==> ignore
           arg [0] ==> ignore
           arg [--minor-image-version] ==> ignore

@@ -123,7 +123,7 @@ set(CMAKE_MAKEFILE_DEPENDS
   "C:/Program Files/CMake/share/cmake-4.3/Modules/Platform/Windows-windres.cmake"
   "C:/Program Files/CMake/share/cmake-4.3/Modules/Platform/Windows.cmake"
   "C:/Program Files/CMake/share/cmake-4.3/Modules/Platform/WindowsPaths.cmake"
-  "D:/CS/CPP/DAYI_XIA/week2/CMakeLists.txt"
+  "D:/CS/CPP/DAYI_XIA/Breakout-Game/CMakeLists.txt"
   "CMakeFiles/4.3.0-rc3/CMakeCCompiler.cmake"
   "CMakeFiles/4.3.0-rc3/CMakeCXXCompiler.cmake"
   "CMakeFiles/4.3.0-rc3/CMakeRCCompiler.cmake"
@@ -151,5 +151,5 @@ set(CMAKE_MAKEFILE_PRODUCTS
 
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
-  "CMakeFiles/breakout_week2.dir/DependInfo.cmake"
+  "CMakeFiles/breakout.dir/DependInfo.cmake"
   )

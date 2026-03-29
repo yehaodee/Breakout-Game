@@ -56,10 +56,10 @@ RM = "C:\Program Files\CMake\bin\cmake.exe" -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = D:\CS\CPP\DAYI_XIA\week2
+CMAKE_SOURCE_DIR = D:\CS\CPP\DAYI_XIA\Breakout-Game
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = D:\CS\CPP\DAYI_XIA\week2\build
+CMAKE_BINARY_DIR = D:\CS\CPP\DAYI_XIA\Breakout-Game\build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -86,9 +86,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start D:\CS\CPP\DAYI_XIA\week2\build\CMakeFiles D:\CS\CPP\DAYI_XIA\week2\build\\CMakeFiles\progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start D:\CS\CPP\DAYI_XIA\Breakout-Game\build\CMakeFiles D:\CS\CPP\DAYI_XIA\Breakout-Game\build\\CMakeFiles\progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start D:\CS\CPP\DAYI_XIA\week2\build\CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start D:\CS\CPP\DAYI_XIA\Breakout-Game\build\CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -116,24 +116,24 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named breakout_week2
+# Target rules for targets named breakout
 
 # Build rule for target.
-breakout_week2: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 breakout_week2
-.PHONY : breakout_week2
+breakout: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 breakout
+.PHONY : breakout
 
 # fast build rule for target.
-breakout_week2/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\breakout_week2.dir\build.make CMakeFiles/breakout_week2.dir/build
-.PHONY : breakout_week2/fast
+breakout/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\breakout.dir\build.make CMakeFiles/breakout.dir/build
+.PHONY : breakout/fast
 
 Ball.obj: Ball.cpp.obj
 .PHONY : Ball.obj
 
 # target to build an object file
 Ball.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\breakout_week2.dir\build.make CMakeFiles/breakout_week2.dir/Ball.cpp.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\breakout.dir\build.make CMakeFiles/breakout.dir/Ball.cpp.obj
 .PHONY : Ball.cpp.obj
 
 Ball.i: Ball.cpp.i
@@ -141,7 +141,7 @@ Ball.i: Ball.cpp.i
 
 # target to preprocess a source file
 Ball.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\breakout_week2.dir\build.make CMakeFiles/breakout_week2.dir/Ball.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\breakout.dir\build.make CMakeFiles/breakout.dir/Ball.cpp.i
 .PHONY : Ball.cpp.i
 
 Ball.s: Ball.cpp.s
@@ -149,7 +149,7 @@ Ball.s: Ball.cpp.s
 
 # target to generate assembly for a file
 Ball.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\breakout_week2.dir\build.make CMakeFiles/breakout_week2.dir/Ball.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\breakout.dir\build.make CMakeFiles/breakout.dir/Ball.cpp.s
 .PHONY : Ball.cpp.s
 
 Brick.obj: Brick.cpp.obj
@@ -157,7 +157,7 @@ Brick.obj: Brick.cpp.obj
 
 # target to build an object file
 Brick.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\breakout_week2.dir\build.make CMakeFiles/breakout_week2.dir/Brick.cpp.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\breakout.dir\build.make CMakeFiles/breakout.dir/Brick.cpp.obj
 .PHONY : Brick.cpp.obj
 
 Brick.i: Brick.cpp.i
@@ -165,7 +165,7 @@ Brick.i: Brick.cpp.i
 
 # target to preprocess a source file
 Brick.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\breakout_week2.dir\build.make CMakeFiles/breakout_week2.dir/Brick.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\breakout.dir\build.make CMakeFiles/breakout.dir/Brick.cpp.i
 .PHONY : Brick.cpp.i
 
 Brick.s: Brick.cpp.s
@@ -173,7 +173,7 @@ Brick.s: Brick.cpp.s
 
 # target to generate assembly for a file
 Brick.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\breakout_week2.dir\build.make CMakeFiles/breakout_week2.dir/Brick.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\breakout.dir\build.make CMakeFiles/breakout.dir/Brick.cpp.s
 .PHONY : Brick.cpp.s
 
 Paddle.obj: Paddle.cpp.obj
@@ -181,7 +181,7 @@ Paddle.obj: Paddle.cpp.obj
 
 # target to build an object file
 Paddle.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\breakout_week2.dir\build.make CMakeFiles/breakout_week2.dir/Paddle.cpp.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\breakout.dir\build.make CMakeFiles/breakout.dir/Paddle.cpp.obj
 .PHONY : Paddle.cpp.obj
 
 Paddle.i: Paddle.cpp.i
@@ -189,7 +189,7 @@ Paddle.i: Paddle.cpp.i
 
 # target to preprocess a source file
 Paddle.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\breakout_week2.dir\build.make CMakeFiles/breakout_week2.dir/Paddle.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\breakout.dir\build.make CMakeFiles/breakout.dir/Paddle.cpp.i
 .PHONY : Paddle.cpp.i
 
 Paddle.s: Paddle.cpp.s
@@ -197,7 +197,7 @@ Paddle.s: Paddle.cpp.s
 
 # target to generate assembly for a file
 Paddle.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\breakout_week2.dir\build.make CMakeFiles/breakout_week2.dir/Paddle.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\breakout.dir\build.make CMakeFiles/breakout.dir/Paddle.cpp.s
 .PHONY : Paddle.cpp.s
 
 main.obj: main.cpp.obj
@@ -205,7 +205,7 @@ main.obj: main.cpp.obj
 
 # target to build an object file
 main.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\breakout_week2.dir\build.make CMakeFiles/breakout_week2.dir/main.cpp.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\breakout.dir\build.make CMakeFiles/breakout.dir/main.cpp.obj
 .PHONY : main.cpp.obj
 
 main.i: main.cpp.i
@@ -213,7 +213,7 @@ main.i: main.cpp.i
 
 # target to preprocess a source file
 main.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\breakout_week2.dir\build.make CMakeFiles/breakout_week2.dir/main.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\breakout.dir\build.make CMakeFiles/breakout.dir/main.cpp.i
 .PHONY : main.cpp.i
 
 main.s: main.cpp.s
@@ -221,7 +221,7 @@ main.s: main.cpp.s
 
 # target to generate assembly for a file
 main.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\breakout_week2.dir\build.make CMakeFiles/breakout_week2.dir/main.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\breakout.dir\build.make CMakeFiles/breakout.dir/main.cpp.s
 .PHONY : main.cpp.s
 
 # Help Target
@@ -232,7 +232,7 @@ help:
 	@echo ... depend
 	@echo ... edit_cache
 	@echo ... rebuild_cache
-	@echo ... breakout_week2
+	@echo ... breakout
 	@echo ... Ball.obj
 	@echo ... Ball.i
 	@echo ... Ball.s

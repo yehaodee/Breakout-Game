@@ -12,7 +12,7 @@ public:
     Ball(Vector2 pos, Vector2 sp, float r);
     void Move();
     void Draw();
-    void BounceEdge(int screenWidth, int screenHeight);
+    bool BounceEdge(int screenWidth, int screenHeight);
     Vector2 GetPosition();
     float GetRadius();
     void ReverseY();
