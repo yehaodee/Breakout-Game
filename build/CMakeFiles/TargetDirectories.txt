@@ -1,0 +1,3 @@
+D:/CS/CPP/DAYI_XIA/week2/build/CMakeFiles/breakout_week2.dir
+D:/CS/CPP/DAYI_XIA/week2/build/CMakeFiles/edit_cache.dir
+D:/CS/CPP/DAYI_XIA/week2/build/CMakeFiles/rebuild_cache.dir
