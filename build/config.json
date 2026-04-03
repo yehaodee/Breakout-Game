@@ -1,0 +1,7 @@
+{
+    "window": { "width": 800, "height": 600, "title": "Breakout" },
+    "ball": { "radius": 20, "gravity": 0.08, "maxSpeed": 15, "bounceForce": 0.5 },
+    "paddle": { "width": 240, "height": 15, "speed": 18, "boostSpeed": 28 },
+    "bricks": { "rows": 2, "cols": 8, "width": 85, "height": 25 },
+    "game": { "initialLives": 1, "scorePerBrick": 10, "timeMultiplierDecay": 0.05 }
+}
