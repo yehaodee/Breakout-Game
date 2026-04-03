@@ -25,7 +25,24 @@ add_executable(breakout
     RectangleObject.cpp
 )
 
+add_executable(test_ball_brick_collision
+    test_ball_brick_collision.cpp
+    Ball.cpp
+    Brick.cpp
+    GameObject.cpp
+    PhysicalObject.cpp
+    VisualObject.cpp
+    RectangleObject.cpp
+)
+
 target_link_libraries(breakout PRIVATE
+    raylib
+    opengl32
+    gdi32
+    winmm
+)
+
+target_link_libraries(test_ball_brick_collision PRIVATE
     raylib
     opengl32
     gdi32
