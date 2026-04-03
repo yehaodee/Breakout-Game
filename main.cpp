@@ -2,7 +2,7 @@
 #include "Game.h"
 
 int main() {
-    InitWindow(800, 600, "Breakout");
+    InitWindow(game.windowWidth, game.windowHeight, game.windowTitle.c_str());
     Game game;
     game.Init();
     while (!WindowShouldClose()) {

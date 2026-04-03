@@ -128,12 +128,26 @@ breakout/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\breakout.dir\build.make CMakeFiles/breakout.dir/build
 .PHONY : breakout/fast
 
+#=============================================================================
+# Target rules for targets named test_ball_brick_collision
+
+# Build rule for target.
+test_ball_brick_collision: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 test_ball_brick_collision
+.PHONY : test_ball_brick_collision
+
+# fast build rule for target.
+test_ball_brick_collision/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\test_ball_brick_collision.dir\build.make CMakeFiles/test_ball_brick_collision.dir/build
+.PHONY : test_ball_brick_collision/fast
+
 Ball.obj: Ball.cpp.obj
 .PHONY : Ball.obj
 
 # target to build an object file
 Ball.cpp.obj:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\breakout.dir\build.make CMakeFiles/breakout.dir/Ball.cpp.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\test_ball_brick_collision.dir\build.make CMakeFiles/test_ball_brick_collision.dir/Ball.cpp.obj
 .PHONY : Ball.cpp.obj
 
 Ball.i: Ball.cpp.i
@@ -142,6 +156,7 @@ Ball.i: Ball.cpp.i
 # target to preprocess a source file
 Ball.cpp.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\breakout.dir\build.make CMakeFiles/breakout.dir/Ball.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\test_ball_brick_collision.dir\build.make CMakeFiles/test_ball_brick_collision.dir/Ball.cpp.i
 .PHONY : Ball.cpp.i
 
 Ball.s: Ball.cpp.s
@@ -150,6 +165,7 @@ Ball.s: Ball.cpp.s
 # target to generate assembly for a file
 Ball.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\breakout.dir\build.make CMakeFiles/breakout.dir/Ball.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\test_ball_brick_collision.dir\build.make CMakeFiles/test_ball_brick_collision.dir/Ball.cpp.s
 .PHONY : Ball.cpp.s
 
 Brick.obj: Brick.cpp.obj
@@ -158,6 +174,7 @@ Brick.obj: Brick.cpp.obj
 # target to build an object file
 Brick.cpp.obj:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\breakout.dir\build.make CMakeFiles/breakout.dir/Brick.cpp.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\test_ball_brick_collision.dir\build.make CMakeFiles/test_ball_brick_collision.dir/Brick.cpp.obj
 .PHONY : Brick.cpp.obj
 
 Brick.i: Brick.cpp.i
@@ -166,6 +183,7 @@ Brick.i: Brick.cpp.i
 # target to preprocess a source file
 Brick.cpp.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\breakout.dir\build.make CMakeFiles/breakout.dir/Brick.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\test_ball_brick_collision.dir\build.make CMakeFiles/test_ball_brick_collision.dir/Brick.cpp.i
 .PHONY : Brick.cpp.i
 
 Brick.s: Brick.cpp.s
@@ -174,6 +192,7 @@ Brick.s: Brick.cpp.s
 # target to generate assembly for a file
 Brick.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\breakout.dir\build.make CMakeFiles/breakout.dir/Brick.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\test_ball_brick_collision.dir\build.make CMakeFiles/test_ball_brick_collision.dir/Brick.cpp.s
 .PHONY : Brick.cpp.s
 
 Game.obj: Game.cpp.obj
@@ -206,6 +225,7 @@ GameObject.obj: GameObject.cpp.obj
 # target to build an object file
 GameObject.cpp.obj:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\breakout.dir\build.make CMakeFiles/breakout.dir/GameObject.cpp.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\test_ball_brick_collision.dir\build.make CMakeFiles/test_ball_brick_collision.dir/GameObject.cpp.obj
 .PHONY : GameObject.cpp.obj
 
 GameObject.i: GameObject.cpp.i
@@ -214,6 +234,7 @@ GameObject.i: GameObject.cpp.i
 # target to preprocess a source file
 GameObject.cpp.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\breakout.dir\build.make CMakeFiles/breakout.dir/GameObject.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\test_ball_brick_collision.dir\build.make CMakeFiles/test_ball_brick_collision.dir/GameObject.cpp.i
 .PHONY : GameObject.cpp.i
 
 GameObject.s: GameObject.cpp.s
@@ -222,6 +243,7 @@ GameObject.s: GameObject.cpp.s
 # target to generate assembly for a file
 GameObject.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\breakout.dir\build.make CMakeFiles/breakout.dir/GameObject.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\test_ball_brick_collision.dir\build.make CMakeFiles/test_ball_brick_collision.dir/GameObject.cpp.s
 .PHONY : GameObject.cpp.s
 
 Paddle.obj: Paddle.cpp.obj
@@ -254,6 +276,7 @@ PhysicalObject.obj: PhysicalObject.cpp.obj
 # target to build an object file
 PhysicalObject.cpp.obj:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\breakout.dir\build.make CMakeFiles/breakout.dir/PhysicalObject.cpp.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\test_ball_brick_collision.dir\build.make CMakeFiles/test_ball_brick_collision.dir/PhysicalObject.cpp.obj
 .PHONY : PhysicalObject.cpp.obj
 
 PhysicalObject.i: PhysicalObject.cpp.i
@@ -262,6 +285,7 @@ PhysicalObject.i: PhysicalObject.cpp.i
 # target to preprocess a source file
 PhysicalObject.cpp.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\breakout.dir\build.make CMakeFiles/breakout.dir/PhysicalObject.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\test_ball_brick_collision.dir\build.make CMakeFiles/test_ball_brick_collision.dir/PhysicalObject.cpp.i
 .PHONY : PhysicalObject.cpp.i
 
 PhysicalObject.s: PhysicalObject.cpp.s
@@ -270,6 +294,7 @@ PhysicalObject.s: PhysicalObject.cpp.s
 # target to generate assembly for a file
 PhysicalObject.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\breakout.dir\build.make CMakeFiles/breakout.dir/PhysicalObject.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\test_ball_brick_collision.dir\build.make CMakeFiles/test_ball_brick_collision.dir/PhysicalObject.cpp.s
 .PHONY : PhysicalObject.cpp.s
 
 RectangleObject.obj: RectangleObject.cpp.obj
@@ -278,6 +303,7 @@ RectangleObject.obj: RectangleObject.cpp.obj
 # target to build an object file
 RectangleObject.cpp.obj:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\breakout.dir\build.make CMakeFiles/breakout.dir/RectangleObject.cpp.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\test_ball_brick_collision.dir\build.make CMakeFiles/test_ball_brick_collision.dir/RectangleObject.cpp.obj
 .PHONY : RectangleObject.cpp.obj
 
 RectangleObject.i: RectangleObject.cpp.i
@@ -286,6 +312,7 @@ RectangleObject.i: RectangleObject.cpp.i
 # target to preprocess a source file
 RectangleObject.cpp.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\breakout.dir\build.make CMakeFiles/breakout.dir/RectangleObject.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\test_ball_brick_collision.dir\build.make CMakeFiles/test_ball_brick_collision.dir/RectangleObject.cpp.i
 .PHONY : RectangleObject.cpp.i
 
 RectangleObject.s: RectangleObject.cpp.s
@@ -294,6 +321,7 @@ RectangleObject.s: RectangleObject.cpp.s
 # target to generate assembly for a file
 RectangleObject.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\breakout.dir\build.make CMakeFiles/breakout.dir/RectangleObject.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\test_ball_brick_collision.dir\build.make CMakeFiles/test_ball_brick_collision.dir/RectangleObject.cpp.s
 .PHONY : RectangleObject.cpp.s
 
 VisualObject.obj: VisualObject.cpp.obj
@@ -302,6 +330,7 @@ VisualObject.obj: VisualObject.cpp.obj
 # target to build an object file
 VisualObject.cpp.obj:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\breakout.dir\build.make CMakeFiles/breakout.dir/VisualObject.cpp.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\test_ball_brick_collision.dir\build.make CMakeFiles/test_ball_brick_collision.dir/VisualObject.cpp.obj
 .PHONY : VisualObject.cpp.obj
 
 VisualObject.i: VisualObject.cpp.i
@@ -310,6 +339,7 @@ VisualObject.i: VisualObject.cpp.i
 # target to preprocess a source file
 VisualObject.cpp.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\breakout.dir\build.make CMakeFiles/breakout.dir/VisualObject.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\test_ball_brick_collision.dir\build.make CMakeFiles/test_ball_brick_collision.dir/VisualObject.cpp.i
 .PHONY : VisualObject.cpp.i
 
 VisualObject.s: VisualObject.cpp.s
@@ -318,6 +348,7 @@ VisualObject.s: VisualObject.cpp.s
 # target to generate assembly for a file
 VisualObject.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\breakout.dir\build.make CMakeFiles/breakout.dir/VisualObject.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\test_ball_brick_collision.dir\build.make CMakeFiles/test_ball_brick_collision.dir/VisualObject.cpp.s
 .PHONY : VisualObject.cpp.s
 
 main.obj: main.cpp.obj
@@ -344,6 +375,30 @@ main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\breakout.dir\build.make CMakeFiles/breakout.dir/main.cpp.s
 .PHONY : main.cpp.s
 
+test_ball_brick_collision.obj: test_ball_brick_collision.cpp.obj
+.PHONY : test_ball_brick_collision.obj
+
+# target to build an object file
+test_ball_brick_collision.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\test_ball_brick_collision.dir\build.make CMakeFiles/test_ball_brick_collision.dir/test_ball_brick_collision.cpp.obj
+.PHONY : test_ball_brick_collision.cpp.obj
+
+test_ball_brick_collision.i: test_ball_brick_collision.cpp.i
+.PHONY : test_ball_brick_collision.i
+
+# target to preprocess a source file
+test_ball_brick_collision.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\test_ball_brick_collision.dir\build.make CMakeFiles/test_ball_brick_collision.dir/test_ball_brick_collision.cpp.i
+.PHONY : test_ball_brick_collision.cpp.i
+
+test_ball_brick_collision.s: test_ball_brick_collision.cpp.s
+.PHONY : test_ball_brick_collision.s
+
+# target to generate assembly for a file
+test_ball_brick_collision.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\test_ball_brick_collision.dir\build.make CMakeFiles/test_ball_brick_collision.dir/test_ball_brick_collision.cpp.s
+.PHONY : test_ball_brick_collision.cpp.s
+
 # Help Target
 help:
 	@echo The following are some of the valid targets for this Makefile:
@@ -353,6 +408,7 @@ help:
 	@echo ... edit_cache
 	@echo ... rebuild_cache
 	@echo ... breakout
+	@echo ... test_ball_brick_collision
 	@echo ... Ball.obj
 	@echo ... Ball.i
 	@echo ... Ball.s
@@ -380,6 +436,9 @@ help:
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s
+	@echo ... test_ball_brick_collision.obj
+	@echo ... test_ball_brick_collision.i
+	@echo ... test_ball_brick_collision.s
 .PHONY : help
 
 
