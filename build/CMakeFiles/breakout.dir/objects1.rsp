@@ -1,1 +1,1 @@
-CMakeFiles/breakout.dir/main.cpp.obj CMakeFiles/breakout.dir/Ball.cpp.obj CMakeFiles/breakout.dir/Paddle.cpp.obj CMakeFiles/breakout.dir/Brick.cpp.obj
+CMakeFiles/breakout.dir/main.cpp.obj CMakeFiles/breakout.dir/Ball.cpp.obj CMakeFiles/breakout.dir/Paddle.cpp.obj CMakeFiles/breakout.dir/Brick.cpp.obj CMakeFiles/breakout.dir/GameObject.cpp.obj CMakeFiles/breakout.dir/PhysicalObject.cpp.obj CMakeFiles/breakout.dir/VisualObject.cpp.obj

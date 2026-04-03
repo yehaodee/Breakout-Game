@@ -52,10 +52,10 @@ RM = "C:\Program Files\CMake\bin\cmake.exe" -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = D:\CS\CPP\DAYI_XIA\Breakout-Game
+CMAKE_SOURCE_DIR = D:\CS\CPP\Breakout-Game
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = D:\CS\CPP\DAYI_XIA\Breakout-Game\build
+CMAKE_BINARY_DIR = D:\CS\CPP\Breakout-Game\build
 
 # Include any dependencies generated for this target.
 include CMakeFiles/breakout.dir/depend.make
@@ -73,70 +73,118 @@ CMakeFiles/breakout.dir/codegen:
 
 CMakeFiles/breakout.dir/main.cpp.obj: CMakeFiles/breakout.dir/flags.make
 CMakeFiles/breakout.dir/main.cpp.obj: CMakeFiles/breakout.dir/includes_CXX.rsp
-CMakeFiles/breakout.dir/main.cpp.obj: D:/CS/CPP/DAYI_XIA/Breakout-Game/main.cpp
+CMakeFiles/breakout.dir/main.cpp.obj: D:/CS/CPP/Breakout-Game/main.cpp
 CMakeFiles/breakout.dir/main.cpp.obj: CMakeFiles/breakout.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\CS\CPP\DAYI_XIA\Breakout-Game\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/breakout.dir/main.cpp.obj"
-	D:\mingw-w64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/breakout.dir/main.cpp.obj -MF CMakeFiles\breakout.dir\main.cpp.obj.d -o CMakeFiles\breakout.dir\main.cpp.obj -c D:\CS\CPP\DAYI_XIA\Breakout-Game\main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\CS\CPP\Breakout-Game\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/breakout.dir/main.cpp.obj"
+	D:\mingw-w64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/breakout.dir/main.cpp.obj -MF CMakeFiles\breakout.dir\main.cpp.obj.d -o CMakeFiles\breakout.dir\main.cpp.obj -c D:\CS\CPP\Breakout-Game\main.cpp
 
 CMakeFiles/breakout.dir/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/breakout.dir/main.cpp.i"
-	D:\mingw-w64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\CS\CPP\DAYI_XIA\Breakout-Game\main.cpp > CMakeFiles\breakout.dir\main.cpp.i
+	D:\mingw-w64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\CS\CPP\Breakout-Game\main.cpp > CMakeFiles\breakout.dir\main.cpp.i
 
 CMakeFiles/breakout.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/breakout.dir/main.cpp.s"
-	D:\mingw-w64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\CS\CPP\DAYI_XIA\Breakout-Game\main.cpp -o CMakeFiles\breakout.dir\main.cpp.s
+	D:\mingw-w64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\CS\CPP\Breakout-Game\main.cpp -o CMakeFiles\breakout.dir\main.cpp.s
 
 CMakeFiles/breakout.dir/Ball.cpp.obj: CMakeFiles/breakout.dir/flags.make
 CMakeFiles/breakout.dir/Ball.cpp.obj: CMakeFiles/breakout.dir/includes_CXX.rsp
-CMakeFiles/breakout.dir/Ball.cpp.obj: D:/CS/CPP/DAYI_XIA/Breakout-Game/Ball.cpp
+CMakeFiles/breakout.dir/Ball.cpp.obj: D:/CS/CPP/Breakout-Game/Ball.cpp
 CMakeFiles/breakout.dir/Ball.cpp.obj: CMakeFiles/breakout.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\CS\CPP\DAYI_XIA\Breakout-Game\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/breakout.dir/Ball.cpp.obj"
-	D:\mingw-w64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/breakout.dir/Ball.cpp.obj -MF CMakeFiles\breakout.dir\Ball.cpp.obj.d -o CMakeFiles\breakout.dir\Ball.cpp.obj -c D:\CS\CPP\DAYI_XIA\Breakout-Game\Ball.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\CS\CPP\Breakout-Game\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/breakout.dir/Ball.cpp.obj"
+	D:\mingw-w64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/breakout.dir/Ball.cpp.obj -MF CMakeFiles\breakout.dir\Ball.cpp.obj.d -o CMakeFiles\breakout.dir\Ball.cpp.obj -c D:\CS\CPP\Breakout-Game\Ball.cpp
 
 CMakeFiles/breakout.dir/Ball.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/breakout.dir/Ball.cpp.i"
-	D:\mingw-w64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\CS\CPP\DAYI_XIA\Breakout-Game\Ball.cpp > CMakeFiles\breakout.dir\Ball.cpp.i
+	D:\mingw-w64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\CS\CPP\Breakout-Game\Ball.cpp > CMakeFiles\breakout.dir\Ball.cpp.i
 
 CMakeFiles/breakout.dir/Ball.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/breakout.dir/Ball.cpp.s"
-	D:\mingw-w64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\CS\CPP\DAYI_XIA\Breakout-Game\Ball.cpp -o CMakeFiles\breakout.dir\Ball.cpp.s
+	D:\mingw-w64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\CS\CPP\Breakout-Game\Ball.cpp -o CMakeFiles\breakout.dir\Ball.cpp.s
 
 CMakeFiles/breakout.dir/Paddle.cpp.obj: CMakeFiles/breakout.dir/flags.make
 CMakeFiles/breakout.dir/Paddle.cpp.obj: CMakeFiles/breakout.dir/includes_CXX.rsp
-CMakeFiles/breakout.dir/Paddle.cpp.obj: D:/CS/CPP/DAYI_XIA/Breakout-Game/Paddle.cpp
+CMakeFiles/breakout.dir/Paddle.cpp.obj: D:/CS/CPP/Breakout-Game/Paddle.cpp
 CMakeFiles/breakout.dir/Paddle.cpp.obj: CMakeFiles/breakout.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\CS\CPP\DAYI_XIA\Breakout-Game\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/breakout.dir/Paddle.cpp.obj"
-	D:\mingw-w64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/breakout.dir/Paddle.cpp.obj -MF CMakeFiles\breakout.dir\Paddle.cpp.obj.d -o CMakeFiles\breakout.dir\Paddle.cpp.obj -c D:\CS\CPP\DAYI_XIA\Breakout-Game\Paddle.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\CS\CPP\Breakout-Game\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/breakout.dir/Paddle.cpp.obj"
+	D:\mingw-w64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/breakout.dir/Paddle.cpp.obj -MF CMakeFiles\breakout.dir\Paddle.cpp.obj.d -o CMakeFiles\breakout.dir\Paddle.cpp.obj -c D:\CS\CPP\Breakout-Game\Paddle.cpp
 
 CMakeFiles/breakout.dir/Paddle.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/breakout.dir/Paddle.cpp.i"
-	D:\mingw-w64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\CS\CPP\DAYI_XIA\Breakout-Game\Paddle.cpp > CMakeFiles\breakout.dir\Paddle.cpp.i
+	D:\mingw-w64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\CS\CPP\Breakout-Game\Paddle.cpp > CMakeFiles\breakout.dir\Paddle.cpp.i
 
 CMakeFiles/breakout.dir/Paddle.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/breakout.dir/Paddle.cpp.s"
-	D:\mingw-w64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\CS\CPP\DAYI_XIA\Breakout-Game\Paddle.cpp -o CMakeFiles\breakout.dir\Paddle.cpp.s
+	D:\mingw-w64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\CS\CPP\Breakout-Game\Paddle.cpp -o CMakeFiles\breakout.dir\Paddle.cpp.s
 
 CMakeFiles/breakout.dir/Brick.cpp.obj: CMakeFiles/breakout.dir/flags.make
 CMakeFiles/breakout.dir/Brick.cpp.obj: CMakeFiles/breakout.dir/includes_CXX.rsp
-CMakeFiles/breakout.dir/Brick.cpp.obj: D:/CS/CPP/DAYI_XIA/Breakout-Game/Brick.cpp
+CMakeFiles/breakout.dir/Brick.cpp.obj: D:/CS/CPP/Breakout-Game/Brick.cpp
 CMakeFiles/breakout.dir/Brick.cpp.obj: CMakeFiles/breakout.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\CS\CPP\DAYI_XIA\Breakout-Game\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/breakout.dir/Brick.cpp.obj"
-	D:\mingw-w64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/breakout.dir/Brick.cpp.obj -MF CMakeFiles\breakout.dir\Brick.cpp.obj.d -o CMakeFiles\breakout.dir\Brick.cpp.obj -c D:\CS\CPP\DAYI_XIA\Breakout-Game\Brick.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\CS\CPP\Breakout-Game\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/breakout.dir/Brick.cpp.obj"
+	D:\mingw-w64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/breakout.dir/Brick.cpp.obj -MF CMakeFiles\breakout.dir\Brick.cpp.obj.d -o CMakeFiles\breakout.dir\Brick.cpp.obj -c D:\CS\CPP\Breakout-Game\Brick.cpp
 
 CMakeFiles/breakout.dir/Brick.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/breakout.dir/Brick.cpp.i"
-	D:\mingw-w64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\CS\CPP\DAYI_XIA\Breakout-Game\Brick.cpp > CMakeFiles\breakout.dir\Brick.cpp.i
+	D:\mingw-w64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\CS\CPP\Breakout-Game\Brick.cpp > CMakeFiles\breakout.dir\Brick.cpp.i
 
 CMakeFiles/breakout.dir/Brick.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/breakout.dir/Brick.cpp.s"
-	D:\mingw-w64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\CS\CPP\DAYI_XIA\Breakout-Game\Brick.cpp -o CMakeFiles\breakout.dir\Brick.cpp.s
+	D:\mingw-w64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\CS\CPP\Breakout-Game\Brick.cpp -o CMakeFiles\breakout.dir\Brick.cpp.s
+
+CMakeFiles/breakout.dir/GameObject.cpp.obj: CMakeFiles/breakout.dir/flags.make
+CMakeFiles/breakout.dir/GameObject.cpp.obj: CMakeFiles/breakout.dir/includes_CXX.rsp
+CMakeFiles/breakout.dir/GameObject.cpp.obj: D:/CS/CPP/Breakout-Game/GameObject.cpp
+CMakeFiles/breakout.dir/GameObject.cpp.obj: CMakeFiles/breakout.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\CS\CPP\Breakout-Game\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/breakout.dir/GameObject.cpp.obj"
+	D:\mingw-w64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/breakout.dir/GameObject.cpp.obj -MF CMakeFiles\breakout.dir\GameObject.cpp.obj.d -o CMakeFiles\breakout.dir\GameObject.cpp.obj -c D:\CS\CPP\Breakout-Game\GameObject.cpp
+
+CMakeFiles/breakout.dir/GameObject.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/breakout.dir/GameObject.cpp.i"
+	D:\mingw-w64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\CS\CPP\Breakout-Game\GameObject.cpp > CMakeFiles\breakout.dir\GameObject.cpp.i
+
+CMakeFiles/breakout.dir/GameObject.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/breakout.dir/GameObject.cpp.s"
+	D:\mingw-w64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\CS\CPP\Breakout-Game\GameObject.cpp -o CMakeFiles\breakout.dir\GameObject.cpp.s
+
+CMakeFiles/breakout.dir/PhysicalObject.cpp.obj: CMakeFiles/breakout.dir/flags.make
+CMakeFiles/breakout.dir/PhysicalObject.cpp.obj: CMakeFiles/breakout.dir/includes_CXX.rsp
+CMakeFiles/breakout.dir/PhysicalObject.cpp.obj: D:/CS/CPP/Breakout-Game/PhysicalObject.cpp
+CMakeFiles/breakout.dir/PhysicalObject.cpp.obj: CMakeFiles/breakout.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\CS\CPP\Breakout-Game\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/breakout.dir/PhysicalObject.cpp.obj"
+	D:\mingw-w64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/breakout.dir/PhysicalObject.cpp.obj -MF CMakeFiles\breakout.dir\PhysicalObject.cpp.obj.d -o CMakeFiles\breakout.dir\PhysicalObject.cpp.obj -c D:\CS\CPP\Breakout-Game\PhysicalObject.cpp
+
+CMakeFiles/breakout.dir/PhysicalObject.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/breakout.dir/PhysicalObject.cpp.i"
+	D:\mingw-w64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\CS\CPP\Breakout-Game\PhysicalObject.cpp > CMakeFiles\breakout.dir\PhysicalObject.cpp.i
+
+CMakeFiles/breakout.dir/PhysicalObject.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/breakout.dir/PhysicalObject.cpp.s"
+	D:\mingw-w64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\CS\CPP\Breakout-Game\PhysicalObject.cpp -o CMakeFiles\breakout.dir\PhysicalObject.cpp.s
+
+CMakeFiles/breakout.dir/VisualObject.cpp.obj: CMakeFiles/breakout.dir/flags.make
+CMakeFiles/breakout.dir/VisualObject.cpp.obj: CMakeFiles/breakout.dir/includes_CXX.rsp
+CMakeFiles/breakout.dir/VisualObject.cpp.obj: D:/CS/CPP/Breakout-Game/VisualObject.cpp
+CMakeFiles/breakout.dir/VisualObject.cpp.obj: CMakeFiles/breakout.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\CS\CPP\Breakout-Game\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/breakout.dir/VisualObject.cpp.obj"
+	D:\mingw-w64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/breakout.dir/VisualObject.cpp.obj -MF CMakeFiles\breakout.dir\VisualObject.cpp.obj.d -o CMakeFiles\breakout.dir\VisualObject.cpp.obj -c D:\CS\CPP\Breakout-Game\VisualObject.cpp
+
+CMakeFiles/breakout.dir/VisualObject.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/breakout.dir/VisualObject.cpp.i"
+	D:\mingw-w64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\CS\CPP\Breakout-Game\VisualObject.cpp > CMakeFiles\breakout.dir\VisualObject.cpp.i
+
+CMakeFiles/breakout.dir/VisualObject.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/breakout.dir/VisualObject.cpp.s"
+	D:\mingw-w64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\CS\CPP\Breakout-Game\VisualObject.cpp -o CMakeFiles\breakout.dir\VisualObject.cpp.s
 
 # Object files for target breakout
 breakout_OBJECTS = \
 "CMakeFiles/breakout.dir/main.cpp.obj" \
 "CMakeFiles/breakout.dir/Ball.cpp.obj" \
 "CMakeFiles/breakout.dir/Paddle.cpp.obj" \
-"CMakeFiles/breakout.dir/Brick.cpp.obj"
+"CMakeFiles/breakout.dir/Brick.cpp.obj" \
+"CMakeFiles/breakout.dir/GameObject.cpp.obj" \
+"CMakeFiles/breakout.dir/PhysicalObject.cpp.obj" \
+"CMakeFiles/breakout.dir/VisualObject.cpp.obj"
 
 # External object files for target breakout
 breakout_EXTERNAL_OBJECTS =
@@ -145,11 +193,14 @@ breakout.exe: CMakeFiles/breakout.dir/main.cpp.obj
 breakout.exe: CMakeFiles/breakout.dir/Ball.cpp.obj
 breakout.exe: CMakeFiles/breakout.dir/Paddle.cpp.obj
 breakout.exe: CMakeFiles/breakout.dir/Brick.cpp.obj
+breakout.exe: CMakeFiles/breakout.dir/GameObject.cpp.obj
+breakout.exe: CMakeFiles/breakout.dir/PhysicalObject.cpp.obj
+breakout.exe: CMakeFiles/breakout.dir/VisualObject.cpp.obj
 breakout.exe: CMakeFiles/breakout.dir/build.make
 breakout.exe: CMakeFiles/breakout.dir/linkLibs.rsp
 breakout.exe: CMakeFiles/breakout.dir/objects1.rsp
 breakout.exe: CMakeFiles/breakout.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=D:\CS\CPP\DAYI_XIA\Breakout-Game\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX executable breakout.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=D:\CS\CPP\Breakout-Game\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Linking CXX executable breakout.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\breakout.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -161,6 +212,6 @@ CMakeFiles/breakout.dir/clean:
 .PHONY : CMakeFiles/breakout.dir/clean
 
 CMakeFiles/breakout.dir/depend:
-	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" D:\CS\CPP\DAYI_XIA\Breakout-Game D:\CS\CPP\DAYI_XIA\Breakout-Game D:\CS\CPP\DAYI_XIA\Breakout-Game\build D:\CS\CPP\DAYI_XIA\Breakout-Game\build D:\CS\CPP\DAYI_XIA\Breakout-Game\build\CMakeFiles\breakout.dir\DependInfo.cmake "--color=$(COLOR)" breakout
+	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" D:\CS\CPP\Breakout-Game D:\CS\CPP\Breakout-Game D:\CS\CPP\Breakout-Game\build D:\CS\CPP\Breakout-Game\build D:\CS\CPP\Breakout-Game\build\CMakeFiles\breakout.dir\DependInfo.cmake "--color=$(COLOR)" breakout
 .PHONY : CMakeFiles/breakout.dir/depend
 

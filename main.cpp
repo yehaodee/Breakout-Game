@@ -45,14 +45,14 @@ int main() {
     GameState currentState = MENU;
     
     // 游戏对象
-    Ball ball((Vector2){400, 300}, (Vector2){3, 3}, 10);
+    Ball ball((Vector2){400, 300}, (Vector2){3, 3}, 10, RED);
     Paddle paddle(350, 550, 100, 20);
     
     // 游戏数据
     int score = 0;
     int lives = 3;
     int level = 1;
-    int ballSpeed = 3;
+    float ballSpeed = 3.0f;
     
     std::vector<Brick> bricks;
     CreateBricks(bricks, level);
@@ -68,7 +68,7 @@ int main() {
                 lives = 3;
                 level = 1;
                 ballSpeed = 3;
-                ball = Ball((Vector2){400, 300}, (Vector2){ballSpeed, ballSpeed}, 10);
+                ball = Ball((Vector2){400, 300}, (Vector2){ballSpeed, ballSpeed}, 10, RED);
                 CreateBricks(bricks, level);
             }
         }
@@ -91,11 +91,16 @@ int main() {
                     if (lives<= 0) {
                         currentState = GAME_OVER;
                     } else {
-                        ball = Ball((Vector2){400, 300}, (Vector2){ballSpeed, ballSpeed}, 10);
+                        ball = Ball((Vector2){400, 300}, (Vector2){ballSpeed, ballSpeed}, 10, RED);
                     }
                 }
             }
 
+            // 球与砖块碰撞检测
+            if (ball.CheckBrickCollision(bricks)) {
+                score += ball.GetScoreValue();
+            }
+            
             // 板移动
             if (IsKeyDown(KEY_LEFT)) paddle.MoveLeft(8);
             if (IsKeyDown(KEY_RIGHT)) paddle.MoveRight(8);
@@ -116,7 +121,7 @@ int main() {
             if (allBricksDestroyed) {
                 level++;
                 ballSpeed += 0.5;
-                ball = Ball((Vector2){400, 300}, (Vector2){ballSpeed, ballSpeed}, 10);
+                ball = Ball((Vector2){400, 300}, (Vector2){ballSpeed, ballSpeed}, 10, RED);
                 CreateBricks(bricks, level);
                 
                 // 如果是第5关，游戏胜利

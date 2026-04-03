@@ -1,3 +1,3 @@
-D:/CS/CPP/DAYI_XIA/Breakout-Game/build/CMakeFiles/breakout.dir
-D:/CS/CPP/DAYI_XIA/Breakout-Game/build/CMakeFiles/edit_cache.dir
-D:/CS/CPP/DAYI_XIA/Breakout-Game/build/CMakeFiles/rebuild_cache.dir
+D:/CS/CPP/Breakout-Game/build/CMakeFiles/breakout.dir
+D:/CS/CPP/Breakout-Game/build/CMakeFiles/edit_cache.dir
+D:/CS/CPP/Breakout-Game/build/CMakeFiles/rebuild_cache.dir

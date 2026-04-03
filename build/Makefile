@@ -56,10 +56,10 @@ RM = "C:\Program Files\CMake\bin\cmake.exe" -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = D:\CS\CPP\DAYI_XIA\Breakout-Game
+CMAKE_SOURCE_DIR = D:\CS\CPP\Breakout-Game
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = D:\CS\CPP\DAYI_XIA\Breakout-Game\build
+CMAKE_BINARY_DIR = D:\CS\CPP\Breakout-Game\build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -86,9 +86,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start D:\CS\CPP\DAYI_XIA\Breakout-Game\build\CMakeFiles D:\CS\CPP\DAYI_XIA\Breakout-Game\build\\CMakeFiles\progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start D:\CS\CPP\Breakout-Game\build\CMakeFiles D:\CS\CPP\Breakout-Game\build\\CMakeFiles\progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start D:\CS\CPP\DAYI_XIA\Breakout-Game\build\CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start D:\CS\CPP\Breakout-Game\build\CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -176,6 +176,30 @@ Brick.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\breakout.dir\build.make CMakeFiles/breakout.dir/Brick.cpp.s
 .PHONY : Brick.cpp.s
 
+GameObject.obj: GameObject.cpp.obj
+.PHONY : GameObject.obj
+
+# target to build an object file
+GameObject.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\breakout.dir\build.make CMakeFiles/breakout.dir/GameObject.cpp.obj
+.PHONY : GameObject.cpp.obj
+
+GameObject.i: GameObject.cpp.i
+.PHONY : GameObject.i
+
+# target to preprocess a source file
+GameObject.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\breakout.dir\build.make CMakeFiles/breakout.dir/GameObject.cpp.i
+.PHONY : GameObject.cpp.i
+
+GameObject.s: GameObject.cpp.s
+.PHONY : GameObject.s
+
+# target to generate assembly for a file
+GameObject.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\breakout.dir\build.make CMakeFiles/breakout.dir/GameObject.cpp.s
+.PHONY : GameObject.cpp.s
+
 Paddle.obj: Paddle.cpp.obj
 .PHONY : Paddle.obj
 
@@ -199,6 +223,54 @@ Paddle.s: Paddle.cpp.s
 Paddle.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\breakout.dir\build.make CMakeFiles/breakout.dir/Paddle.cpp.s
 .PHONY : Paddle.cpp.s
+
+PhysicalObject.obj: PhysicalObject.cpp.obj
+.PHONY : PhysicalObject.obj
+
+# target to build an object file
+PhysicalObject.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\breakout.dir\build.make CMakeFiles/breakout.dir/PhysicalObject.cpp.obj
+.PHONY : PhysicalObject.cpp.obj
+
+PhysicalObject.i: PhysicalObject.cpp.i
+.PHONY : PhysicalObject.i
+
+# target to preprocess a source file
+PhysicalObject.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\breakout.dir\build.make CMakeFiles/breakout.dir/PhysicalObject.cpp.i
+.PHONY : PhysicalObject.cpp.i
+
+PhysicalObject.s: PhysicalObject.cpp.s
+.PHONY : PhysicalObject.s
+
+# target to generate assembly for a file
+PhysicalObject.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\breakout.dir\build.make CMakeFiles/breakout.dir/PhysicalObject.cpp.s
+.PHONY : PhysicalObject.cpp.s
+
+VisualObject.obj: VisualObject.cpp.obj
+.PHONY : VisualObject.obj
+
+# target to build an object file
+VisualObject.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\breakout.dir\build.make CMakeFiles/breakout.dir/VisualObject.cpp.obj
+.PHONY : VisualObject.cpp.obj
+
+VisualObject.i: VisualObject.cpp.i
+.PHONY : VisualObject.i
+
+# target to preprocess a source file
+VisualObject.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\breakout.dir\build.make CMakeFiles/breakout.dir/VisualObject.cpp.i
+.PHONY : VisualObject.cpp.i
+
+VisualObject.s: VisualObject.cpp.s
+.PHONY : VisualObject.s
+
+# target to generate assembly for a file
+VisualObject.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\breakout.dir\build.make CMakeFiles/breakout.dir/VisualObject.cpp.s
+.PHONY : VisualObject.cpp.s
 
 main.obj: main.cpp.obj
 .PHONY : main.obj
@@ -239,9 +311,18 @@ help:
 	@echo ... Brick.obj
 	@echo ... Brick.i
 	@echo ... Brick.s
+	@echo ... GameObject.obj
+	@echo ... GameObject.i
+	@echo ... GameObject.s
 	@echo ... Paddle.obj
 	@echo ... Paddle.i
 	@echo ... Paddle.s
+	@echo ... PhysicalObject.obj
+	@echo ... PhysicalObject.i
+	@echo ... PhysicalObject.s
+	@echo ... VisualObject.obj
+	@echo ... VisualObject.i
+	@echo ... VisualObject.s
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s

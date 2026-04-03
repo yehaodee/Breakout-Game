@@ -1,5 +1,5 @@
-CMakeFiles/breakout.dir/main.cpp.obj: \
- D:\CS\CPP\DAYI_XIA\Breakout-Game\main.cpp D:/raylib/include/raylib.h \
+CMakeFiles/breakout.dir/main.cpp.obj: D:\CS\CPP\Breakout-Game\main.cpp \
+ D:/raylib/include/raylib.h \
  D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/stdarg.h \
  D:/mingw-w64/x86_64-w64-mingw32/include/stdarg.h \
  D:/mingw-w64/x86_64-w64-mingw32/include/_mingw_stdarg.h \
@@ -8,9 +8,9 @@ CMakeFiles/breakout.dir/main.cpp.obj: \
  D:/mingw-w64/x86_64-w64-mingw32/include/_mingw_mac.h \
  D:/mingw-w64/x86_64-w64-mingw32/include/_mingw_secapi.h \
  D:/mingw-w64/x86_64-w64-mingw32/include/sdks/_mingw_ddk.h \
- D:\CS\CPP\DAYI_XIA\Breakout-Game\Ball.h \
- D:\CS\CPP\DAYI_XIA\Breakout-Game\Paddle.h \
- D:\CS\CPP\DAYI_XIA\Breakout-Game\Brick.h \
+ D:\CS\CPP\Breakout-Game\Ball.h D:\CS\CPP\Breakout-Game\PhysicalObject.h \
+ D:\CS\CPP\Breakout-Game\GameObject.h \
+ D:\CS\CPP\Breakout-Game\VisualObject.h \
  D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/vector \
  D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/requires_hosted.h \
  D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/x86_64-w64-mingw32/bits/c++config.h \
@@ -66,6 +66,7 @@ CMakeFiles/breakout.dir/main.cpp.obj: \
  D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/uses_allocator.h \
  D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/uses_allocator_args.h \
  D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/tuple \
+ D:\CS\CPP\Breakout-Game\Paddle.h D:\CS\CPP\Breakout-Game\Brick.h \
  D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/string \
  D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/stringfwd.h \
  D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/char_traits.h \

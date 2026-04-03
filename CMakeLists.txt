@@ -18,6 +18,9 @@ add_executable(breakout
     Ball.cpp
     Paddle.cpp
     Brick.cpp
+    GameObject.cpp
+    PhysicalObject.cpp
+    VisualObject.cpp
 )
 
 target_link_libraries(breakout PRIVATE

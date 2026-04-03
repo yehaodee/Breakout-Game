@@ -2,14 +2,15 @@
 #define BALL_H
 
 #include "raylib.h"
+#include "PhysicalObject.h"
+#include "VisualObject.h"
+#include <vector>
 
-class Ball {
+class Ball : public PhysicalObject, public VisualObject {
 private:
-    Vector2 position;
-    Vector2 speed;
-    float radius;
+    int scoreValue;
 public:
-    Ball(Vector2 pos, Vector2 sp, float r);
+    Ball(Vector2 pos, Vector2 sp, float r, Color c);
     void Move();
     void Draw();
     bool BounceEdge(int screenWidth, int screenHeight);
@@ -17,6 +18,8 @@ public:
     float GetRadius();
     void ReverseY();
     bool CheckPaddleCollision(Rectangle paddleRect);
+    bool CheckBrickCollision(std::vector<class Brick>& bricks);
+    int GetScoreValue();
 };
 
 #endif
