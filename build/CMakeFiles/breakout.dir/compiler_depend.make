@@ -70,6 +70,7 @@ CMakeFiles/breakout.dir/Ball.cpp.obj: D:/CS/CPP/Breakout-Game/Ball.cpp \
   D:/CS/CPP/Breakout-Game/Brick.h \
   D:/CS/CPP/Breakout-Game/GameObject.h \
   D:/CS/CPP/Breakout-Game/PhysicalObject.h \
+  D:/CS/CPP/Breakout-Game/RectangleObject.h \
   D:/CS/CPP/Breakout-Game/VisualObject.h
 
 CMakeFiles/breakout.dir/Brick.cpp.obj: D:/CS/CPP/Breakout-Game/Brick.cpp \
@@ -141,6 +142,7 @@ CMakeFiles/breakout.dir/Brick.cpp.obj: D:/CS/CPP/Breakout-Game/Brick.cpp \
   D:/CS/CPP/Breakout-Game/Brick.h \
   D:/CS/CPP/Breakout-Game/GameObject.h \
   D:/CS/CPP/Breakout-Game/PhysicalObject.h \
+  D:/CS/CPP/Breakout-Game/RectangleObject.h \
   D:/CS/CPP/Breakout-Game/VisualObject.h
 
 CMakeFiles/breakout.dir/GameObject.cpp.obj: D:/CS/CPP/Breakout-Game/GameObject.cpp \
@@ -165,9 +167,7 @@ CMakeFiles/breakout.dir/Paddle.cpp.obj: D:/CS/CPP/Breakout-Game/Paddle.cpp \
   D:/mingw-w64/x86_64-w64-mingw32/include/stdarg.h \
   D:/mingw-w64/x86_64-w64-mingw32/include/vadefs.h \
   D:/raylib/include/raylib.h \
-  D:/CS/CPP/Breakout-Game/GameObject.h \
-  D:/CS/CPP/Breakout-Game/Paddle.h \
-  D:/CS/CPP/Breakout-Game/PhysicalObject.h
+  D:/CS/CPP/Breakout-Game/Paddle.h
 
 CMakeFiles/breakout.dir/PhysicalObject.cpp.obj: D:/CS/CPP/Breakout-Game/PhysicalObject.cpp \
   D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/stdarg.h \
@@ -181,6 +181,19 @@ CMakeFiles/breakout.dir/PhysicalObject.cpp.obj: D:/CS/CPP/Breakout-Game/Physical
   D:/raylib/include/raylib.h \
   D:/CS/CPP/Breakout-Game/GameObject.h \
   D:/CS/CPP/Breakout-Game/PhysicalObject.h
+
+CMakeFiles/breakout.dir/RectangleObject.cpp.obj: D:/CS/CPP/Breakout-Game/RectangleObject.cpp \
+  D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/stdarg.h \
+  D:/mingw-w64/x86_64-w64-mingw32/include/_mingw.h \
+  D:/mingw-w64/x86_64-w64-mingw32/include/_mingw_mac.h \
+  D:/mingw-w64/x86_64-w64-mingw32/include/_mingw_secapi.h \
+  D:/mingw-w64/x86_64-w64-mingw32/include/_mingw_stdarg.h \
+  D:/mingw-w64/x86_64-w64-mingw32/include/sdks/_mingw_ddk.h \
+  D:/mingw-w64/x86_64-w64-mingw32/include/stdarg.h \
+  D:/mingw-w64/x86_64-w64-mingw32/include/vadefs.h \
+  D:/raylib/include/raylib.h \
+  D:/CS/CPP/Breakout-Game/GameObject.h \
+  D:/CS/CPP/Breakout-Game/RectangleObject.h
 
 CMakeFiles/breakout.dir/VisualObject.cpp.obj: D:/CS/CPP/Breakout-Game/VisualObject.cpp \
   D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/stdarg.h \
@@ -307,6 +320,7 @@ CMakeFiles/breakout.dir/main.cpp.obj: D:/CS/CPP/Breakout-Game/main.cpp \
   D:/CS/CPP/Breakout-Game/GameObject.h \
   D:/CS/CPP/Breakout-Game/Paddle.h \
   D:/CS/CPP/Breakout-Game/PhysicalObject.h \
+  D:/CS/CPP/Breakout-Game/RectangleObject.h \
   D:/CS/CPP/Breakout-Game/VisualObject.h
 
 
@@ -390,6 +404,8 @@ D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/ptr_traits.h:
 
 D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/range_access.h:
 
+D:/CS/CPP/Breakout-Game/RectangleObject.h:
+
 D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/requires_hosted.h:
 
 D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/stl_algobase.h:
@@ -469,6 +485,8 @@ D:/CS/CPP/Breakout-Game/Paddle.cpp:
 D:/CS/CPP/Breakout-Game/Paddle.h:
 
 D:/CS/CPP/Breakout-Game/PhysicalObject.cpp:
+
+D:/CS/CPP/Breakout-Game/RectangleObject.cpp:
 
 D:/CS/CPP/Breakout-Game/VisualObject.cpp:
 

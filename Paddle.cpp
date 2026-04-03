@@ -1,11 +1,11 @@
 #include "Paddle.h"
 
-Paddle::Paddle(float x, float y, float w, float h) {
-    rect = { x, y, w, h };
+Paddle::Paddle(float x, float y, float w, float h) 
+    : GameObject({x, y}), RectangleObject(x, y, w, h), VisualObject(BLUE) {
 }
 
 void Paddle::Draw() {
-    DrawRectangleRec(rect, BLUE);
+    DrawRectangleRec(rect, color);
 }
 
 void Paddle::MoveLeft(float speed) {

@@ -66,4 +66,5 @@ CMakeFiles/breakout.dir/Ball.cpp.obj: D:\CS\CPP\Breakout-Game\Ball.cpp \
  D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/uses_allocator.h \
  D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/uses_allocator_args.h \
  D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/tuple \
- D:\CS\CPP\Breakout-Game\Brick.h
+ D:\CS\CPP\Breakout-Game\Brick.h \
+ D:\CS\CPP\Breakout-Game\RectangleObject.h

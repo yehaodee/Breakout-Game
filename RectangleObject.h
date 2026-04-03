@@ -9,6 +9,5 @@ protected:
     Rectangle rect;
 public:
     RectangleObject(float x, float y, float w, float h);
-    void Draw();
 };
 #endif

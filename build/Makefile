@@ -248,6 +248,30 @@ PhysicalObject.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\breakout.dir\build.make CMakeFiles/breakout.dir/PhysicalObject.cpp.s
 .PHONY : PhysicalObject.cpp.s
 
+RectangleObject.obj: RectangleObject.cpp.obj
+.PHONY : RectangleObject.obj
+
+# target to build an object file
+RectangleObject.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\breakout.dir\build.make CMakeFiles/breakout.dir/RectangleObject.cpp.obj
+.PHONY : RectangleObject.cpp.obj
+
+RectangleObject.i: RectangleObject.cpp.i
+.PHONY : RectangleObject.i
+
+# target to preprocess a source file
+RectangleObject.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\breakout.dir\build.make CMakeFiles/breakout.dir/RectangleObject.cpp.i
+.PHONY : RectangleObject.cpp.i
+
+RectangleObject.s: RectangleObject.cpp.s
+.PHONY : RectangleObject.s
+
+# target to generate assembly for a file
+RectangleObject.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\breakout.dir\build.make CMakeFiles/breakout.dir/RectangleObject.cpp.s
+.PHONY : RectangleObject.cpp.s
+
 VisualObject.obj: VisualObject.cpp.obj
 .PHONY : VisualObject.obj
 
@@ -320,6 +344,9 @@ help:
 	@echo ... PhysicalObject.obj
 	@echo ... PhysicalObject.i
 	@echo ... PhysicalObject.s
+	@echo ... RectangleObject.obj
+	@echo ... RectangleObject.i
+	@echo ... RectangleObject.s
 	@echo ... VisualObject.obj
 	@echo ... VisualObject.i
 	@echo ... VisualObject.s

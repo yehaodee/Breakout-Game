@@ -21,6 +21,7 @@ add_executable(breakout
     GameObject.cpp
     PhysicalObject.cpp
     VisualObject.cpp
+    RectangleObject.cpp
 )
 
 target_link_libraries(breakout PRIVATE

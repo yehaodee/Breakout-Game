@@ -2,10 +2,10 @@
 #define PADDLE_H
 
 #include "raylib.h"
+#include "RectangleObject.h"
+#include "VisualObject.h"
 
-class Paddle {
-private:
-    Rectangle rect;
+class Paddle : public RectangleObject, public VisualObject {
 public:
     Paddle(float x, float y, float w, float h);
     void Draw();
