@@ -1,3 +1,3 @@
 "C:\Program Files\CMake\bin\cmake.exe" -E rm -f CMakeFiles\breakout.dir/objects.a
 D:\mingw-w64\bin\ar.exe qc CMakeFiles\breakout.dir/objects.a @CMakeFiles\breakout.dir\objects1.rsp
-D:\mingw-w64\bin\c++.exe -static-libgcc -static-libstdc++ -Wl,--whole-archive CMakeFiles\breakout.dir/objects.a -Wl,--no-whole-archive -o breakout.exe -Wl,--out-implib,libbreakout.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\breakout.dir\linkLibs.rsp
+D:\mingw-w64\bin\g++.exe -static-libgcc -static-libstdc++ -Wl,--whole-archive CMakeFiles\breakout.dir/objects.a -Wl,--no-whole-archive -o breakout.exe -Wl,--out-implib,libbreakout.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\breakout.dir\linkLibs.rsp

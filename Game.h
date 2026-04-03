@@ -6,6 +6,7 @@
 #include "Paddle.h"
 #include "Brick.h"
 #include <vector>
+#include <string>
 
 enum GameState {
     MENU,
@@ -27,7 +28,28 @@ private:
     GameState currentState;
     float gameTime;
     
+    // 配置参数
+    int windowWidth;
+    int windowHeight;
+    std::string windowTitle;
+    float ballRadius;
+    float ballGravity;
+    float ballMaxSpeed;
+    float ballBounceForce;
+    float paddleWidth;
+    float paddleHeight;
+    float paddleSpeed;
+    float paddleBoostSpeed;
+    int brickRows;
+    int brickCols;
+    float brickWidth;
+    float brickHeight;
+    int initialLives;
+    int scorePerBrick;
+    float timeMultiplierDecay;
+    
     void CreateBricks(int level);
+    void LoadConfig(const std::string& path);
     
 public:
     Game();
