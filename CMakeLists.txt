@@ -10,7 +10,7 @@ set(CMAKE_CXX_EXTENSIONS OFF)
 set(RAYLIB_INCLUDE_DIR D:/raylib/include)
 set(RAYLIB_LIB_DIR D:/raylib/lib)
 
-include_directories(${RAYLIB_INCLUDE_DIR})
+include_directories(${RAYLIB_INCLUDE_DIR} ${CMAKE_SOURCE_DIR}/include)
 link_directories(${RAYLIB_LIB_DIR})
 
 add_executable(breakout

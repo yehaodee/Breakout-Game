@@ -69,4 +69,46 @@ CMakeFiles/breakout.dir/main.cpp.obj: D:\CS\CPP\Breakout-Game\main.cpp \
  D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/tuple \
  D:\CS\CPP\Breakout-Game\Paddle.h \
  D:\CS\CPP\Breakout-Game\RectangleObject.h \
- D:\CS\CPP\Breakout-Game\Brick.h
+ D:\CS\CPP\Breakout-Game\Brick.h \
+ D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/string \
+ D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/stringfwd.h \
+ D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/char_traits.h \
+ D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/postypes.h \
+ D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/cwchar \
+ D:/mingw-w64/x86_64-w64-mingw32/include/wchar.h \
+ D:/mingw-w64/x86_64-w64-mingw32/include/corecrt_stdio_config.h \
+ D:/mingw-w64/x86_64-w64-mingw32/include/corecrt_wstdlib.h \
+ D:/mingw-w64/x86_64-w64-mingw32/include/_mingw_off_t.h \
+ D:/mingw-w64/x86_64-w64-mingw32/include/_mingw_stat64.h \
+ D:/mingw-w64/x86_64-w64-mingw32/include/swprintf.inl \
+ D:/mingw-w64/x86_64-w64-mingw32/include/sec_api/wchar_s.h \
+ D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/localefwd.h \
+ D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/x86_64-w64-mingw32/bits/c++locale.h \
+ D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/clocale \
+ D:/mingw-w64/x86_64-w64-mingw32/include/locale.h \
+ D:/mingw-w64/x86_64-w64-mingw32/include/stdio.h \
+ D:/mingw-w64/x86_64-w64-mingw32/include/sec_api/stdio_s.h \
+ D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/iosfwd \
+ D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/cctype \
+ D:/mingw-w64/x86_64-w64-mingw32/include/ctype.h \
+ D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/ostream_insert.h \
+ D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/cxxabi_forced.h \
+ D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/basic_string.h \
+ D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/string_view \
+ D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/string_view.tcc \
+ D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/ext/string_conversions.h \
+ D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/cstdlib \
+ D:/mingw-w64/x86_64-w64-mingw32/include/stdlib.h \
+ D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/limits.h \
+ D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/syslimits.h \
+ D:/mingw-w64/x86_64-w64-mingw32/include/limits.h \
+ D:/mingw-w64/x86_64-w64-mingw32/include/sec_api/stdlib_s.h \
+ D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/stdlib.h \
+ D:/mingw-w64/x86_64-w64-mingw32/include/malloc.h \
+ D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/mm_malloc.h \
+ D:/mingw-w64/x86_64-w64-mingw32/include/errno.h \
+ D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/std_abs.h \
+ D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/cstdio \
+ D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/cerrno \
+ D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/charconv.h \
+ D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/basic_string.tcc
