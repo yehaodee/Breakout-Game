@@ -3,6 +3,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/breakout.dir/Ball.cpp.obj.d"
   "CMakeFiles/breakout.dir/Brick.cpp.obj"
   "CMakeFiles/breakout.dir/Brick.cpp.obj.d"
+  "CMakeFiles/breakout.dir/Game.cpp.obj"
+  "CMakeFiles/breakout.dir/Game.cpp.obj.d"
   "CMakeFiles/breakout.dir/GameObject.cpp.obj"
   "CMakeFiles/breakout.dir/GameObject.cpp.obj.d"
   "CMakeFiles/breakout.dir/Paddle.cpp.obj"

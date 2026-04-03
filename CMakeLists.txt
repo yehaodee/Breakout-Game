@@ -15,6 +15,7 @@ link_directories(${RAYLIB_LIB_DIR})
 
 add_executable(breakout
     main.cpp
+    Game.cpp
     Ball.cpp
     Paddle.cpp
     Brick.cpp

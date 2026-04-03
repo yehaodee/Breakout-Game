@@ -145,70 +145,7 @@ CMakeFiles/breakout.dir/Brick.cpp.obj: D:/CS/CPP/Breakout-Game/Brick.cpp \
   D:/CS/CPP/Breakout-Game/RectangleObject.h \
   D:/CS/CPP/Breakout-Game/VisualObject.h
 
-CMakeFiles/breakout.dir/GameObject.cpp.obj: D:/CS/CPP/Breakout-Game/GameObject.cpp \
-  D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/stdarg.h \
-  D:/mingw-w64/x86_64-w64-mingw32/include/_mingw.h \
-  D:/mingw-w64/x86_64-w64-mingw32/include/_mingw_mac.h \
-  D:/mingw-w64/x86_64-w64-mingw32/include/_mingw_secapi.h \
-  D:/mingw-w64/x86_64-w64-mingw32/include/_mingw_stdarg.h \
-  D:/mingw-w64/x86_64-w64-mingw32/include/sdks/_mingw_ddk.h \
-  D:/mingw-w64/x86_64-w64-mingw32/include/stdarg.h \
-  D:/mingw-w64/x86_64-w64-mingw32/include/vadefs.h \
-  D:/raylib/include/raylib.h \
-  D:/CS/CPP/Breakout-Game/GameObject.h
-
-CMakeFiles/breakout.dir/Paddle.cpp.obj: D:/CS/CPP/Breakout-Game/Paddle.cpp \
-  D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/stdarg.h \
-  D:/mingw-w64/x86_64-w64-mingw32/include/_mingw.h \
-  D:/mingw-w64/x86_64-w64-mingw32/include/_mingw_mac.h \
-  D:/mingw-w64/x86_64-w64-mingw32/include/_mingw_secapi.h \
-  D:/mingw-w64/x86_64-w64-mingw32/include/_mingw_stdarg.h \
-  D:/mingw-w64/x86_64-w64-mingw32/include/sdks/_mingw_ddk.h \
-  D:/mingw-w64/x86_64-w64-mingw32/include/stdarg.h \
-  D:/mingw-w64/x86_64-w64-mingw32/include/vadefs.h \
-  D:/raylib/include/raylib.h \
-  D:/CS/CPP/Breakout-Game/Paddle.h
-
-CMakeFiles/breakout.dir/PhysicalObject.cpp.obj: D:/CS/CPP/Breakout-Game/PhysicalObject.cpp \
-  D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/stdarg.h \
-  D:/mingw-w64/x86_64-w64-mingw32/include/_mingw.h \
-  D:/mingw-w64/x86_64-w64-mingw32/include/_mingw_mac.h \
-  D:/mingw-w64/x86_64-w64-mingw32/include/_mingw_secapi.h \
-  D:/mingw-w64/x86_64-w64-mingw32/include/_mingw_stdarg.h \
-  D:/mingw-w64/x86_64-w64-mingw32/include/sdks/_mingw_ddk.h \
-  D:/mingw-w64/x86_64-w64-mingw32/include/stdarg.h \
-  D:/mingw-w64/x86_64-w64-mingw32/include/vadefs.h \
-  D:/raylib/include/raylib.h \
-  D:/CS/CPP/Breakout-Game/GameObject.h \
-  D:/CS/CPP/Breakout-Game/PhysicalObject.h
-
-CMakeFiles/breakout.dir/RectangleObject.cpp.obj: D:/CS/CPP/Breakout-Game/RectangleObject.cpp \
-  D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/stdarg.h \
-  D:/mingw-w64/x86_64-w64-mingw32/include/_mingw.h \
-  D:/mingw-w64/x86_64-w64-mingw32/include/_mingw_mac.h \
-  D:/mingw-w64/x86_64-w64-mingw32/include/_mingw_secapi.h \
-  D:/mingw-w64/x86_64-w64-mingw32/include/_mingw_stdarg.h \
-  D:/mingw-w64/x86_64-w64-mingw32/include/sdks/_mingw_ddk.h \
-  D:/mingw-w64/x86_64-w64-mingw32/include/stdarg.h \
-  D:/mingw-w64/x86_64-w64-mingw32/include/vadefs.h \
-  D:/raylib/include/raylib.h \
-  D:/CS/CPP/Breakout-Game/GameObject.h \
-  D:/CS/CPP/Breakout-Game/RectangleObject.h
-
-CMakeFiles/breakout.dir/VisualObject.cpp.obj: D:/CS/CPP/Breakout-Game/VisualObject.cpp \
-  D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/stdarg.h \
-  D:/mingw-w64/x86_64-w64-mingw32/include/_mingw.h \
-  D:/mingw-w64/x86_64-w64-mingw32/include/_mingw_mac.h \
-  D:/mingw-w64/x86_64-w64-mingw32/include/_mingw_secapi.h \
-  D:/mingw-w64/x86_64-w64-mingw32/include/_mingw_stdarg.h \
-  D:/mingw-w64/x86_64-w64-mingw32/include/sdks/_mingw_ddk.h \
-  D:/mingw-w64/x86_64-w64-mingw32/include/stdarg.h \
-  D:/mingw-w64/x86_64-w64-mingw32/include/vadefs.h \
-  D:/raylib/include/raylib.h \
-  D:/CS/CPP/Breakout-Game/GameObject.h \
-  D:/CS/CPP/Breakout-Game/VisualObject.h
-
-CMakeFiles/breakout.dir/main.cpp.obj: D:/CS/CPP/Breakout-Game/main.cpp \
+CMakeFiles/breakout.dir/Game.cpp.obj: D:/CS/CPP/Breakout-Game/Game.cpp \
   D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/backward/binders.h \
   D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bit \
   D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/alloc_traits.h \
@@ -317,6 +254,147 @@ CMakeFiles/breakout.dir/main.cpp.obj: D:/CS/CPP/Breakout-Game/main.cpp \
   D:/raylib/include/raylib.h \
   D:/CS/CPP/Breakout-Game/Ball.h \
   D:/CS/CPP/Breakout-Game/Brick.h \
+  D:/CS/CPP/Breakout-Game/Game.h \
+  D:/CS/CPP/Breakout-Game/GameObject.h \
+  D:/CS/CPP/Breakout-Game/Paddle.h \
+  D:/CS/CPP/Breakout-Game/PhysicalObject.h \
+  D:/CS/CPP/Breakout-Game/RectangleObject.h \
+  D:/CS/CPP/Breakout-Game/VisualObject.h
+
+CMakeFiles/breakout.dir/GameObject.cpp.obj: D:/CS/CPP/Breakout-Game/GameObject.cpp \
+  D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/stdarg.h \
+  D:/mingw-w64/x86_64-w64-mingw32/include/_mingw.h \
+  D:/mingw-w64/x86_64-w64-mingw32/include/_mingw_mac.h \
+  D:/mingw-w64/x86_64-w64-mingw32/include/_mingw_secapi.h \
+  D:/mingw-w64/x86_64-w64-mingw32/include/_mingw_stdarg.h \
+  D:/mingw-w64/x86_64-w64-mingw32/include/sdks/_mingw_ddk.h \
+  D:/mingw-w64/x86_64-w64-mingw32/include/stdarg.h \
+  D:/mingw-w64/x86_64-w64-mingw32/include/vadefs.h \
+  D:/raylib/include/raylib.h \
+  D:/CS/CPP/Breakout-Game/GameObject.h
+
+CMakeFiles/breakout.dir/Paddle.cpp.obj: D:/CS/CPP/Breakout-Game/Paddle.cpp \
+  D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/stdarg.h \
+  D:/mingw-w64/x86_64-w64-mingw32/include/_mingw.h \
+  D:/mingw-w64/x86_64-w64-mingw32/include/_mingw_mac.h \
+  D:/mingw-w64/x86_64-w64-mingw32/include/_mingw_secapi.h \
+  D:/mingw-w64/x86_64-w64-mingw32/include/_mingw_stdarg.h \
+  D:/mingw-w64/x86_64-w64-mingw32/include/sdks/_mingw_ddk.h \
+  D:/mingw-w64/x86_64-w64-mingw32/include/stdarg.h \
+  D:/mingw-w64/x86_64-w64-mingw32/include/vadefs.h \
+  D:/raylib/include/raylib.h \
+  D:/CS/CPP/Breakout-Game/GameObject.h \
+  D:/CS/CPP/Breakout-Game/Paddle.h \
+  D:/CS/CPP/Breakout-Game/RectangleObject.h \
+  D:/CS/CPP/Breakout-Game/VisualObject.h
+
+CMakeFiles/breakout.dir/PhysicalObject.cpp.obj: D:/CS/CPP/Breakout-Game/PhysicalObject.cpp \
+  D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/stdarg.h \
+  D:/mingw-w64/x86_64-w64-mingw32/include/_mingw.h \
+  D:/mingw-w64/x86_64-w64-mingw32/include/_mingw_mac.h \
+  D:/mingw-w64/x86_64-w64-mingw32/include/_mingw_secapi.h \
+  D:/mingw-w64/x86_64-w64-mingw32/include/_mingw_stdarg.h \
+  D:/mingw-w64/x86_64-w64-mingw32/include/sdks/_mingw_ddk.h \
+  D:/mingw-w64/x86_64-w64-mingw32/include/stdarg.h \
+  D:/mingw-w64/x86_64-w64-mingw32/include/vadefs.h \
+  D:/raylib/include/raylib.h \
+  D:/CS/CPP/Breakout-Game/GameObject.h \
+  D:/CS/CPP/Breakout-Game/PhysicalObject.h
+
+CMakeFiles/breakout.dir/RectangleObject.cpp.obj: D:/CS/CPP/Breakout-Game/RectangleObject.cpp \
+  D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/stdarg.h \
+  D:/mingw-w64/x86_64-w64-mingw32/include/_mingw.h \
+  D:/mingw-w64/x86_64-w64-mingw32/include/_mingw_mac.h \
+  D:/mingw-w64/x86_64-w64-mingw32/include/_mingw_secapi.h \
+  D:/mingw-w64/x86_64-w64-mingw32/include/_mingw_stdarg.h \
+  D:/mingw-w64/x86_64-w64-mingw32/include/sdks/_mingw_ddk.h \
+  D:/mingw-w64/x86_64-w64-mingw32/include/stdarg.h \
+  D:/mingw-w64/x86_64-w64-mingw32/include/vadefs.h \
+  D:/raylib/include/raylib.h \
+  D:/CS/CPP/Breakout-Game/GameObject.h \
+  D:/CS/CPP/Breakout-Game/RectangleObject.h
+
+CMakeFiles/breakout.dir/VisualObject.cpp.obj: D:/CS/CPP/Breakout-Game/VisualObject.cpp \
+  D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/stdarg.h \
+  D:/mingw-w64/x86_64-w64-mingw32/include/_mingw.h \
+  D:/mingw-w64/x86_64-w64-mingw32/include/_mingw_mac.h \
+  D:/mingw-w64/x86_64-w64-mingw32/include/_mingw_secapi.h \
+  D:/mingw-w64/x86_64-w64-mingw32/include/_mingw_stdarg.h \
+  D:/mingw-w64/x86_64-w64-mingw32/include/sdks/_mingw_ddk.h \
+  D:/mingw-w64/x86_64-w64-mingw32/include/stdarg.h \
+  D:/mingw-w64/x86_64-w64-mingw32/include/vadefs.h \
+  D:/raylib/include/raylib.h \
+  D:/CS/CPP/Breakout-Game/GameObject.h \
+  D:/CS/CPP/Breakout-Game/VisualObject.h
+
+CMakeFiles/breakout.dir/main.cpp.obj: D:/CS/CPP/Breakout-Game/main.cpp \
+  D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/backward/binders.h \
+  D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bit \
+  D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/alloc_traits.h \
+  D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/allocator.h \
+  D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/concept_check.h \
+  D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/cpp_type_traits.h \
+  D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/exception.h \
+  D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/exception_defines.h \
+  D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/functexcept.h \
+  D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/functional_hash.h \
+  D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/hash_bytes.h \
+  D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/invoke.h \
+  D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/memory_resource.h \
+  D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/memoryfwd.h \
+  D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/move.h \
+  D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/new_allocator.h \
+  D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/predefined_ops.h \
+  D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/ptr_traits.h \
+  D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/range_access.h \
+  D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/refwrap.h \
+  D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/requires_hosted.h \
+  D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/stl_algobase.h \
+  D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/stl_bvector.h \
+  D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/stl_construct.h \
+  D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/stl_function.h \
+  D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/stl_iterator.h \
+  D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/stl_iterator_base_funcs.h \
+  D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/stl_iterator_base_types.h \
+  D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/stl_pair.h \
+  D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/stl_uninitialized.h \
+  D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/stl_vector.h \
+  D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/uses_allocator.h \
+  D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/uses_allocator_args.h \
+  D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/utility.h \
+  D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/vector.tcc \
+  D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/cstddef \
+  D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/debug/assertions.h \
+  D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/debug/debug.h \
+  D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/ext/alloc_traits.h \
+  D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/ext/numeric_traits.h \
+  D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/ext/type_traits.h \
+  D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/initializer_list \
+  D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/new \
+  D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/pstl/pstl_config.h \
+  D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/tuple \
+  D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/type_traits \
+  D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/vector \
+  D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/x86_64-w64-mingw32/bits/c++allocator.h \
+  D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/x86_64-w64-mingw32/bits/c++config.h \
+  D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/x86_64-w64-mingw32/bits/cpu_defines.h \
+  D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/x86_64-w64-mingw32/bits/os_defines.h \
+  D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/stdarg.h \
+  D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/stddef.h \
+  D:/mingw-w64/x86_64-w64-mingw32/include/_mingw.h \
+  D:/mingw-w64/x86_64-w64-mingw32/include/_mingw_mac.h \
+  D:/mingw-w64/x86_64-w64-mingw32/include/_mingw_secapi.h \
+  D:/mingw-w64/x86_64-w64-mingw32/include/_mingw_stdarg.h \
+  D:/mingw-w64/x86_64-w64-mingw32/include/corecrt.h \
+  D:/mingw-w64/x86_64-w64-mingw32/include/crtdefs.h \
+  D:/mingw-w64/x86_64-w64-mingw32/include/sdks/_mingw_ddk.h \
+  D:/mingw-w64/x86_64-w64-mingw32/include/stdarg.h \
+  D:/mingw-w64/x86_64-w64-mingw32/include/stddef.h \
+  D:/mingw-w64/x86_64-w64-mingw32/include/vadefs.h \
+  D:/raylib/include/raylib.h \
+  D:/CS/CPP/Breakout-Game/Ball.h \
+  D:/CS/CPP/Breakout-Game/Brick.h \
+  D:/CS/CPP/Breakout-Game/Game.h \
   D:/CS/CPP/Breakout-Game/GameObject.h \
   D:/CS/CPP/Breakout-Game/Paddle.h \
   D:/CS/CPP/Breakout-Game/PhysicalObject.h \
@@ -478,19 +556,7 @@ D:/CS/CPP/Breakout-Game/VisualObject.h:
 
 D:/CS/CPP/Breakout-Game/Brick.cpp:
 
-D:/CS/CPP/Breakout-Game/GameObject.cpp:
-
-D:/CS/CPP/Breakout-Game/Paddle.cpp:
-
-D:/CS/CPP/Breakout-Game/Paddle.h:
-
-D:/CS/CPP/Breakout-Game/PhysicalObject.cpp:
-
-D:/CS/CPP/Breakout-Game/RectangleObject.cpp:
-
-D:/CS/CPP/Breakout-Game/VisualObject.cpp:
-
-D:/CS/CPP/Breakout-Game/main.cpp:
+D:/CS/CPP/Breakout-Game/Game.cpp:
 
 D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/basic_string.h:
 
@@ -565,3 +631,19 @@ D:/mingw-w64/x86_64-w64-mingw32/include/stdlib.h:
 D:/mingw-w64/x86_64-w64-mingw32/include/swprintf.inl:
 
 D:/mingw-w64/x86_64-w64-mingw32/include/wchar.h:
+
+D:/CS/CPP/Breakout-Game/Game.h:
+
+D:/CS/CPP/Breakout-Game/Paddle.h:
+
+D:/CS/CPP/Breakout-Game/GameObject.cpp:
+
+D:/CS/CPP/Breakout-Game/Paddle.cpp:
+
+D:/CS/CPP/Breakout-Game/PhysicalObject.cpp:
+
+D:/CS/CPP/Breakout-Game/RectangleObject.cpp:
+
+D:/CS/CPP/Breakout-Game/VisualObject.cpp:
+
+D:/CS/CPP/Breakout-Game/main.cpp:
