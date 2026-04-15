@@ -33,9 +33,11 @@ Game::Game()
       ball((Vector2){400, 300}, (Vector2){3, 3}, 10, RED),
       paddle(350, 550, 100, 20) {
     LoadConfig("config.json");
+    srand(time(NULL));
 }
 
 void Game::Init() {
+    InitWindow(windowWidth, windowHeight, windowTitle.c_str());
     SetTargetFPS(60);
 }
 
@@ -106,6 +108,15 @@ void Game::Update() {
                 if (brick.CheckCollision(ball)) {
                     ball.ReverseY();
                     score += brick.GetPoints();
+                    
+                    // 检查砖块是否被摧毁
+                    if (!brick.IsActive()) {
+                        // 30%概率生成道具
+                        if (rand() % 100 < 30) {
+                            PowerUpType type = static_cast<PowerUpType>(rand() % 3);
+                            powerUps.emplace_back(brick.GetRect().x + brick.GetRect().width / 2, brick.GetRect().y, type);
+                        }
+                    }
                 }
             }
         }
@@ -118,6 +129,17 @@ void Game::Update() {
             
             if (level >5) {
                 currentState = VICTORY;
+            }
+        }
+
+        // 更新道具
+        for (auto& powerUp : powerUps) {
+            powerUp.Update(GetFrameTime());
+            
+            // 检测道具与 paddle 的碰撞
+            if (powerUp.active && CheckCollisionCircleRec(powerUp.position, 10, paddle.GetRect())) {
+                powerUp.Apply(*this);
+                powerUp.active = false;
             }
         }
 
@@ -157,6 +179,11 @@ void Game::Draw() {
         ball.Draw();
         paddle.Draw();
         for (auto& brick : bricks) brick.Draw();
+        
+        // 绘制道具
+        for (auto& powerUp : powerUps) {
+            powerUp.Draw();
+        }
         
         DrawText(("Score: " + std::to_string(score)).c_str(), 20, 20, 20, DARKGRAY);
         DrawText(("Lives: " + std::to_string(lives)).c_str(), 150, 20, 20, DARKGRAY);

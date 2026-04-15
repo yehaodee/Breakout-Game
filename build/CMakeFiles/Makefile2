@@ -63,12 +63,10 @@ CMAKE_BINARY_DIR = D:\CS\CPP\Breakout-Game\build
 
 # The main recursive "all" target.
 all: CMakeFiles/breakout.dir/all
-all: CMakeFiles/test_ball_brick_collision.dir/all
 .PHONY : all
 
 # The main recursive "codegen" target.
 codegen: CMakeFiles/breakout.dir/codegen
-codegen: CMakeFiles/test_ball_brick_collision.dir/codegen
 .PHONY : codegen
 
 # The main recursive "preinstall" target.
@@ -77,7 +75,6 @@ preinstall:
 
 # The main recursive "clean" target.
 clean: CMakeFiles/breakout.dir/clean
-clean: CMakeFiles/test_ball_brick_collision.dir/clean
 .PHONY : clean
 
 #=============================================================================
@@ -87,12 +84,12 @@ clean: CMakeFiles/test_ball_brick_collision.dir/clean
 CMakeFiles/breakout.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\breakout.dir\build.make CMakeFiles/breakout.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\breakout.dir\build.make CMakeFiles/breakout.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=D:\CS\CPP\Breakout-Game\build\CMakeFiles --progress-num=1,2,3,4,5,6,7,8,9,10 "Built target breakout"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=D:\CS\CPP\Breakout-Game\build\CMakeFiles --progress-num=1,2,3,4,5,6,7,8,9,10,11 "Built target breakout"
 .PHONY : CMakeFiles/breakout.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/breakout.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start D:\CS\CPP\Breakout-Game\build\CMakeFiles 10
+	$(CMAKE_COMMAND) -E cmake_progress_start D:\CS\CPP\Breakout-Game\build\CMakeFiles 11
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 CMakeFiles/breakout.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start D:\CS\CPP\Breakout-Game\build\CMakeFiles 0
 .PHONY : CMakeFiles/breakout.dir/rule
@@ -104,45 +101,13 @@ breakout: CMakeFiles/breakout.dir/rule
 # codegen rule for target.
 CMakeFiles/breakout.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\breakout.dir\build.make CMakeFiles/breakout.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=D:\CS\CPP\Breakout-Game\build\CMakeFiles --progress-num=1,2,3,4,5,6,7,8,9,10 "Finished codegen for target breakout"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=D:\CS\CPP\Breakout-Game\build\CMakeFiles --progress-num=1,2,3,4,5,6,7,8,9,10,11 "Finished codegen for target breakout"
 .PHONY : CMakeFiles/breakout.dir/codegen
 
 # clean rule for target.
 CMakeFiles/breakout.dir/clean:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\breakout.dir\build.make CMakeFiles/breakout.dir/clean
 .PHONY : CMakeFiles/breakout.dir/clean
-
-#=============================================================================
-# Target rules for target CMakeFiles/test_ball_brick_collision.dir
-
-# All Build rule for target.
-CMakeFiles/test_ball_brick_collision.dir/all:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\test_ball_brick_collision.dir\build.make CMakeFiles/test_ball_brick_collision.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\test_ball_brick_collision.dir\build.make CMakeFiles/test_ball_brick_collision.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=D:\CS\CPP\Breakout-Game\build\CMakeFiles --progress-num=11,12,13,14,15,16,17,18 "Built target test_ball_brick_collision"
-.PHONY : CMakeFiles/test_ball_brick_collision.dir/all
-
-# Build rule for subdir invocation for target.
-CMakeFiles/test_ball_brick_collision.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start D:\CS\CPP\Breakout-Game\build\CMakeFiles 8
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 CMakeFiles/test_ball_brick_collision.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start D:\CS\CPP\Breakout-Game\build\CMakeFiles 0
-.PHONY : CMakeFiles/test_ball_brick_collision.dir/rule
-
-# Convenience name for target.
-test_ball_brick_collision: CMakeFiles/test_ball_brick_collision.dir/rule
-.PHONY : test_ball_brick_collision
-
-# codegen rule for target.
-CMakeFiles/test_ball_brick_collision.dir/codegen:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\test_ball_brick_collision.dir\build.make CMakeFiles/test_ball_brick_collision.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=D:\CS\CPP\Breakout-Game\build\CMakeFiles --progress-num=11,12,13,14,15,16,17,18 "Finished codegen for target test_ball_brick_collision"
-.PHONY : CMakeFiles/test_ball_brick_collision.dir/codegen
-
-# clean rule for target.
-CMakeFiles/test_ball_brick_collision.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\test_ball_brick_collision.dir\build.make CMakeFiles/test_ball_brick_collision.dir/clean
-.PHONY : CMakeFiles/test_ball_brick_collision.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

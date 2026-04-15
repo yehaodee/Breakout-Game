@@ -69,7 +69,7 @@ CMakeFiles/breakout.dir/main.cpp.obj: D:\CS\CPP\Breakout-Game\main.cpp \
  D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/tuple \
  D:\CS\CPP\Breakout-Game\Paddle.h \
  D:\CS\CPP\Breakout-Game\RectangleObject.h \
- D:\CS\CPP\Breakout-Game\Brick.h \
+ D:\CS\CPP\Breakout-Game\Brick.h D:\CS\CPP\Breakout-Game\PowerUp.h \
  D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/string \
  D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/stringfwd.h \
  D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/char_traits.h \

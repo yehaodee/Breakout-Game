@@ -11,6 +11,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/breakout.dir/Paddle.cpp.obj.d"
   "CMakeFiles/breakout.dir/PhysicalObject.cpp.obj"
   "CMakeFiles/breakout.dir/PhysicalObject.cpp.obj.d"
+  "CMakeFiles/breakout.dir/PowerUp.cpp.obj"
+  "CMakeFiles/breakout.dir/PowerUp.cpp.obj.d"
   "CMakeFiles/breakout.dir/RectangleObject.cpp.obj"
   "CMakeFiles/breakout.dir/RectangleObject.cpp.obj.d"
   "CMakeFiles/breakout.dir/VisualObject.cpp.obj"

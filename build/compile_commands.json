@@ -55,44 +55,8 @@
 },
 {
   "directory": "D:/CS/CPP/Breakout-Game/build",
-  "command": "D:\\mingw-w64\\bin\\g++.exe  @CMakeFiles/test_ball_brick_collision.dir/includes_CXX.rsp -g -std=c++17 -o CMakeFiles\\test_ball_brick_collision.dir\\test_ball_brick_collision.cpp.obj -c D:\\CS\\CPP\\Breakout-Game\\test_ball_brick_collision.cpp",
-  "file": "D:/CS/CPP/Breakout-Game/test_ball_brick_collision.cpp",
-  "output": "CMakeFiles/test_ball_brick_collision.dir/test_ball_brick_collision.cpp.obj"
-},
-{
-  "directory": "D:/CS/CPP/Breakout-Game/build",
-  "command": "D:\\mingw-w64\\bin\\g++.exe  @CMakeFiles/test_ball_brick_collision.dir/includes_CXX.rsp -g -std=c++17 -o CMakeFiles\\test_ball_brick_collision.dir\\Ball.cpp.obj -c D:\\CS\\CPP\\Breakout-Game\\Ball.cpp",
-  "file": "D:/CS/CPP/Breakout-Game/Ball.cpp",
-  "output": "CMakeFiles/test_ball_brick_collision.dir/Ball.cpp.obj"
-},
-{
-  "directory": "D:/CS/CPP/Breakout-Game/build",
-  "command": "D:\\mingw-w64\\bin\\g++.exe  @CMakeFiles/test_ball_brick_collision.dir/includes_CXX.rsp -g -std=c++17 -o CMakeFiles\\test_ball_brick_collision.dir\\Brick.cpp.obj -c D:\\CS\\CPP\\Breakout-Game\\Brick.cpp",
-  "file": "D:/CS/CPP/Breakout-Game/Brick.cpp",
-  "output": "CMakeFiles/test_ball_brick_collision.dir/Brick.cpp.obj"
-},
-{
-  "directory": "D:/CS/CPP/Breakout-Game/build",
-  "command": "D:\\mingw-w64\\bin\\g++.exe  @CMakeFiles/test_ball_brick_collision.dir/includes_CXX.rsp -g -std=c++17 -o CMakeFiles\\test_ball_brick_collision.dir\\GameObject.cpp.obj -c D:\\CS\\CPP\\Breakout-Game\\GameObject.cpp",
-  "file": "D:/CS/CPP/Breakout-Game/GameObject.cpp",
-  "output": "CMakeFiles/test_ball_brick_collision.dir/GameObject.cpp.obj"
-},
-{
-  "directory": "D:/CS/CPP/Breakout-Game/build",
-  "command": "D:\\mingw-w64\\bin\\g++.exe  @CMakeFiles/test_ball_brick_collision.dir/includes_CXX.rsp -g -std=c++17 -o CMakeFiles\\test_ball_brick_collision.dir\\PhysicalObject.cpp.obj -c D:\\CS\\CPP\\Breakout-Game\\PhysicalObject.cpp",
-  "file": "D:/CS/CPP/Breakout-Game/PhysicalObject.cpp",
-  "output": "CMakeFiles/test_ball_brick_collision.dir/PhysicalObject.cpp.obj"
-},
-{
-  "directory": "D:/CS/CPP/Breakout-Game/build",
-  "command": "D:\\mingw-w64\\bin\\g++.exe  @CMakeFiles/test_ball_brick_collision.dir/includes_CXX.rsp -g -std=c++17 -o CMakeFiles\\test_ball_brick_collision.dir\\VisualObject.cpp.obj -c D:\\CS\\CPP\\Breakout-Game\\VisualObject.cpp",
-  "file": "D:/CS/CPP/Breakout-Game/VisualObject.cpp",
-  "output": "CMakeFiles/test_ball_brick_collision.dir/VisualObject.cpp.obj"
-},
-{
-  "directory": "D:/CS/CPP/Breakout-Game/build",
-  "command": "D:\\mingw-w64\\bin\\g++.exe  @CMakeFiles/test_ball_brick_collision.dir/includes_CXX.rsp -g -std=c++17 -o CMakeFiles\\test_ball_brick_collision.dir\\RectangleObject.cpp.obj -c D:\\CS\\CPP\\Breakout-Game\\RectangleObject.cpp",
-  "file": "D:/CS/CPP/Breakout-Game/RectangleObject.cpp",
-  "output": "CMakeFiles/test_ball_brick_collision.dir/RectangleObject.cpp.obj"
+  "command": "D:\\mingw-w64\\bin\\g++.exe  @CMakeFiles/breakout.dir/includes_CXX.rsp -g -std=c++17 -o CMakeFiles\\breakout.dir\\PowerUp.cpp.obj -c D:\\CS\\CPP\\Breakout-Game\\PowerUp.cpp",
+  "file": "D:/CS/CPP/Breakout-Game/PowerUp.cpp",
+  "output": "CMakeFiles/breakout.dir/PowerUp.cpp.obj"
 }
 ]

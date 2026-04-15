@@ -23,16 +23,7 @@ add_executable(breakout
     PhysicalObject.cpp
     VisualObject.cpp
     RectangleObject.cpp
-)
-
-add_executable(test_ball_brick_collision
-    test_ball_brick_collision.cpp
-    Ball.cpp
-    Brick.cpp
-    GameObject.cpp
-    PhysicalObject.cpp
-    VisualObject.cpp
-    RectangleObject.cpp
+    PowerUp.cpp
 )
 
 target_link_libraries(breakout PRIVATE
@@ -42,9 +33,3 @@ target_link_libraries(breakout PRIVATE
     winmm
 )
 
-target_link_libraries(test_ball_brick_collision PRIVATE
-    raylib
-    opengl32
-    gdi32
-    winmm
-)

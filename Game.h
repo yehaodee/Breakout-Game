@@ -5,6 +5,7 @@
 #include "Ball.h"
 #include "Paddle.h"
 #include "Brick.h"
+#include "PowerUp.h"
 #include <vector>
 #include <string>
 
@@ -16,11 +17,18 @@ enum GameState {
     PAUSED
 };
 
+enum class PowerUpType {
+    PADDLE_EXTEND,
+    MULTI_BALL,
+    SLOW_BALL
+};
+
 class Game {
 private:
     Ball ball;
     Paddle paddle;
     std::vector<Brick> bricks;
+    std::vector<PowerUp> powerUps;
     int score;
     int lives;
     int level;

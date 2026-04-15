@@ -9,5 +9,6 @@ protected:
     Rectangle rect;
 public:
     RectangleObject(float x, float y, float w, float h);
+    Rectangle GetRect() const { return rect; }
 };
 #endif
