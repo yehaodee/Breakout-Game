@@ -25,16 +25,18 @@ enum class PowerUpType {
 
 class Game {
 private:
-    Ball ball;
-    Paddle paddle;
-    std::vector<Brick> bricks;
-    std::vector<PowerUp> powerUps;
     int score;
     int lives;
     int level;
-    float ballSpeed;
     GameState currentState;
     float gameTime;
+public:
+    Paddle paddle;
+    std::vector<Ball> balls;
+    std::vector<Brick> bricks;
+    std::vector<PowerUp> powerUps;
+    float slowBallEffectTime;
+    float ballSpeed;
     
     // 配置参数
     int windowWidth;

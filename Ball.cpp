@@ -37,10 +37,6 @@ Vector2 Ball::GetPosition() {
     return position;
 }
 
-float Ball::GetRadius() { 
-    return radius;
-}
-
 void Ball::ReverseY() { 
     velocity.y *= -1;
 }

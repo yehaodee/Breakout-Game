@@ -15,7 +15,6 @@ public:
     void Draw();
     bool BounceEdge(int screenWidth, int screenHeight);
     Vector2 GetPosition();
-    float GetRadius();
     void ReverseY();
     bool CheckPaddleCollision(Rectangle paddleRect);
     bool CheckBrickCollision(std::vector<class Brick>& bricks);

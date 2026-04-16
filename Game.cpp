@@ -6,12 +6,14 @@
 using json = nlohmann::json;
 
 Game::Game()
-    : score(0),
+    : paddle(350, 550, 100, 20),
+      score(0),
       lives(3),
       level(1),
       ballSpeed(3.0f),
       currentState(MENU),
       gameTime(0.0f),
+      slowBallEffectTime(0.0f),
       windowWidth(800),
       windowHeight(600),
       windowTitle("Breakout"),
@@ -29,11 +31,10 @@ Game::Game()
       brickHeight(25),
       initialLives(3),
       scorePerBrick(10),
-      timeMultiplierDecay(0.05f),
-      ball((Vector2){400, 300}, (Vector2){3, 3}, 10, RED),
-      paddle(350, 550, 100, 20) {
+      timeMultiplierDecay(0.05f) {
     LoadConfig("config.json");
-    srand(time(NULL));
+    // 初始化球
+    balls.emplace_back((Vector2){400, 300}, (Vector2){3, 3}, 10, RED);
 }
 
 void Game::Init() {
@@ -71,7 +72,8 @@ void Game::Update() {
             lives = initialLives;
             level = 1;
             ballSpeed = 3;
-            ball = Ball((Vector2){windowWidth / 2.0f, windowHeight / 2.0f}, (Vector2){ballSpeed, ballSpeed}, ballRadius, RED);
+            balls.clear();
+            balls.emplace_back((Vector2){windowWidth / 2.0f, windowHeight / 2.0f}, (Vector2){ballSpeed, ballSpeed}, ballRadius, RED);
             CreateBricks(level);
         }
     }
@@ -81,40 +83,57 @@ void Game::Update() {
             currentState = PAUSED;
         }
         
-        ball.Move();
-        
-        if (ball.BounceEdge(windowWidth, windowHeight)) {
-            if (ball.GetPosition().y + ball.GetRadius() >= windowHeight) {
-                lives--;
-                if (lives<= 0) {
-                    currentState = GAME_OVER;
-                } else {
-                    ball = Ball((Vector2){windowWidth / 2.0f, windowHeight / 2.0f}, (Vector2){ballSpeed, ballSpeed}, ballRadius, RED);
+        // 处理所有球的移动和碰撞
+        for (size_t i = 0; i < balls.size(); i++) {
+            Ball& ball = balls[i];
+            ball.Move();
+            
+            if (ball.BounceEdge(windowWidth, windowHeight)) {
+                if (ball.GetPosition().y + ball.GetRadius() >= windowHeight) {
+                    // 移除掉落的球
+                    balls.erase(balls.begin() + i);
+                    i--; // 调整索引
+                    
+                    // 如果所有球都掉落了，减少生命值
+                    if (balls.empty()) {
+                        lives--;
+                        if (lives <= 0) {
+                            currentState = GAME_OVER;
+                        } else {
+                            // 重新生成一个球
+                            balls.emplace_back((Vector2){windowWidth / 2.0f, windowHeight / 2.0f}, (Vector2){ballSpeed, ballSpeed}, ballRadius, RED);
+                        }
+                    }
                 }
             }
-        }
 
-        if (ball.CheckBrickCollision(bricks)) {
-            score += ball.GetScoreValue();
+            if (ball.CheckBrickCollision(bricks)) {
+                score += ball.GetScoreValue();
+            }
         }
         
         if (IsKeyDown(KEY_LEFT)) paddle.MoveLeft(paddleSpeed);
         if (IsKeyDown(KEY_RIGHT)) paddle.MoveRight(paddleSpeed);
+        
+        // 更新 paddle 状态
+        paddle.Update(GetFrameTime());
 
         bool allBricksDestroyed = true;
         for (auto& brick : bricks) {
             if (brick.IsActive()) {
                 allBricksDestroyed = false;
-                if (brick.CheckCollision(ball)) {
-                    ball.ReverseY();
-                    score += brick.GetPoints();
-                    
-                    // 检查砖块是否被摧毁
-                    if (!brick.IsActive()) {
-                        // 30%概率生成道具
-                        if (rand() % 100 < 30) {
-                            PowerUpType type = static_cast<PowerUpType>(rand() % 3);
-                            powerUps.emplace_back(brick.GetRect().x + brick.GetRect().width / 2, brick.GetRect().y, type);
+                for (auto& ball : balls) {
+                    if (brick.CheckCollision(ball)) {
+                        ball.ReverseY();
+                        score += brick.GetPoints();
+                        
+                        // 检查砖块是否被摧毁
+                        if (!brick.IsActive()) {
+                            // 30%概率生成道具
+                            if (rand() % 100 < 30) {
+                                PowerUpType type = static_cast<PowerUpType>(rand() % 3);
+                                powerUps.emplace_back(brick.GetRect().x + brick.GetRect().width / 2, brick.GetRect().y, type);
+                            }
                         }
                     }
                 }
@@ -124,7 +143,8 @@ void Game::Update() {
         if (allBricksDestroyed) {
             level++;
             ballSpeed += 0.5;
-            ball = Ball((Vector2){windowWidth / 2.0f, windowHeight / 2.0f}, (Vector2){ballSpeed, ballSpeed}, ballRadius, RED);
+            balls.clear();
+            balls.emplace_back((Vector2){windowWidth / 2.0f, windowHeight / 2.0f}, (Vector2){ballSpeed, ballSpeed}, ballRadius, RED);
             CreateBricks(level);
             
             if (level >5) {
@@ -143,7 +163,27 @@ void Game::Update() {
             }
         }
 
-        ball.CheckPaddleCollision(paddle.GetRect());
+        // 处理所有球与 paddle 的碰撞
+        for (auto& ball : balls) {
+            ball.CheckPaddleCollision(paddle.GetRect());
+        }
+        
+        // 处理减速球效果
+        if (slowBallEffectTime > 0) {
+            slowBallEffectTime -= GetFrameTime();
+            if (slowBallEffectTime <= 0) {
+                // 恢复所有球的速度
+                for (auto& ball : balls) {
+                    // 这里需要一个方法来恢复球的原始速度
+                    // 暂时简单处理，重新设置为默认速度
+                    Vector2 vel = ball.GetVelocity();
+                    float speed = sqrt(vel.x * vel.x + vel.y * vel.y);
+                    float normalizedSpeed = speed / 0.7f;
+                    float angle = atan2(vel.y, vel.x);
+                    ball.SetVelocity((Vector2){cos(angle) * normalizedSpeed, sin(angle) * normalizedSpeed});
+                }
+            }
+        }
     }
     
     else if (currentState == PAUSED) {
@@ -176,7 +216,10 @@ void Game::Draw() {
     }
     
     else if (currentState == PLAYING || currentState == PAUSED) {
-        ball.Draw();
+        // 绘制所有球
+        for (auto& ball : balls) {
+            ball.Draw();
+        }
         paddle.Draw();
         for (auto& brick : bricks) brick.Draw();
         

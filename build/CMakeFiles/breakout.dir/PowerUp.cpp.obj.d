@@ -112,4 +112,20 @@ CMakeFiles/breakout.dir/PowerUp.cpp.obj: \
  D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/cstdio \
  D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/cerrno \
  D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/charconv.h \
- D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/basic_string.tcc
+ D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/basic_string.tcc \
+ D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/cmath \
+ D:/mingw-w64/x86_64-w64-mingw32/include/math.h \
+ D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/specfun.h \
+ D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/limits \
+ D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/tr1/gamma.tcc \
+ D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/tr1/special_function_util.h \
+ D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/tr1/bessel_function.tcc \
+ D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/tr1/beta_function.tcc \
+ D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/tr1/ell_integral.tcc \
+ D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/tr1/exp_integral.tcc \
+ D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/tr1/hypergeometric.tcc \
+ D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/tr1/legendre_function.tcc \
+ D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/tr1/modified_bessel_func.tcc \
+ D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/tr1/poly_hermite.tcc \
+ D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/tr1/poly_laguerre.tcc \
+ D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/tr1/riemann_zeta.tcc

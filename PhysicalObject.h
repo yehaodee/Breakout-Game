@@ -10,6 +10,9 @@ protected:
     float radius;
 public:
     PhysicalObject(Vector2 speed, float r);
+    Vector2 GetVelocity() const { return velocity; }
+    void SetVelocity(Vector2 vel) { velocity = vel; }
+    float GetRadius() const { return radius; }
 };
 
 #endif
