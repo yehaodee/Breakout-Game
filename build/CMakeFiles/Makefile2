@@ -84,12 +84,12 @@ clean: CMakeFiles/breakout.dir/clean
 CMakeFiles/breakout.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\breakout.dir\build.make CMakeFiles/breakout.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\breakout.dir\build.make CMakeFiles/breakout.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=D:\CS\CPP\Breakout-Game\build\CMakeFiles --progress-num=1,2,3,4,5,6,7,8,9,10,11,12 "Built target breakout"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=D:\CS\CPP\Breakout-Game\build\CMakeFiles --progress-num=1,2,3,4,5,6,7,8,9,10,11,12,13 "Built target breakout"
 .PHONY : CMakeFiles/breakout.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/breakout.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start D:\CS\CPP\Breakout-Game\build\CMakeFiles 12
+	$(CMAKE_COMMAND) -E cmake_progress_start D:\CS\CPP\Breakout-Game\build\CMakeFiles 13
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 CMakeFiles/breakout.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start D:\CS\CPP\Breakout-Game\build\CMakeFiles 0
 .PHONY : CMakeFiles/breakout.dir/rule
@@ -101,7 +101,7 @@ breakout: CMakeFiles/breakout.dir/rule
 # codegen rule for target.
 CMakeFiles/breakout.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\breakout.dir\build.make CMakeFiles/breakout.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=D:\CS\CPP\Breakout-Game\build\CMakeFiles --progress-num=1,2,3,4,5,6,7,8,9,10,11,12 "Finished codegen for target breakout"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=D:\CS\CPP\Breakout-Game\build\CMakeFiles --progress-num=1,2,3,4,5,6,7,8,9,10,11,12,13 "Finished codegen for target breakout"
 .PHONY : CMakeFiles/breakout.dir/codegen
 
 # clean rule for target.

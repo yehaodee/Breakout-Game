@@ -18,12 +18,6 @@ enum GameState {
     PAUSED
 };
 
-enum class PowerUpType {
-    PADDLE_EXTEND,
-    MULTI_BALL,
-    SLOW_BALL
-};
-
 class Game {
 private:
     int score;

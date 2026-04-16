@@ -24,6 +24,7 @@ add_executable(breakout
     VisualObject.cpp
     RectangleObject.cpp
     PowerUp.cpp
+    PowerUpEffect.cpp
     Particle.cpp
 )
 
