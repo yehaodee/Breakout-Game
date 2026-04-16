@@ -402,8 +402,10 @@ CMakeFiles/breakout.dir/Game.cpp.obj: D:/CS/CPP/Breakout-Game/Game.cpp \
   D:/CS/CPP/Breakout-Game/Game.h \
   D:/CS/CPP/Breakout-Game/GameObject.h \
   D:/CS/CPP/Breakout-Game/Paddle.h \
+  D:/CS/CPP/Breakout-Game/Particle.h \
   D:/CS/CPP/Breakout-Game/PhysicalObject.h \
   D:/CS/CPP/Breakout-Game/PowerUp.h \
+  D:/CS/CPP/Breakout-Game/PowerUpEffect.h \
   D:/CS/CPP/Breakout-Game/RectangleObject.h \
   D:/CS/CPP/Breakout-Game/VisualObject.h
 
@@ -434,6 +436,18 @@ CMakeFiles/breakout.dir/Paddle.cpp.obj: D:/CS/CPP/Breakout-Game/Paddle.cpp \
   D:/CS/CPP/Breakout-Game/RectangleObject.h \
   D:/CS/CPP/Breakout-Game/VisualObject.h
 
+CMakeFiles/breakout.dir/Particle.cpp.obj: D:/CS/CPP/Breakout-Game/Particle.cpp \
+  D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/stdarg.h \
+  D:/mingw-w64/x86_64-w64-mingw32/include/_mingw.h \
+  D:/mingw-w64/x86_64-w64-mingw32/include/_mingw_mac.h \
+  D:/mingw-w64/x86_64-w64-mingw32/include/_mingw_secapi.h \
+  D:/mingw-w64/x86_64-w64-mingw32/include/_mingw_stdarg.h \
+  D:/mingw-w64/x86_64-w64-mingw32/include/sdks/_mingw_ddk.h \
+  D:/mingw-w64/x86_64-w64-mingw32/include/stdarg.h \
+  D:/mingw-w64/x86_64-w64-mingw32/include/vadefs.h \
+  D:/raylib/include/raylib.h \
+  D:/CS/CPP/Breakout-Game/Particle.h
+
 CMakeFiles/breakout.dir/PhysicalObject.cpp.obj: D:/CS/CPP/Breakout-Game/PhysicalObject.cpp \
   D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/stdarg.h \
   D:/mingw-w64/x86_64-w64-mingw32/include/_mingw.h \
@@ -448,10 +462,15 @@ CMakeFiles/breakout.dir/PhysicalObject.cpp.obj: D:/CS/CPP/Breakout-Game/Physical
   D:/CS/CPP/Breakout-Game/PhysicalObject.h
 
 CMakeFiles/breakout.dir/PowerUp.cpp.obj: D:/CS/CPP/Breakout-Game/PowerUp.cpp \
+  D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/backward/auto_ptr.h \
   D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/backward/binders.h \
   D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bit \
+  D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/align.h \
   D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/alloc_traits.h \
+  D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/allocated_ptr.h \
   D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/allocator.h \
+  D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/atomic_base.h \
+  D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/atomic_lockfree_defines.h \
   D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/basic_string.h \
   D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/basic_string.tcc \
   D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/char_traits.h \
@@ -459,8 +478,10 @@ CMakeFiles/breakout.dir/PowerUp.cpp.obj: D:/CS/CPP/Breakout-Game/PowerUp.cpp \
   D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/concept_check.h \
   D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/cpp_type_traits.h \
   D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/cxxabi_forced.h \
+  D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/cxxabi_init_exception.h \
   D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/exception.h \
   D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/exception_defines.h \
+  D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/exception_ptr.h \
   D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/functexcept.h \
   D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/functional_hash.h \
   D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/hash_bytes.h \
@@ -469,6 +490,7 @@ CMakeFiles/breakout.dir/PowerUp.cpp.obj: D:/CS/CPP/Breakout-Game/PowerUp.cpp \
   D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/memory_resource.h \
   D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/memoryfwd.h \
   D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/move.h \
+  D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/nested_exception.h \
   D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/new_allocator.h \
   D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/ostream_insert.h \
   D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/postypes.h \
@@ -477,7 +499,9 @@ CMakeFiles/breakout.dir/PowerUp.cpp.obj: D:/CS/CPP/Breakout-Game/PowerUp.cpp \
   D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/range_access.h \
   D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/refwrap.h \
   D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/requires_hosted.h \
-  D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/specfun.h \
+  D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/shared_ptr.h \
+  D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/shared_ptr_atomic.h \
+  D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/shared_ptr_base.h \
   D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/std_abs.h \
   D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/stl_algobase.h \
   D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/stl_bvector.h \
@@ -487,10 +511,13 @@ CMakeFiles/breakout.dir/PowerUp.cpp.obj: D:/CS/CPP/Breakout-Game/PowerUp.cpp \
   D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/stl_iterator_base_funcs.h \
   D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/stl_iterator_base_types.h \
   D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/stl_pair.h \
+  D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/stl_raw_storage_iter.h \
+  D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/stl_tempbuf.h \
   D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/stl_uninitialized.h \
   D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/stl_vector.h \
   D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/string_view.tcc \
   D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/stringfwd.h \
+  D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/unique_ptr.h \
   D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/uses_allocator.h \
   D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/uses_allocator_args.h \
   D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/utility.h \
@@ -498,49 +525,47 @@ CMakeFiles/breakout.dir/PowerUp.cpp.obj: D:/CS/CPP/Breakout-Game/PowerUp.cpp \
   D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/cctype \
   D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/cerrno \
   D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/clocale \
-  D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/cmath \
   D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/cstddef \
   D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/cstdio \
   D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/cstdlib \
   D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/cwchar \
   D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/debug/assertions.h \
   D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/debug/debug.h \
+  D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/exception \
+  D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/ext/aligned_buffer.h \
   D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/ext/alloc_traits.h \
+  D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/ext/atomicity.h \
+  D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/ext/concurrence.h \
   D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/ext/numeric_traits.h \
   D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/ext/string_conversions.h \
   D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/ext/type_traits.h \
   D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/initializer_list \
   D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/iosfwd \
-  D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/limits \
+  D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/memory \
   D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/new \
+  D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/pstl/execution_defs.h \
+  D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/pstl/glue_memory_defs.h \
   D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/pstl/pstl_config.h \
   D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/stdlib.h \
   D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/string \
   D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/string_view \
-  D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/tr1/bessel_function.tcc \
-  D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/tr1/beta_function.tcc \
-  D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/tr1/ell_integral.tcc \
-  D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/tr1/exp_integral.tcc \
-  D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/tr1/gamma.tcc \
-  D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/tr1/hypergeometric.tcc \
-  D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/tr1/legendre_function.tcc \
-  D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/tr1/modified_bessel_func.tcc \
-  D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/tr1/poly_hermite.tcc \
-  D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/tr1/poly_laguerre.tcc \
-  D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/tr1/riemann_zeta.tcc \
-  D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/tr1/special_function_util.h \
   D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/tuple \
   D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/type_traits \
+  D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/typeinfo \
   D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/vector \
+  D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/x86_64-w64-mingw32/bits/atomic_word.h \
   D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/x86_64-w64-mingw32/bits/c++allocator.h \
   D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/x86_64-w64-mingw32/bits/c++config.h \
   D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/x86_64-w64-mingw32/bits/c++locale.h \
   D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/x86_64-w64-mingw32/bits/cpu_defines.h \
+  D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/x86_64-w64-mingw32/bits/gthr-default.h \
+  D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/x86_64-w64-mingw32/bits/gthr.h \
   D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/x86_64-w64-mingw32/bits/os_defines.h \
   D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/limits.h \
   D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/mm_malloc.h \
   D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/stdarg.h \
   D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/stddef.h \
+  D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/stdint.h \
   D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/syslimits.h \
   D:/mingw-w64/x86_64-w64-mingw32/include/_mingw.h \
   D:/mingw-w64/x86_64-w64-mingw32/include/_mingw_mac.h \
@@ -557,16 +582,18 @@ CMakeFiles/breakout.dir/PowerUp.cpp.obj: D:/CS/CPP/Breakout-Game/PowerUp.cpp \
   D:/mingw-w64/x86_64-w64-mingw32/include/limits.h \
   D:/mingw-w64/x86_64-w64-mingw32/include/locale.h \
   D:/mingw-w64/x86_64-w64-mingw32/include/malloc.h \
-  D:/mingw-w64/x86_64-w64-mingw32/include/math.h \
   D:/mingw-w64/x86_64-w64-mingw32/include/sdks/_mingw_ddk.h \
   D:/mingw-w64/x86_64-w64-mingw32/include/sec_api/stdio_s.h \
   D:/mingw-w64/x86_64-w64-mingw32/include/sec_api/stdlib_s.h \
+  D:/mingw-w64/x86_64-w64-mingw32/include/sec_api/sys/timeb_s.h \
   D:/mingw-w64/x86_64-w64-mingw32/include/sec_api/wchar_s.h \
   D:/mingw-w64/x86_64-w64-mingw32/include/stdarg.h \
   D:/mingw-w64/x86_64-w64-mingw32/include/stddef.h \
+  D:/mingw-w64/x86_64-w64-mingw32/include/stdint.h \
   D:/mingw-w64/x86_64-w64-mingw32/include/stdio.h \
   D:/mingw-w64/x86_64-w64-mingw32/include/stdlib.h \
   D:/mingw-w64/x86_64-w64-mingw32/include/swprintf.inl \
+  D:/mingw-w64/x86_64-w64-mingw32/include/sys/timeb.h \
   D:/mingw-w64/x86_64-w64-mingw32/include/vadefs.h \
   D:/mingw-w64/x86_64-w64-mingw32/include/wchar.h \
   D:/raylib/include/raylib.h \
@@ -575,8 +602,158 @@ CMakeFiles/breakout.dir/PowerUp.cpp.obj: D:/CS/CPP/Breakout-Game/PowerUp.cpp \
   D:/CS/CPP/Breakout-Game/Game.h \
   D:/CS/CPP/Breakout-Game/GameObject.h \
   D:/CS/CPP/Breakout-Game/Paddle.h \
+  D:/CS/CPP/Breakout-Game/Particle.h \
   D:/CS/CPP/Breakout-Game/PhysicalObject.h \
   D:/CS/CPP/Breakout-Game/PowerUp.h \
+  D:/CS/CPP/Breakout-Game/PowerUpEffect.h \
+  D:/CS/CPP/Breakout-Game/RectangleObject.h \
+  D:/CS/CPP/Breakout-Game/VisualObject.h
+
+CMakeFiles/breakout.dir/PowerUpEffect.cpp.obj: D:/CS/CPP/Breakout-Game/PowerUpEffect.cpp \
+  D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/backward/auto_ptr.h \
+  D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/backward/binders.h \
+  D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bit \
+  D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/align.h \
+  D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/alloc_traits.h \
+  D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/allocated_ptr.h \
+  D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/allocator.h \
+  D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/atomic_base.h \
+  D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/atomic_lockfree_defines.h \
+  D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/basic_string.h \
+  D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/basic_string.tcc \
+  D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/char_traits.h \
+  D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/charconv.h \
+  D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/concept_check.h \
+  D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/cpp_type_traits.h \
+  D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/cxxabi_forced.h \
+  D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/cxxabi_init_exception.h \
+  D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/exception.h \
+  D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/exception_defines.h \
+  D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/exception_ptr.h \
+  D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/functexcept.h \
+  D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/functional_hash.h \
+  D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/hash_bytes.h \
+  D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/invoke.h \
+  D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/localefwd.h \
+  D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/memory_resource.h \
+  D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/memoryfwd.h \
+  D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/move.h \
+  D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/nested_exception.h \
+  D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/new_allocator.h \
+  D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/ostream_insert.h \
+  D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/postypes.h \
+  D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/predefined_ops.h \
+  D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/ptr_traits.h \
+  D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/range_access.h \
+  D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/refwrap.h \
+  D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/requires_hosted.h \
+  D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/shared_ptr.h \
+  D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/shared_ptr_atomic.h \
+  D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/shared_ptr_base.h \
+  D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/std_abs.h \
+  D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/stl_algobase.h \
+  D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/stl_bvector.h \
+  D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/stl_construct.h \
+  D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/stl_function.h \
+  D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/stl_iterator.h \
+  D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/stl_iterator_base_funcs.h \
+  D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/stl_iterator_base_types.h \
+  D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/stl_pair.h \
+  D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/stl_raw_storage_iter.h \
+  D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/stl_tempbuf.h \
+  D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/stl_uninitialized.h \
+  D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/stl_vector.h \
+  D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/string_view.tcc \
+  D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/stringfwd.h \
+  D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/unique_ptr.h \
+  D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/uses_allocator.h \
+  D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/uses_allocator_args.h \
+  D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/utility.h \
+  D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/vector.tcc \
+  D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/cctype \
+  D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/cerrno \
+  D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/clocale \
+  D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/cstddef \
+  D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/cstdio \
+  D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/cstdlib \
+  D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/cwchar \
+  D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/debug/assertions.h \
+  D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/debug/debug.h \
+  D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/exception \
+  D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/ext/aligned_buffer.h \
+  D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/ext/alloc_traits.h \
+  D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/ext/atomicity.h \
+  D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/ext/concurrence.h \
+  D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/ext/numeric_traits.h \
+  D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/ext/string_conversions.h \
+  D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/ext/type_traits.h \
+  D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/initializer_list \
+  D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/iosfwd \
+  D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/memory \
+  D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/new \
+  D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/pstl/execution_defs.h \
+  D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/pstl/glue_memory_defs.h \
+  D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/pstl/pstl_config.h \
+  D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/stdlib.h \
+  D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/string \
+  D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/string_view \
+  D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/tuple \
+  D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/type_traits \
+  D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/typeinfo \
+  D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/vector \
+  D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/x86_64-w64-mingw32/bits/atomic_word.h \
+  D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/x86_64-w64-mingw32/bits/c++allocator.h \
+  D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/x86_64-w64-mingw32/bits/c++config.h \
+  D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/x86_64-w64-mingw32/bits/c++locale.h \
+  D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/x86_64-w64-mingw32/bits/cpu_defines.h \
+  D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/x86_64-w64-mingw32/bits/gthr-default.h \
+  D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/x86_64-w64-mingw32/bits/gthr.h \
+  D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/x86_64-w64-mingw32/bits/os_defines.h \
+  D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/limits.h \
+  D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/mm_malloc.h \
+  D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/stdarg.h \
+  D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/stddef.h \
+  D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/stdint.h \
+  D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/syslimits.h \
+  D:/mingw-w64/x86_64-w64-mingw32/include/_mingw.h \
+  D:/mingw-w64/x86_64-w64-mingw32/include/_mingw_mac.h \
+  D:/mingw-w64/x86_64-w64-mingw32/include/_mingw_off_t.h \
+  D:/mingw-w64/x86_64-w64-mingw32/include/_mingw_secapi.h \
+  D:/mingw-w64/x86_64-w64-mingw32/include/_mingw_stat64.h \
+  D:/mingw-w64/x86_64-w64-mingw32/include/_mingw_stdarg.h \
+  D:/mingw-w64/x86_64-w64-mingw32/include/corecrt.h \
+  D:/mingw-w64/x86_64-w64-mingw32/include/corecrt_stdio_config.h \
+  D:/mingw-w64/x86_64-w64-mingw32/include/corecrt_wstdlib.h \
+  D:/mingw-w64/x86_64-w64-mingw32/include/crtdefs.h \
+  D:/mingw-w64/x86_64-w64-mingw32/include/ctype.h \
+  D:/mingw-w64/x86_64-w64-mingw32/include/errno.h \
+  D:/mingw-w64/x86_64-w64-mingw32/include/limits.h \
+  D:/mingw-w64/x86_64-w64-mingw32/include/locale.h \
+  D:/mingw-w64/x86_64-w64-mingw32/include/malloc.h \
+  D:/mingw-w64/x86_64-w64-mingw32/include/sdks/_mingw_ddk.h \
+  D:/mingw-w64/x86_64-w64-mingw32/include/sec_api/stdio_s.h \
+  D:/mingw-w64/x86_64-w64-mingw32/include/sec_api/stdlib_s.h \
+  D:/mingw-w64/x86_64-w64-mingw32/include/sec_api/sys/timeb_s.h \
+  D:/mingw-w64/x86_64-w64-mingw32/include/sec_api/wchar_s.h \
+  D:/mingw-w64/x86_64-w64-mingw32/include/stdarg.h \
+  D:/mingw-w64/x86_64-w64-mingw32/include/stddef.h \
+  D:/mingw-w64/x86_64-w64-mingw32/include/stdint.h \
+  D:/mingw-w64/x86_64-w64-mingw32/include/stdio.h \
+  D:/mingw-w64/x86_64-w64-mingw32/include/stdlib.h \
+  D:/mingw-w64/x86_64-w64-mingw32/include/swprintf.inl \
+  D:/mingw-w64/x86_64-w64-mingw32/include/sys/timeb.h \
+  D:/mingw-w64/x86_64-w64-mingw32/include/vadefs.h \
+  D:/mingw-w64/x86_64-w64-mingw32/include/wchar.h \
+  D:/raylib/include/raylib.h \
+  D:/CS/CPP/Breakout-Game/Ball.h \
+  D:/CS/CPP/Breakout-Game/Brick.h \
+  D:/CS/CPP/Breakout-Game/Game.h \
+  D:/CS/CPP/Breakout-Game/GameObject.h \
+  D:/CS/CPP/Breakout-Game/Paddle.h \
+  D:/CS/CPP/Breakout-Game/Particle.h \
+  D:/CS/CPP/Breakout-Game/PhysicalObject.h \
+  D:/CS/CPP/Breakout-Game/PowerUp.h \
+  D:/CS/CPP/Breakout-Game/PowerUpEffect.h \
   D:/CS/CPP/Breakout-Game/RectangleObject.h \
   D:/CS/CPP/Breakout-Game/VisualObject.h
 
@@ -607,10 +784,15 @@ CMakeFiles/breakout.dir/VisualObject.cpp.obj: D:/CS/CPP/Breakout-Game/VisualObje
   D:/CS/CPP/Breakout-Game/VisualObject.h
 
 CMakeFiles/breakout.dir/main.cpp.obj: D:/CS/CPP/Breakout-Game/main.cpp \
+  D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/backward/auto_ptr.h \
   D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/backward/binders.h \
   D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bit \
+  D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/align.h \
   D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/alloc_traits.h \
+  D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/allocated_ptr.h \
   D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/allocator.h \
+  D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/atomic_base.h \
+  D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/atomic_lockfree_defines.h \
   D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/basic_string.h \
   D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/basic_string.tcc \
   D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/char_traits.h \
@@ -618,8 +800,10 @@ CMakeFiles/breakout.dir/main.cpp.obj: D:/CS/CPP/Breakout-Game/main.cpp \
   D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/concept_check.h \
   D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/cpp_type_traits.h \
   D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/cxxabi_forced.h \
+  D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/cxxabi_init_exception.h \
   D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/exception.h \
   D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/exception_defines.h \
+  D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/exception_ptr.h \
   D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/functexcept.h \
   D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/functional_hash.h \
   D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/hash_bytes.h \
@@ -628,6 +812,7 @@ CMakeFiles/breakout.dir/main.cpp.obj: D:/CS/CPP/Breakout-Game/main.cpp \
   D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/memory_resource.h \
   D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/memoryfwd.h \
   D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/move.h \
+  D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/nested_exception.h \
   D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/new_allocator.h \
   D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/ostream_insert.h \
   D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/postypes.h \
@@ -636,6 +821,9 @@ CMakeFiles/breakout.dir/main.cpp.obj: D:/CS/CPP/Breakout-Game/main.cpp \
   D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/range_access.h \
   D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/refwrap.h \
   D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/requires_hosted.h \
+  D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/shared_ptr.h \
+  D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/shared_ptr_atomic.h \
+  D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/shared_ptr_base.h \
   D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/std_abs.h \
   D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/stl_algobase.h \
   D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/stl_bvector.h \
@@ -645,10 +833,13 @@ CMakeFiles/breakout.dir/main.cpp.obj: D:/CS/CPP/Breakout-Game/main.cpp \
   D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/stl_iterator_base_funcs.h \
   D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/stl_iterator_base_types.h \
   D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/stl_pair.h \
+  D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/stl_raw_storage_iter.h \
+  D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/stl_tempbuf.h \
   D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/stl_uninitialized.h \
   D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/stl_vector.h \
   D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/string_view.tcc \
   D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/stringfwd.h \
+  D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/unique_ptr.h \
   D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/uses_allocator.h \
   D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/uses_allocator_args.h \
   D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/utility.h \
@@ -662,29 +853,41 @@ CMakeFiles/breakout.dir/main.cpp.obj: D:/CS/CPP/Breakout-Game/main.cpp \
   D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/cwchar \
   D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/debug/assertions.h \
   D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/debug/debug.h \
+  D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/exception \
+  D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/ext/aligned_buffer.h \
   D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/ext/alloc_traits.h \
+  D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/ext/atomicity.h \
+  D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/ext/concurrence.h \
   D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/ext/numeric_traits.h \
   D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/ext/string_conversions.h \
   D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/ext/type_traits.h \
   D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/initializer_list \
   D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/iosfwd \
+  D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/memory \
   D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/new \
+  D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/pstl/execution_defs.h \
+  D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/pstl/glue_memory_defs.h \
   D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/pstl/pstl_config.h \
   D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/stdlib.h \
   D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/string \
   D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/string_view \
   D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/tuple \
   D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/type_traits \
+  D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/typeinfo \
   D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/vector \
+  D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/x86_64-w64-mingw32/bits/atomic_word.h \
   D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/x86_64-w64-mingw32/bits/c++allocator.h \
   D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/x86_64-w64-mingw32/bits/c++config.h \
   D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/x86_64-w64-mingw32/bits/c++locale.h \
   D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/x86_64-w64-mingw32/bits/cpu_defines.h \
+  D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/x86_64-w64-mingw32/bits/gthr-default.h \
+  D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/x86_64-w64-mingw32/bits/gthr.h \
   D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/x86_64-w64-mingw32/bits/os_defines.h \
   D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/limits.h \
   D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/mm_malloc.h \
   D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/stdarg.h \
   D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/stddef.h \
+  D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/stdint.h \
   D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/syslimits.h \
   D:/mingw-w64/x86_64-w64-mingw32/include/_mingw.h \
   D:/mingw-w64/x86_64-w64-mingw32/include/_mingw_mac.h \
@@ -704,12 +907,15 @@ CMakeFiles/breakout.dir/main.cpp.obj: D:/CS/CPP/Breakout-Game/main.cpp \
   D:/mingw-w64/x86_64-w64-mingw32/include/sdks/_mingw_ddk.h \
   D:/mingw-w64/x86_64-w64-mingw32/include/sec_api/stdio_s.h \
   D:/mingw-w64/x86_64-w64-mingw32/include/sec_api/stdlib_s.h \
+  D:/mingw-w64/x86_64-w64-mingw32/include/sec_api/sys/timeb_s.h \
   D:/mingw-w64/x86_64-w64-mingw32/include/sec_api/wchar_s.h \
   D:/mingw-w64/x86_64-w64-mingw32/include/stdarg.h \
   D:/mingw-w64/x86_64-w64-mingw32/include/stddef.h \
+  D:/mingw-w64/x86_64-w64-mingw32/include/stdint.h \
   D:/mingw-w64/x86_64-w64-mingw32/include/stdio.h \
   D:/mingw-w64/x86_64-w64-mingw32/include/stdlib.h \
   D:/mingw-w64/x86_64-w64-mingw32/include/swprintf.inl \
+  D:/mingw-w64/x86_64-w64-mingw32/include/sys/timeb.h \
   D:/mingw-w64/x86_64-w64-mingw32/include/vadefs.h \
   D:/mingw-w64/x86_64-w64-mingw32/include/wchar.h \
   D:/raylib/include/raylib.h \
@@ -718,8 +924,10 @@ CMakeFiles/breakout.dir/main.cpp.obj: D:/CS/CPP/Breakout-Game/main.cpp \
   D:/CS/CPP/Breakout-Game/Game.h \
   D:/CS/CPP/Breakout-Game/GameObject.h \
   D:/CS/CPP/Breakout-Game/Paddle.h \
+  D:/CS/CPP/Breakout-Game/Particle.h \
   D:/CS/CPP/Breakout-Game/PhysicalObject.h \
   D:/CS/CPP/Breakout-Game/PowerUp.h \
+  D:/CS/CPP/Breakout-Game/PowerUpEffect.h \
   D:/CS/CPP/Breakout-Game/RectangleObject.h \
   D:/CS/CPP/Breakout-Game/VisualObject.h
 
@@ -785,6 +993,8 @@ D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/vector:
 D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/debug/assertions.h:
 
 D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/functional_hash.h:
+
+D:/CS/CPP/Breakout-Game/PowerUpEffect.cpp:
 
 D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/stdarg.h:
 
@@ -937,6 +1147,8 @@ D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/shared_ptr_base.
 D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/atomic_lockfree_defines.h:
 
 D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/basic_ios.h:
+
+D:/CS/CPP/Breakout-Game/Particle.h:
 
 D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/basic_ios.tcc:
 
@@ -1188,6 +1400,8 @@ D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/utility:
 
 D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/valarray:
 
+D:/CS/CPP/Breakout-Game/Particle.cpp:
+
 D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/version:
 
 D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/x86_64-w64-mingw32/bits/c++io.h:
@@ -1257,6 +1471,8 @@ D:/CS/CPP/Breakout-Game/Game.h:
 D:/CS/CPP/Breakout-Game/Paddle.h:
 
 D:/CS/CPP/Breakout-Game/PowerUp.h:
+
+D:/CS/CPP/Breakout-Game/PowerUpEffect.h:
 
 D:/CS/CPP/Breakout-Game/Paddle.cpp:
 

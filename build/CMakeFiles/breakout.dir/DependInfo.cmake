@@ -16,6 +16,7 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "D:/CS/CPP/Breakout-Game/Particle.cpp" "CMakeFiles/breakout.dir/Particle.cpp.obj" "gcc" "CMakeFiles/breakout.dir/Particle.cpp.obj.d"
   "D:/CS/CPP/Breakout-Game/PhysicalObject.cpp" "CMakeFiles/breakout.dir/PhysicalObject.cpp.obj" "gcc" "CMakeFiles/breakout.dir/PhysicalObject.cpp.obj.d"
   "D:/CS/CPP/Breakout-Game/PowerUp.cpp" "CMakeFiles/breakout.dir/PowerUp.cpp.obj" "gcc" "CMakeFiles/breakout.dir/PowerUp.cpp.obj.d"
+  "D:/CS/CPP/Breakout-Game/PowerUpEffect.cpp" "CMakeFiles/breakout.dir/PowerUpEffect.cpp.obj" "gcc" "CMakeFiles/breakout.dir/PowerUpEffect.cpp.obj.d"
   "D:/CS/CPP/Breakout-Game/RectangleObject.cpp" "CMakeFiles/breakout.dir/RectangleObject.cpp.obj" "gcc" "CMakeFiles/breakout.dir/RectangleObject.cpp.obj.d"
   "D:/CS/CPP/Breakout-Game/VisualObject.cpp" "CMakeFiles/breakout.dir/VisualObject.cpp.obj" "gcc" "CMakeFiles/breakout.dir/VisualObject.cpp.obj.d"
   "D:/CS/CPP/Breakout-Game/main.cpp" "CMakeFiles/breakout.dir/main.cpp.obj" "gcc" "CMakeFiles/breakout.dir/main.cpp.obj.d"

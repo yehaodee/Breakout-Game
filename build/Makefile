@@ -320,6 +320,30 @@ PowerUp.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\breakout.dir\build.make CMakeFiles/breakout.dir/PowerUp.cpp.s
 .PHONY : PowerUp.cpp.s
 
+PowerUpEffect.obj: PowerUpEffect.cpp.obj
+.PHONY : PowerUpEffect.obj
+
+# target to build an object file
+PowerUpEffect.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\breakout.dir\build.make CMakeFiles/breakout.dir/PowerUpEffect.cpp.obj
+.PHONY : PowerUpEffect.cpp.obj
+
+PowerUpEffect.i: PowerUpEffect.cpp.i
+.PHONY : PowerUpEffect.i
+
+# target to preprocess a source file
+PowerUpEffect.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\breakout.dir\build.make CMakeFiles/breakout.dir/PowerUpEffect.cpp.i
+.PHONY : PowerUpEffect.cpp.i
+
+PowerUpEffect.s: PowerUpEffect.cpp.s
+.PHONY : PowerUpEffect.s
+
+# target to generate assembly for a file
+PowerUpEffect.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\breakout.dir\build.make CMakeFiles/breakout.dir/PowerUpEffect.cpp.s
+.PHONY : PowerUpEffect.cpp.s
+
 RectangleObject.obj: RectangleObject.cpp.obj
 .PHONY : RectangleObject.obj
 
@@ -425,6 +449,9 @@ help:
 	@echo ... PowerUp.obj
 	@echo ... PowerUp.i
 	@echo ... PowerUp.s
+	@echo ... PowerUpEffect.obj
+	@echo ... PowerUpEffect.i
+	@echo ... PowerUpEffect.s
 	@echo ... RectangleObject.obj
 	@echo ... RectangleObject.i
 	@echo ... RectangleObject.s
