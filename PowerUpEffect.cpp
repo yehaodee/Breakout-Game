@@ -10,24 +10,21 @@ void MultiBallEffect::Apply(Game& game) {
     if (!game.balls.empty()) {
         Ball& originalBall = game.balls[0];
         Vector2 originalPos = originalBall.GetPosition();
-        
-        // 生成新球，数量由配置决定
+
         for (int i = 0; i < game.powerUpConfig[1].extraBalls; i++) {
-            // 随机速度方向
             float angle = (float)rand() / RAND_MAX * PI * 2;
             float speed = game.ballSpeed;
             Vector2 velocity = { cos(angle) * speed, sin(angle) * speed };
-            
-            // 在原始球附近生成新球
+
             Vector2 position = { originalPos.x + (float)(rand() % 20 - 10), originalPos.y + (float)(rand() % 20 - 10) };
-            
+
             game.balls.emplace_back(position, velocity, game.ballRadius, RED);
         }
     }
 }
 
 void SlowBallEffect::Apply(Game& game) {
-    game.slowBallEffectTime = duration; // 持续时间
+    game.slowBallEffectTime = duration;
     for (auto& ball : game.balls) {
         Vector2 vel = ball.GetVelocity();
         ball.SetVelocity({ vel.x * game.powerUpConfig[2].speedFactor, vel.y * game.powerUpConfig[2].speedFactor });

@@ -1,2 +1,0 @@
-# Empty dependencies file for test_ball_brick_collision.
-# This may be replaced when dependencies are built.

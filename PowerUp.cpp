@@ -20,12 +20,9 @@ void PowerUp::Apply(Game& game) {
 }
 
 void PowerUp::Update(float dt) {
-    // 实现增强道具的更新逻辑
     if (active) {
-        // 掉落运动
         position.y += speed * dt;
-        
-        // 检查持续时间
+
         if (duration > 0) {
             duration -= dt;
             if (duration <= 0) {
@@ -36,9 +33,7 @@ void PowerUp::Update(float dt) {
 }
 
 void PowerUp::Draw() {
-    // 实现增强道具的绘制逻辑
     if (active) {
-        // 根据类型绘制不同的道具
         switch (type) {
             case PowerUpType::PADDLE_EXTEND:
                 DrawCircleV(position, 10, GREEN);
