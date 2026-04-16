@@ -9,6 +9,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/breakout.dir/GameObject.cpp.obj.d"
   "CMakeFiles/breakout.dir/Paddle.cpp.obj"
   "CMakeFiles/breakout.dir/Paddle.cpp.obj.d"
+  "CMakeFiles/breakout.dir/Particle.cpp.obj"
+  "CMakeFiles/breakout.dir/Particle.cpp.obj.d"
   "CMakeFiles/breakout.dir/PhysicalObject.cpp.obj"
   "CMakeFiles/breakout.dir/PhysicalObject.cpp.obj.d"
   "CMakeFiles/breakout.dir/PowerUp.cpp.obj"

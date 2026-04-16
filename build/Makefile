@@ -248,6 +248,30 @@ Paddle.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\breakout.dir\build.make CMakeFiles/breakout.dir/Paddle.cpp.s
 .PHONY : Paddle.cpp.s
 
+Particle.obj: Particle.cpp.obj
+.PHONY : Particle.obj
+
+# target to build an object file
+Particle.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\breakout.dir\build.make CMakeFiles/breakout.dir/Particle.cpp.obj
+.PHONY : Particle.cpp.obj
+
+Particle.i: Particle.cpp.i
+.PHONY : Particle.i
+
+# target to preprocess a source file
+Particle.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\breakout.dir\build.make CMakeFiles/breakout.dir/Particle.cpp.i
+.PHONY : Particle.cpp.i
+
+Particle.s: Particle.cpp.s
+.PHONY : Particle.s
+
+# target to generate assembly for a file
+Particle.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\breakout.dir\build.make CMakeFiles/breakout.dir/Particle.cpp.s
+.PHONY : Particle.cpp.s
+
 PhysicalObject.obj: PhysicalObject.cpp.obj
 .PHONY : PhysicalObject.obj
 
@@ -392,6 +416,9 @@ help:
 	@echo ... Paddle.obj
 	@echo ... Paddle.i
 	@echo ... Paddle.s
+	@echo ... Particle.obj
+	@echo ... Particle.i
+	@echo ... Particle.s
 	@echo ... PhysicalObject.obj
 	@echo ... PhysicalObject.i
 	@echo ... PhysicalObject.s

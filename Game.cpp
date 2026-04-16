@@ -129,6 +129,16 @@ void Game::Update() {
                         
                         // 检查砖块是否被摧毁
                         if (!brick.IsActive()) {
+                            // 生成粒子效果
+                            for (int i = 0; i < 10; i++) {
+                                Particle p;
+                                p.pos = { brick.GetRect().x + rand() % (int)brick.GetRect().width, brick.GetRect().y + rand() % (int)brick.GetRect().height };
+                                p.vel = { (rand() % 100 - 50) / 10.0f, (rand() % 100 - 50) / 10.0f };
+                                p.color = brick.GetColor();
+                                p.life = 0.5f;
+                                particles.push_back(p);
+                            }
+                            
                             // 30%概率生成道具
                             if (rand() % 100 < 30) {
                                 PowerUpType type = static_cast<PowerUpType>(rand() % 3);
@@ -184,6 +194,15 @@ void Game::Update() {
                 }
             }
         }
+        
+        // 更新粒子
+        for (size_t i = 0; i < particles.size(); i++) {
+            particles[i].Update(GetFrameTime());
+            if (particles[i].life <= 0) {
+                particles.erase(particles.begin() + i);
+                i--; // 调整索引
+            }
+        }
     }
     
     else if (currentState == PAUSED) {
@@ -226,6 +245,11 @@ void Game::Draw() {
         // 绘制道具
         for (auto& powerUp : powerUps) {
             powerUp.Draw();
+        }
+        
+        // 绘制粒子
+        for (auto& particle : particles) {
+            particle.Draw();
         }
         
         DrawText(("Score: " + std::to_string(score)).c_str(), 20, 20, 20, DARKGRAY);

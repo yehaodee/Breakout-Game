@@ -24,6 +24,7 @@ add_executable(breakout
     VisualObject.cpp
     RectangleObject.cpp
     PowerUp.cpp
+    Particle.cpp
 )
 
 target_link_libraries(breakout PRIVATE

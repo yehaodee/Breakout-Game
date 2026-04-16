@@ -10,5 +10,6 @@ protected:
     bool visible;
 public:
     VisualObject(Color c, bool v = true);
+    Color GetColor() const { return color; }
 };
 #endif

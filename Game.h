@@ -2,10 +2,11 @@
 #define GAME_H
 
 #include "raylib.h"
-#include "Ball.h"
 #include "Paddle.h"
+#include "Ball.h"
 #include "Brick.h"
 #include "PowerUp.h"
+#include "Particle.h"
 #include <vector>
 #include <string>
 
@@ -35,6 +36,7 @@ public:
     std::vector<Ball> balls;
     std::vector<Brick> bricks;
     std::vector<PowerUp> powerUps;
+    std::vector<Particle> particles;
     float slowBallEffectTime;
     float ballSpeed;
     

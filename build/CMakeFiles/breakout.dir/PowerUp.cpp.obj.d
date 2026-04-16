@@ -9,10 +9,11 @@ CMakeFiles/breakout.dir/PowerUp.cpp.obj: \
  D:/mingw-w64/x86_64-w64-mingw32/include/_mingw_mac.h \
  D:/mingw-w64/x86_64-w64-mingw32/include/_mingw_secapi.h \
  D:/mingw-w64/x86_64-w64-mingw32/include/sdks/_mingw_ddk.h \
- D:\CS\CPP\Breakout-Game\Game.h D:\CS\CPP\Breakout-Game\Ball.h \
- D:\CS\CPP\Breakout-Game\PhysicalObject.h \
+ D:\CS\CPP\Breakout-Game\Game.h D:\CS\CPP\Breakout-Game\Paddle.h \
+ D:\CS\CPP\Breakout-Game\RectangleObject.h \
  D:\CS\CPP\Breakout-Game\GameObject.h \
- D:\CS\CPP\Breakout-Game\VisualObject.h \
+ D:\CS\CPP\Breakout-Game\VisualObject.h D:\CS\CPP\Breakout-Game\Ball.h \
+ D:\CS\CPP\Breakout-Game\PhysicalObject.h \
  D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/vector \
  D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/requires_hosted.h \
  D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/x86_64-w64-mingw32/bits/c++config.h \
@@ -68,9 +69,7 @@ CMakeFiles/breakout.dir/PowerUp.cpp.obj: \
  D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/uses_allocator.h \
  D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/uses_allocator_args.h \
  D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/tuple \
- D:\CS\CPP\Breakout-Game\Paddle.h \
- D:\CS\CPP\Breakout-Game\RectangleObject.h \
- D:\CS\CPP\Breakout-Game\Brick.h \
+ D:\CS\CPP\Breakout-Game\Brick.h D:\CS\CPP\Breakout-Game\Particle.h \
  D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/string \
  D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/stringfwd.h \
  D:/mingw-w64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/char_traits.h \

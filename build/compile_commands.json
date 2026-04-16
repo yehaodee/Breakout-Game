@@ -58,5 +58,11 @@
   "command": "D:\\mingw-w64\\bin\\g++.exe  @CMakeFiles/breakout.dir/includes_CXX.rsp -g -std=c++17 -o CMakeFiles\\breakout.dir\\PowerUp.cpp.obj -c D:\\CS\\CPP\\Breakout-Game\\PowerUp.cpp",
   "file": "D:/CS/CPP/Breakout-Game/PowerUp.cpp",
   "output": "CMakeFiles/breakout.dir/PowerUp.cpp.obj"
+},
+{
+  "directory": "D:/CS/CPP/Breakout-Game/build",
+  "command": "D:\\mingw-w64\\bin\\g++.exe  @CMakeFiles/breakout.dir/includes_CXX.rsp -g -std=c++17 -o CMakeFiles\\breakout.dir\\Particle.cpp.obj -c D:\\CS\\CPP\\Breakout-Game\\Particle.cpp",
+  "file": "D:/CS/CPP/Breakout-Game/Particle.cpp",
+  "output": "CMakeFiles/breakout.dir/Particle.cpp.obj"
 }
 ]
