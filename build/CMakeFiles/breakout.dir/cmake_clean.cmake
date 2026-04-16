@@ -15,6 +15,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/breakout.dir/PhysicalObject.cpp.obj.d"
   "CMakeFiles/breakout.dir/PowerUp.cpp.obj"
   "CMakeFiles/breakout.dir/PowerUp.cpp.obj.d"
+  "CMakeFiles/breakout.dir/PowerUpEffect.cpp.obj"
+  "CMakeFiles/breakout.dir/PowerUpEffect.cpp.obj.d"
   "CMakeFiles/breakout.dir/RectangleObject.cpp.obj"
   "CMakeFiles/breakout.dir/RectangleObject.cpp.obj.d"
   "CMakeFiles/breakout.dir/VisualObject.cpp.obj"

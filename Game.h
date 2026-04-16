@@ -5,6 +5,7 @@
 #include "Paddle.h"
 #include "Ball.h"
 #include "Brick.h"
+#include "PowerUpEffect.h"
 #include "PowerUp.h"
 #include "Particle.h"
 #include <vector>
@@ -16,12 +17,6 @@ enum GameState {
     GAME_OVER,
     VICTORY,
     PAUSED
-};
-
-enum class PowerUpType {
-    PADDLE_EXTEND,
-    MULTI_BALL,
-    SLOW_BALL
 };
 
 class Game {
@@ -59,6 +54,16 @@ public:
     int initialLives;
     int scorePerBrick;
     float timeMultiplierDecay;
+    
+    // 道具配置
+    struct PowerUpConfig {
+        float extraWidth;
+        float duration;
+        float dropRate;
+        int extraBalls;
+        float speedFactor;
+    };
+    PowerUpConfig powerUpConfig[3];
     
     void CreateBricks(int level);
     void LoadConfig(const std::string& path);

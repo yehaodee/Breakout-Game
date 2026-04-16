@@ -107,9 +107,6 @@ void Game::Update() {
                 }
             }
 
-            if (ball.CheckBrickCollision(bricks)) {
-                score += ball.GetScoreValue();
-            }
         }
         
         if (IsKeyDown(KEY_LEFT)) paddle.MoveLeft(paddleSpeed);
@@ -139,10 +136,11 @@ void Game::Update() {
                                 particles.push_back(p);
                             }
                             
-                            // 30%概率生成道具
-                            if (rand() % 100 < 30) {
-                                PowerUpType type = static_cast<PowerUpType>(rand() % 3);
-                                powerUps.emplace_back(brick.GetRect().x + brick.GetRect().width / 2, brick.GetRect().y, type);
+                            // 根据配置的掉落率生成道具
+                            PowerUpType type = static_cast<PowerUpType>(rand() % 3);
+                            float dropRate = powerUpConfig[static_cast<int>(type)].dropRate * 100;
+                            if (rand() % 100 < dropRate) {
+                                powerUps.emplace_back(brick.GetRect().x + brick.GetRect().width / 2, brick.GetRect().y, type, *this);
                             }
                         }
                     }
@@ -304,6 +302,19 @@ void Game::LoadConfig(const std::string& path) {
     initialLives = config["game"]["initialLives"];
     scorePerBrick = config["game"]["scorePerBrick"];
     timeMultiplierDecay = config["game"]["timeMultiplierDecay"];
+    
+    // 加载道具配置
+    powerUpConfig[0].extraWidth = config["powerups"]["paddle_extend"]["extra_width"];
+    powerUpConfig[0].duration = config["powerups"]["paddle_extend"]["duration"];
+    powerUpConfig[0].dropRate = config["powerups"]["paddle_extend"]["drop_rate"];
+    
+    powerUpConfig[1].extraBalls = config["powerups"]["multi_ball"]["extra_balls"];
+    powerUpConfig[1].duration = config["powerups"]["multi_ball"]["duration"];
+    powerUpConfig[1].dropRate = config["powerups"]["multi_ball"]["drop_rate"];
+    
+    powerUpConfig[2].speedFactor = config["powerups"]["slow_ball"]["speed_factor"];
+    powerUpConfig[2].duration = config["powerups"]["slow_ball"]["duration"];
+    powerUpConfig[2].dropRate = config["powerups"]["slow_ball"]["drop_rate"];
 }
 
 void Game::Shutdown() {
