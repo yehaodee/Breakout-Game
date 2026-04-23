@@ -8,6 +8,7 @@
 #include "PowerUpEffect.h"
 #include "PowerUp.h"
 #include "Particle.h"
+#include "Network.h"
 #include <vector>
 #include <string>
 
@@ -19,23 +20,33 @@ enum GameState {
     PAUSED
 };
 
+enum GameMode {
+    SINGLE_PLAYER,
+    TWO_PLAYER_HOST,
+    TWO_PLAYER_CLIENT
+};
+
 class Game {
 private:
     int score;
     int lives;
     int level;
     GameState currentState;
+    GameMode gameMode;
     float gameTime;
+    Network network;
+    Paddle* localPaddle;
+    Paddle* remotePaddle;
 public:
     Paddle paddle;
+    Paddle paddleTop;
     std::vector<Ball> balls;
     std::vector<Brick> bricks;
     std::vector<PowerUp> powerUps;
     std::vector<Particle> particles;
     float slowBallEffectTime;
     float ballSpeed;
-    
-    // 配置参数
+
     int windowWidth;
     int windowHeight;
     std::string windowTitle;
@@ -54,8 +65,7 @@ public:
     int initialLives;
     int scorePerBrick;
     float timeMultiplierDecay;
-    
-    // 道具配置
+
     struct PowerUpConfig {
         float extraWidth;
         float duration;
@@ -64,12 +74,17 @@ public:
         float speedFactor;
     };
     PowerUpConfig powerUpConfig[3];
-    
+
     void CreateBricks(int level);
     void LoadConfig(const std::string& path);
-    
+    void startTwoPlayerHost();
+    void startTwoPlayerClient();
+    void sendGameState();
+    void handleNetworkPackets();
+
 public:
     Game();
+    ~Game();
     void Init();
     void Update();
     void Draw();

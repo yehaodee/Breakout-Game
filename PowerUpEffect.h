@@ -2,6 +2,7 @@
 #define POWERUPEFFECT_H
 
 #include <memory>
+#include "Paddle.h"
 
 class Game;
 
@@ -13,7 +14,7 @@ enum class PowerUpType {
 
 class PowerUpEffect {
 public:
-    virtual void Apply(Game& game) = 0;
+    virtual void Apply(Game& game, Paddle& paddle) = 0;
     virtual ~PowerUpEffect() {}
 };
 
@@ -22,19 +23,19 @@ class ExtendPaddleEffect : public PowerUpEffect {
     float duration;
 public:
     ExtendPaddleEffect(float w, float d) : extraWidth(w), duration(d) {}
-    void Apply(Game& game) override;
+    void Apply(Game& game, Paddle& paddle) override;
 };
 
 class MultiBallEffect : public PowerUpEffect {
 public:
-    void Apply(Game& game) override;
+    void Apply(Game& game, Paddle& paddle) override;
 };
 
 class SlowBallEffect : public PowerUpEffect {
     float duration;
 public:
     SlowBallEffect(float d) : duration(d) {}
-    void Apply(Game& game) override;
+    void Apply(Game& game, Paddle& paddle) override;
 };
 
 std::unique_ptr<PowerUpEffect> CreatePowerUpEffect(PowerUpType type, Game& game);

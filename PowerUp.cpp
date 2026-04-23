@@ -8,14 +8,23 @@ PowerUp::PowerUp(float x, float y, PowerUpType t, Game& game) {
     position.y = y;
     type = t;
     active = true;
-    duration = 10.0f; // 默认持续10秒
-    speed = 200.0f;   // 默认掉落速度
+    duration = 10.0f;
+    speed = 200.0f;
     effect = CreatePowerUpEffect(type, game);
 }
 
-void PowerUp::Apply(Game& game) {
+PowerUp::PowerUp(const PowerUp& other) {
+    position = other.position;
+    type = other.type;
+    active = other.active;
+    duration = other.duration;
+    speed = other.speed;
+    effect = nullptr;
+}
+
+void PowerUp::Apply(Game& game, Paddle& paddle) {
     if (effect) {
-        effect->Apply(game);
+        effect->Apply(game, paddle);
     }
 }
 
