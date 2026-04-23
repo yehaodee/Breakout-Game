@@ -27,6 +27,10 @@ void Paddle::MoveTo(float x, float y) {
     rect.y = y;
 }
 
+void Paddle::SetWidth(float w) {
+    rect.width = w;
+}
+
 Rectangle Paddle::GetRect() {
     return rect;
 }

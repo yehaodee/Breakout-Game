@@ -56,7 +56,7 @@ void Game::CreateBricks(int level) {
     float gap = 10;
 
     Color colors[] = { RED, ORANGE, YELLOW, GREEN, BLUE, PURPLE };
-    int health[] = { 1, 1, 1, 1, 1, 1 };
+    int health[] = { 1, 1, 1, 1, 2, 2 };
     int points[] = { 10, 20, 30, 40, 50, 60 };
 
     for (int row = 0; row < brickRows; row++) {
@@ -132,8 +132,8 @@ void Game::sendGameState() {
         }
         j["balls"] = ballsArr;
 
-        j["paddleBottom"] = {{"x", paddle.GetRect().x}, {"y", paddle.GetRect().y}};
-        j["paddleTop"] = {{"x", paddleTop.GetRect().x}, {"y", paddleTop.GetRect().y}};
+        j["paddleBottom"] = {{"x", paddle.GetRect().x}, {"y", paddle.GetRect().y}, {"w", paddle.GetRect().width}};
+        j["paddleTop"] = {{"x", paddleTop.GetRect().x}, {"y", paddleTop.GetRect().y}, {"w", paddleTop.GetRect().width}};
 
         json bricksArr = json::array();
         for (auto& brick : bricks) {
@@ -141,6 +141,7 @@ void Game::sendGameState() {
             brickObj["x"] = brick.GetRect().x;
             brickObj["y"] = brick.GetRect().y;
             brickObj["active"] = brick.IsActive();
+            brickObj["health"] = brick.GetHealth();
             bricksArr.push_back(brickObj);
         }
         j["bricks"] = bricksArr;
@@ -199,6 +200,7 @@ void Game::handleNetworkPackets() {
                 }
 
                 paddleTop.MoveTo(j["paddleTop"]["x"], j["paddleTop"]["y"]);
+                paddleTop.SetWidth(j["paddleTop"]["w"]);
 
                 int idx = 0;
                 for (auto& brickObj : j["bricks"]) {
@@ -206,6 +208,7 @@ void Game::handleNetworkPackets() {
                         if (!brickObj["active"] && bricks[idx].IsActive()) {
                             bricks[idx].SetActive(false);
                         }
+                        bricks[idx].SetHealth(brickObj["health"]);
                     }
                     idx++;
                 }

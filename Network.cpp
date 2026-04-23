@@ -106,6 +106,9 @@ void Network::pollEvents() {
                     peer = reinterpret_cast<void*>(event.peer);
                     connected = true;
                     std::cout << "Client connected" << std::endl;
+                } else if (mode == NetworkMode::CLIENT) {
+                    connected = true;
+                    std::cout << "Connected to server" << std::endl;
                 }
                 break;
             case ENET_EVENT_TYPE_RECEIVE:

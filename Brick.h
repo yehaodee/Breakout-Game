@@ -15,6 +15,8 @@ public:
     void Draw();
     bool IsActive() { return visible; }
     void SetActive(bool a) { visible = a; }
+    void SetHealth(int h) { health = h; }
+    int GetHealth() { return health; }
     bool CheckCollision(Ball ball);
     int GetPoints() { return points; }
 };

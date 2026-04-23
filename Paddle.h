@@ -16,6 +16,7 @@ public:
     void MoveLeft(float speed);
     void MoveRight(float speed);
     void MoveTo(float x, float y);
+    void SetWidth(float w);
     Rectangle GetRect();
     void Extend(float extraWidth, float duration);
     void Update(float dt);
