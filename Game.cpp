@@ -187,7 +187,11 @@ void Game::handleNetworkPackets() {
                 json j = json::parse(packet.jsonData);
                 score = j["score"];
                 lives = j["lives"];
-                level = j["level"];
+                int newLevel = j["level"];
+                if (newLevel != level) {
+                    level = newLevel;
+                    CreateBricks(level);
+                }
                 ballSpeed = j["ballSpeed"];
                 slowBallEffectTime = j["slowBallEffectTime"];
 
@@ -348,11 +352,11 @@ void Game::Update() {
                 powerUp.Update(GetFrameTime());
 
                 if (powerUp.active && CheckCollisionCircleRec(powerUp.position, 10, paddle.GetRect())) {
-                    powerUp.Apply(*this);
+                    powerUp.Apply(*this, paddle);
                     powerUp.active = false;
                 }
                 if (powerUp.active && CheckCollisionCircleRec(powerUp.position, 10, paddleTop.GetRect())) {
-                    powerUp.Apply(*this);
+                    powerUp.Apply(*this, paddleTop);
                     powerUp.active = false;
                 }
             }

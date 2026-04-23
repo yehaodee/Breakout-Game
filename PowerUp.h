@@ -20,7 +20,7 @@ public:
     PowerUp(float x, float y, PowerUpType t, Game& game);
     PowerUp(const PowerUp& other);
     PowerUp& operator=(const PowerUp&) = delete;
-    void Apply(Game& game);
+    void Apply(Game& game, Paddle& paddle);
     void Update(float dt);
     void Draw();
 };

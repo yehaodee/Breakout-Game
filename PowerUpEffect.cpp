@@ -2,11 +2,12 @@
 #include "Game.h"
 #include <cmath>
 
-void ExtendPaddleEffect::Apply(Game& game) {
-    game.paddle.Extend(extraWidth, duration);
+void ExtendPaddleEffect::Apply(Game& game, Paddle& paddle) {
+    paddle.Extend(extraWidth, duration);
 }
 
-void MultiBallEffect::Apply(Game& game) {
+void MultiBallEffect::Apply(Game& game, Paddle& paddle) {
+    (void)paddle;
     if (!game.balls.empty()) {
         Ball& originalBall = game.balls[0];
         Vector2 originalPos = originalBall.GetPosition();
@@ -23,7 +24,8 @@ void MultiBallEffect::Apply(Game& game) {
     }
 }
 
-void SlowBallEffect::Apply(Game& game) {
+void SlowBallEffect::Apply(Game& game, Paddle& paddle) {
+    (void)paddle;
     game.slowBallEffectTime = duration;
     for (auto& ball : game.balls) {
         Vector2 vel = ball.GetVelocity();

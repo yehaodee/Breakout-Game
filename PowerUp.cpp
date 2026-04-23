@@ -22,9 +22,9 @@ PowerUp::PowerUp(const PowerUp& other) {
     effect = nullptr;
 }
 
-void PowerUp::Apply(Game& game) {
+void PowerUp::Apply(Game& game, Paddle& paddle) {
     if (effect) {
-        effect->Apply(game);
+        effect->Apply(game, paddle);
     }
 }
 
