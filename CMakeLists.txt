@@ -6,12 +6,12 @@ set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_CXX_EXTENSIONS OFF)
 
-# 手动指定 raylib 路径
-set(RAYLIB_INCLUDE_DIR D:/raylib/include)
-set(RAYLIB_LIB_DIR D:/raylib/lib)
+add_definitions(-DWIN32_LEAN_AND_MEAN)
 
-include_directories(${RAYLIB_INCLUDE_DIR} ${CMAKE_SOURCE_DIR}/include)
-link_directories(${RAYLIB_LIB_DIR})
+add_subdirectory(enet)
+
+include_directories(${CMAKE_SOURCE_DIR}/raylib/include ${CMAKE_SOURCE_DIR}/include ${CMAKE_SOURCE_DIR}/enet/include)
+link_directories(${CMAKE_SOURCE_DIR}/raylib/lib)
 
 add_executable(breakout
     main.cpp
@@ -26,12 +26,13 @@ add_executable(breakout
     PowerUp.cpp
     PowerUpEffect.cpp
     Particle.cpp
+    Network.cpp
 )
 
 target_link_libraries(breakout PRIVATE
     raylib
+    enet
     opengl32
     gdi32
     winmm
 )
-

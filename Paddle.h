@@ -15,9 +15,10 @@ public:
     void Draw();
     void MoveLeft(float speed);
     void MoveRight(float speed);
+    void MoveTo(float x, float y);
     Rectangle GetRect();
     void Extend(float extraWidth, float duration);
-    void Update(float dt);  // 每帧减少剩余时间，到期恢复
+    void Update(float dt);
 };
 
 #endif
