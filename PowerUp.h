@@ -13,11 +13,13 @@ public:
     Vector2 position;
     PowerUpType type;
     bool active;
-    float duration;   // 持续时间（秒），0永久
-    float speed;      // 掉落速度
+    float duration;
+    float speed;
     std::unique_ptr<PowerUpEffect> effect;
-    
+
     PowerUp(float x, float y, PowerUpType t, Game& game);
+    PowerUp(const PowerUp& other);
+    PowerUp& operator=(const PowerUp&) = delete;
     void Apply(Game& game);
     void Update(float dt);
     void Draw();

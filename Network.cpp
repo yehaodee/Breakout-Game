@@ -112,14 +112,20 @@ void Network::pollEvents() {
                 if (event.packet->dataLength > 0) {
                     std::string data(reinterpret_cast<const char*>(event.packet->data), event.packet->dataLength);
                     PacketData pd;
-                    pd.type = data.substr(0, data.find(':'));
-                    size_t colonPos = data.find(':');
-                    size_t start = colonPos + 1;
-                    for (int i = 0; i < 8 && start < data.length(); i++) {
-                        size_t commaPos = data.find(',', start);
-                        if (commaPos == std::string::npos) commaPos = data.length();
-                        pd.data[i] = std::stof(data.substr(start, commaPos - start));
-                        start = commaPos + 1;
+
+                    if (data.front() == '{') {
+                        pd.type = "FULLSTATE";
+                        pd.jsonData = data;
+                    } else {
+                        pd.type = data.substr(0, data.find(':'));
+                        size_t colonPos = data.find(':');
+                        size_t start = colonPos + 1;
+                        for (int i = 0; i < 8 && start < data.length(); i++) {
+                            size_t commaPos = data.find(',', start);
+                            if (commaPos == std::string::npos) commaPos = data.length();
+                            pd.data[i] = std::stof(data.substr(start, commaPos - start));
+                            start = commaPos + 1;
+                        }
                     }
                     receivedPackets.push_back(pd);
                 }

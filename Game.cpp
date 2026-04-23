@@ -56,7 +56,7 @@ void Game::CreateBricks(int level) {
     float gap = 10;
 
     Color colors[] = { RED, ORANGE, YELLOW, GREEN, BLUE, PURPLE };
-    int health[] = { 1, 1, 2, 2, 3, 3 };
+    int health[] = { 1, 1, 1, 1, 1, 1 };
     int points[] = { 10, 20, 30, 40, 50, 60 };
 
     for (int row = 0; row < brickRows; row++) {
@@ -113,22 +113,63 @@ void Game::startTwoPlayerClient() {
 
 void Game::sendGameState() {
     if (gameMode == TWO_PLAYER_HOST && network.isConnected()) {
-        char buffer[256];
-        snprintf(buffer, sizeof(buffer), "BALL:%.2f,%.2f,%.2f,%.2f",
-                 balls[0].GetPosition().x, balls[0].GetPosition().y,
-                 balls[0].GetVelocity().x, balls[0].GetVelocity().y);
-        network.sendPacket(buffer);
+        json j;
+        j["type"] = "FULLSTATE";
+        j["score"] = score;
+        j["lives"] = lives;
+        j["level"] = level;
+        j["ballSpeed"] = ballSpeed;
+        j["slowBallEffectTime"] = slowBallEffectTime;
 
-        snprintf(buffer, sizeof(buffer), "GAMESTATE:%d,%d,%d,%d,%d,%.2f,%.2f",
-                 score, lives, level, (int)balls.size(),
-                 (int)bricks.size(), ballSpeed, slowBallEffectTime);
-        network.sendPacket(buffer);
-
-        for (auto& brick : bricks) {
-            snprintf(buffer, sizeof(buffer), "BRICK:%.2f,%.2f,%d",
-                     brick.GetRect().x, brick.GetRect().y, brick.IsActive() ? 1 : 0);
-            network.sendPacket(buffer);
+        json ballsArr = json::array();
+        for (auto& ball : balls) {
+            json ballObj;
+            ballObj["x"] = ball.GetPosition().x;
+            ballObj["y"] = ball.GetPosition().y;
+            ballObj["vx"] = ball.GetVelocity().x;
+            ballObj["vy"] = ball.GetVelocity().y;
+            ballsArr.push_back(ballObj);
         }
+        j["balls"] = ballsArr;
+
+        j["paddleBottom"] = {{"x", paddle.GetRect().x}, {"y", paddle.GetRect().y}};
+        j["paddleTop"] = {{"x", paddleTop.GetRect().x}, {"y", paddleTop.GetRect().y}};
+
+        json bricksArr = json::array();
+        for (auto& brick : bricks) {
+            json brickObj;
+            brickObj["x"] = brick.GetRect().x;
+            brickObj["y"] = brick.GetRect().y;
+            brickObj["active"] = brick.IsActive();
+            bricksArr.push_back(brickObj);
+        }
+        j["bricks"] = bricksArr;
+
+        json powerUpsArr = json::array();
+        for (auto& pu : powerUps) {
+            json puObj;
+            puObj["x"] = pu.position.x;
+            puObj["y"] = pu.position.y;
+            puObj["active"] = pu.active;
+            puObj["type"] = static_cast<int>(pu.type);
+            powerUpsArr.push_back(puObj);
+        }
+        j["powerUps"] = powerUpsArr;
+
+        json particlesArr = json::array();
+        for (auto& p : particles) {
+            json pObj;
+            pObj["x"] = p.pos.x;
+            pObj["y"] = p.pos.y;
+            pObj["vx"] = p.vel.x;
+            pObj["vy"] = p.vel.y;
+            pObj["life"] = p.life;
+            particlesArr.push_back(pObj);
+        }
+        j["particles"] = particlesArr;
+
+        std::string data = j.dump();
+        network.sendPacket(data);
     }
 }
 
@@ -137,8 +178,56 @@ void Game::handleNetworkPackets() {
 
     auto packets = network.getPackets();
     for (auto& packet : packets) {
-        if (packet.type == "PADDLE") {
+        if (packet.type == "CLIENT_PADDLE") {
             remotePaddle->MoveTo(packet.data[0], packet.data[1]);
+        }
+        else if (packet.type == "FULLSTATE") {
+            try {
+                json j = json::parse(packet.jsonData);
+                score = j["score"];
+                lives = j["lives"];
+                level = j["level"];
+                ballSpeed = j["ballSpeed"];
+                slowBallEffectTime = j["slowBallEffectTime"];
+
+                balls.clear();
+                for (auto& ballObj : j["balls"]) {
+                    balls.emplace_back(
+                        Vector2{(float)ballObj["x"], (float)ballObj["y"]},
+                        Vector2{(float)ballObj["vx"], (float)ballObj["vy"]},
+                        ballRadius, RED);
+                }
+
+                paddleTop.MoveTo(j["paddleTop"]["x"], j["paddleTop"]["y"]);
+
+                int idx = 0;
+                for (auto& brickObj : j["bricks"]) {
+                    if (idx < (int)bricks.size()) {
+                        if (!brickObj["active"] && bricks[idx].IsActive()) {
+                            bricks[idx].SetActive(false);
+                        }
+                    }
+                    idx++;
+                }
+
+                powerUps.clear();
+                for (auto& puObj : j["powerUps"]) {
+                    PowerUp pu{(float)puObj["x"], (float)puObj["y"],
+                               static_cast<PowerUpType>((int)puObj["type"]), *this};
+                    pu.active = puObj["active"];
+                    powerUps.push_back(pu);
+                }
+
+                particles.clear();
+                for (auto& pObj : j["particles"]) {
+                    Particle p;
+                    p.pos = {(float)pObj["x"], (float)pObj["y"]};
+                    p.vel = {(float)pObj["vx"], (float)pObj["vy"]};
+                    p.life = pObj["life"];
+                    p.color = RED;
+                    particles.push_back(p);
+                }
+            } catch (...) {}
         }
     }
     network.clearPackets();
@@ -174,128 +263,140 @@ void Game::Update() {
             currentState = PAUSED;
         }
 
-        if (gameMode == TWO_PLAYER_HOST || gameMode == TWO_PLAYER_CLIENT) {
+        if (gameMode == TWO_PLAYER_HOST) {
             handleNetworkPackets();
-        }
 
-        for (size_t i = 0; i < balls.size(); i++) {
-            Ball& ball = balls[i];
-            ball.Move();
+            for (size_t i = 0; i < balls.size(); i++) {
+                Ball& ball = balls[i];
+                ball.Move();
 
-            if (ball.BounceEdge(windowWidth, windowHeight)) {
-                if (ball.GetPosition().y + ball.GetRadius() >= windowHeight) {
-                    balls.erase(balls.begin() + i);
-                    i--;
+                if (ball.BounceEdge(windowWidth, windowHeight)) {
+                    if (ball.GetPosition().y + ball.GetRadius() >= windowHeight) {
+                        balls.erase(balls.begin() + i);
+                        i--;
 
-                    if (balls.empty()) {
-                        lives--;
-                        if (lives <= 0) {
-                            currentState = GAME_OVER;
-                        } else {
-                            balls.emplace_back((Vector2){windowWidth / 2.0f, windowHeight / 2.0f}, (Vector2){ballSpeed, ballSpeed}, ballRadius, RED);
+                        if (balls.empty()) {
+                            lives--;
+                            if (lives <= 0) {
+                                currentState = GAME_OVER;
+                            } else {
+                                balls.emplace_back((Vector2){windowWidth / 2.0f, windowHeight / 2.0f}, (Vector2){ballSpeed, ballSpeed}, ballRadius, RED);
+                            }
                         }
                     }
                 }
             }
-        }
 
-        if (gameMode != TWO_PLAYER_CLIENT) {
             if (IsKeyDown(KEY_LEFT)) localPaddle->MoveLeft(paddleSpeed);
             if (IsKeyDown(KEY_RIGHT)) localPaddle->MoveRight(paddleSpeed);
             localPaddle->Update(GetFrameTime());
 
             char buffer[64];
-            snprintf(buffer, sizeof(buffer), "PADDLE:%.2f,%.2f",
+            snprintf(buffer, sizeof(buffer), "CLIENT_PADDLE:%.2f,%.2f",
                      localPaddle->GetRect().x, localPaddle->GetRect().y);
             network.sendPacket(buffer);
-        }
 
-        bool allBricksDestroyed = true;
-        for (auto& brick : bricks) {
-            if (brick.IsActive()) {
-                allBricksDestroyed = false;
-                for (auto& ball : balls) {
-                    if (brick.CheckCollision(ball)) {
-                        ball.ReverseY();
-                        score += brick.GetPoints();
+            bool allBricksDestroyed = true;
+            for (auto& brick : bricks) {
+                if (brick.IsActive()) {
+                    allBricksDestroyed = false;
+                    for (auto& ball : balls) {
+                        if (brick.CheckCollision(ball)) {
+                            ball.ReverseY();
+                            score += brick.GetPoints();
 
-                        if (!brick.IsActive()) {
-                            for (int i = 0; i < 10; i++) {
-                                Particle p;
-                                p.pos = { brick.GetRect().x + rand() % (int)brick.GetRect().width,
-                                          brick.GetRect().y + rand() % (int)brick.GetRect().height };
-                                p.vel = { (rand() % 100 - 50) / 10.0f, (rand() % 100 - 50) / 10.0f };
-                                p.color = brick.GetColor();
-                                p.life = 0.5f;
-                                particles.push_back(p);
-                            }
+                            if (!brick.IsActive()) {
+                                for (int i = 0; i < 10; i++) {
+                                    Particle p;
+                                    p.pos = { brick.GetRect().x + rand() % (int)brick.GetRect().width,
+                                              brick.GetRect().y + rand() % (int)brick.GetRect().height };
+                                    p.vel = { (rand() % 100 - 50) / 10.0f, (rand() % 100 - 50) / 10.0f };
+                                    p.color = brick.GetColor();
+                                    p.life = 0.5f;
+                                    particles.push_back(p);
+                                }
 
-                            PowerUpType type = static_cast<PowerUpType>(rand() % 3);
-                            float dropRate = powerUpConfig[static_cast<int>(type)].dropRate * 100;
-                            if (rand() % 100 < dropRate) {
-                                powerUps.emplace_back(brick.GetRect().x + brick.GetRect().width / 2,
-                                                      brick.GetRect().y, type, *this);
+                                PowerUpType type = static_cast<PowerUpType>(rand() % 3);
+                                float dropRate = powerUpConfig[static_cast<int>(type)].dropRate * 100;
+                                if (rand() % 100 < dropRate) {
+                                    powerUps.emplace_back(brick.GetRect().x + brick.GetRect().width / 2,
+                                                          brick.GetRect().y, type, *this);
+                                }
                             }
                         }
                     }
                 }
             }
-        }
 
-        if (allBricksDestroyed) {
-            level++;
-            ballSpeed += 0.5;
-            balls.clear();
-            balls.emplace_back((Vector2){windowWidth / 2.0f, windowHeight / 2.0f},
-                               (Vector2){ballSpeed, ballSpeed}, ballRadius, RED);
-            CreateBricks(level);
+            if (allBricksDestroyed) {
+                level++;
+                ballSpeed += 0.5;
+                balls.clear();
+                balls.emplace_back((Vector2){windowWidth / 2.0f, windowHeight / 2.0f},
+                                   (Vector2){ballSpeed, ballSpeed}, ballRadius, RED);
+                CreateBricks(level);
 
-            if (level > 5) {
-                currentState = VICTORY;
-            }
-        }
-
-        for (auto& powerUp : powerUps) {
-            powerUp.Update(GetFrameTime());
-
-            if (powerUp.active && CheckCollisionCircleRec(powerUp.position, 10, paddle.GetRect())) {
-                powerUp.Apply(*this);
-                powerUp.active = false;
-            }
-            if (powerUp.active && CheckCollisionCircleRec(powerUp.position, 10, paddleTop.GetRect())) {
-                powerUp.Apply(*this);
-                powerUp.active = false;
-            }
-        }
-
-        for (auto& ball : balls) {
-            ball.CheckPaddleCollision(paddle.GetRect());
-            ball.CheckPaddleCollision(paddleTop.GetRect());
-        }
-
-        if (slowBallEffectTime > 0) {
-            slowBallEffectTime -= GetFrameTime();
-            if (slowBallEffectTime <= 0) {
-                for (auto& ball : balls) {
-                    Vector2 vel = ball.GetVelocity();
-                    float speed = sqrt(vel.x * vel.x + vel.y * vel.y);
-                    float normalizedSpeed = speed / 0.7f;
-                    float angle = atan2(vel.y, vel.x);
-                    ball.SetVelocity((Vector2){cos(angle) * normalizedSpeed, sin(angle) * normalizedSpeed});
+                if (level > 5) {
+                    currentState = VICTORY;
                 }
             }
-        }
 
-        for (size_t i = 0; i < particles.size(); i++) {
-            particles[i].Update(GetFrameTime());
-            if (particles[i].life <= 0) {
-                particles.erase(particles.begin() + i);
-                i--;
+            for (auto& powerUp : powerUps) {
+                powerUp.Update(GetFrameTime());
+
+                if (powerUp.active && CheckCollisionCircleRec(powerUp.position, 10, paddle.GetRect())) {
+                    powerUp.Apply(*this);
+                    powerUp.active = false;
+                }
+                if (powerUp.active && CheckCollisionCircleRec(powerUp.position, 10, paddleTop.GetRect())) {
+                    powerUp.Apply(*this);
+                    powerUp.active = false;
+                }
             }
-        }
 
-        if (gameMode == TWO_PLAYER_HOST) {
+            for (auto& ball : balls) {
+                ball.CheckPaddleCollision(paddle.GetRect());
+                ball.CheckPaddleCollision(paddleTop.GetRect());
+            }
+
+            if (slowBallEffectTime > 0) {
+                slowBallEffectTime -= GetFrameTime();
+                if (slowBallEffectTime <= 0) {
+                    for (auto& ball : balls) {
+                        Vector2 vel = ball.GetVelocity();
+                        float speed = sqrt(vel.x * vel.x + vel.y * vel.y);
+                        float normalizedSpeed = speed / 0.7f;
+                        float angle = atan2(vel.y, vel.x);
+                        ball.SetVelocity((Vector2){cos(angle) * normalizedSpeed, sin(angle) * normalizedSpeed});
+                    }
+                }
+            }
+
+            for (size_t i = 0; i < particles.size(); i++) {
+                particles[i].Update(GetFrameTime());
+                if (particles[i].life <= 0) {
+                    particles.erase(particles.begin() + i);
+                    i--;
+                }
+            }
+
             sendGameState();
+        }
+        else if (gameMode == TWO_PLAYER_CLIENT) {
+            handleNetworkPackets();
+
+            if (IsKeyDown(KEY_LEFT)) localPaddle->MoveLeft(paddleSpeed);
+            if (IsKeyDown(KEY_RIGHT)) localPaddle->MoveRight(paddleSpeed);
+            localPaddle->Update(GetFrameTime());
+
+            char buffer[64];
+            snprintf(buffer, sizeof(buffer), "CLIENT_PADDLE:%.2f,%.2f",
+                     localPaddle->GetRect().x, localPaddle->GetRect().y);
+            network.sendPacket(buffer);
+
+            for (auto& p : particles) {
+                p.Update(GetFrameTime());
+            }
         }
     }
 

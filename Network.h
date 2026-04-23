@@ -13,6 +13,7 @@ enum class NetworkMode {
 struct PacketData {
     std::string type;
     float data[8];
+    std::string jsonData;
 };
 
 class Network {
