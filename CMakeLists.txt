@@ -16,6 +16,9 @@ link_directories(${CMAKE_SOURCE_DIR}/raylib/lib)
 add_executable(breakout
     main.cpp
     Game.cpp
+    GameServer.cpp
+    GameClient.cpp
+    GameSingle.cpp
     Ball.cpp
     Paddle.cpp
     Brick.cpp

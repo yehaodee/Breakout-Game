@@ -8,7 +8,6 @@
 #include "PowerUpEffect.h"
 #include "PowerUp.h"
 #include "Particle.h"
-#include "Network.h"
 #include <vector>
 #include <string>
 
@@ -19,7 +18,6 @@ enum GameState {
     VICTORY,
     PAUSED
 };
-
 enum GameMode {
     SINGLE_PLAYER,
     TWO_PLAYER_HOST,
@@ -27,14 +25,12 @@ enum GameMode {
 };
 
 class Game {
-private:
+protected:
     int score;
     int lives;
     int level;
     GameState currentState;
     GameMode gameMode;
-    float gameTime;
-    Network network;
     Paddle* localPaddle;
     Paddle* remotePaddle;
 public:
@@ -77,18 +73,16 @@ public:
 
     void CreateBricks(int level);
     void LoadConfig(const std::string& path);
-    void startTwoPlayerHost();
-    void startTwoPlayerClient();
-    void sendGameState();
-    void handleNetworkPackets();
 
 public:
     Game();
     ~Game();
     void Init();
-    void Update();
+    virtual void Update(); 
     void Draw();
     void Shutdown();
+    bool ShouldClose() const;
+    void Close();
 };
 
 #endif
