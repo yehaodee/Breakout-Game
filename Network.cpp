@@ -113,24 +113,26 @@ void Network::pollEvents() {
                 break;
             case ENET_EVENT_TYPE_RECEIVE:
                 if (event.packet->dataLength > 0) {
-                    std::string data(reinterpret_cast<const char*>(event.packet->data), event.packet->dataLength);
-                    PacketData pd;
+                    std::string msgData(reinterpret_cast<char*>(event.packet->data), event.packet->dataLength);
+                    PacketData packetData;
 
-                    if (data.front() == '{') {
-                        pd.type = "FULLSTATE";
-                        pd.jsonData = data;
-                    } else {
-                        pd.type = data.substr(0, data.find(':'));
-                        size_t colonPos = data.find(':');
-                        size_t start = colonPos + 1;
-                        for (int i = 0; i < 8 && start < data.length(); i++) {
-                            size_t commaPos = data.find(',', start);
-                            if (commaPos == std::string::npos) commaPos = data.length();
-                            pd.data[i] = std::stof(data.substr(start, commaPos - start));
-                            start = commaPos + 1;
+                    if (msgData.rfind("CLIENT_PADDLE:", 0) == 0) {
+                        packetData.type = "CLIENT_PADDLE";
+                        std::string coords = msgData.substr(14);
+                        size_t commaPos = coords.find(',');
+                        if (commaPos != std::string::npos) {
+                            packetData.data[0] = std::stof(coords.substr(0, commaPos));
+                            packetData.data[1] = std::stof(coords.substr(commaPos + 1));
                         }
+                    } else if (msgData.rfind("FULLSTATE", 0) == 0) {
+                        packetData.type = "FULLSTATE";
+                        packetData.jsonData = msgData;
+                    } else {
+                        packetData.type = "UNKNOWN";
+                        packetData.jsonData = msgData;
                     }
-                    receivedPackets.push_back(pd);
+
+                    receivedPackets.push_back(packetData);
                 }
                 enet_packet_destroy(event.packet);
                 break;

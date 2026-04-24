@@ -3,10 +3,11 @@
 #include <fstream>
 #include <nlohmann/json.hpp>
 #include <sstream>
+#include <iostream>
 
 using json = nlohmann::json;
 
-Game::Game()
+Game::Game() // 这些初始化参数相当于默认值
     : paddle(350, 550, 100, 20),
       paddleTop(350, 30, 100, 20),
       score(0),
@@ -14,7 +15,6 @@ Game::Game()
       level(1),
       currentState(MENU),
       gameMode(SINGLE_PLAYER),
-      gameTime(0.0f),
       slowBallEffectTime(0.0f),
       windowWidth(800),
       windowHeight(600),
@@ -41,7 +41,6 @@ Game::Game()
 }
 
 Game::~Game() {
-    network.disconnect();
 }
 
 void Game::Init() {
@@ -69,359 +68,8 @@ void Game::CreateBricks(int level) {
     }
 }
 
-void Game::startTwoPlayerHost() {
-    network.disconnect();
-    if (network.initServer(12345)) {
-        gameMode = TWO_PLAYER_HOST;
-        currentState = PLAYING;
-        score = 0;
-        lives = initialLives;
-        level = 1;
-        ballSpeed = 3;
-        balls.clear();
-        balls.emplace_back((Vector2){windowWidth / 2.0f, windowHeight / 2.0f}, (Vector2){ballSpeed, ballSpeed}, ballRadius, RED);
-        powerUps.clear();
-        particles.clear();
-        CreateBricks(level);
-        localPaddle = &paddle;
-        remotePaddle = &paddleTop;
-        paddle = Paddle(350, windowHeight - 40, paddleWidth, paddleHeight);
-        paddleTop = Paddle(350, 30, paddleWidth, paddleHeight);
-    }
-}
-
-void Game::startTwoPlayerClient() {
-    network.disconnect();
-    if (network.initClient("127.0.0.1", 12345)) {
-        gameMode = TWO_PLAYER_CLIENT;
-        currentState = PLAYING;
-        score = 0;
-        lives = initialLives;
-        level = 1;
-        ballSpeed = 3;
-        balls.clear();
-        balls.emplace_back((Vector2){windowWidth / 2.0f, windowHeight / 2.0f}, (Vector2){ballSpeed, ballSpeed}, ballRadius, RED);
-        powerUps.clear();
-        particles.clear();
-        CreateBricks(level);
-        localPaddle = &paddleTop;
-        remotePaddle = &paddle;
-        paddle = Paddle(350, windowHeight - 40, paddleWidth, paddleHeight);
-        paddleTop = Paddle(350, 30, paddleWidth, paddleHeight);
-    }
-}
-
-void Game::sendGameState() {
-    if (gameMode == TWO_PLAYER_HOST && network.isConnected()) {
-        json j;
-        j["type"] = "FULLSTATE";
-        j["score"] = score;
-        j["lives"] = lives;
-        j["level"] = level;
-        j["ballSpeed"] = ballSpeed;
-        j["slowBallEffectTime"] = slowBallEffectTime;
-
-        json ballsArr = json::array();
-        for (auto& ball : balls) {
-            json ballObj;
-            ballObj["x"] = ball.GetPosition().x;
-            ballObj["y"] = ball.GetPosition().y;
-            ballObj["vx"] = ball.GetVelocity().x;
-            ballObj["vy"] = ball.GetVelocity().y;
-            ballsArr.push_back(ballObj);
-        }
-        j["balls"] = ballsArr;
-
-        j["paddleBottom"] = {{"x", paddle.GetRect().x}, {"y", paddle.GetRect().y}, {"w", paddle.GetRect().width}};
-        j["paddleTop"] = {{"x", paddleTop.GetRect().x}, {"y", paddleTop.GetRect().y}, {"w", paddleTop.GetRect().width}};
-
-        json bricksArr = json::array();
-        for (auto& brick : bricks) {
-            json brickObj;
-            brickObj["x"] = brick.GetRect().x;
-            brickObj["y"] = brick.GetRect().y;
-            brickObj["active"] = brick.IsActive();
-            brickObj["health"] = brick.GetHealth();
-            bricksArr.push_back(brickObj);
-        }
-        j["bricks"] = bricksArr;
-
-        json powerUpsArr = json::array();
-        for (auto& pu : powerUps) {
-            json puObj;
-            puObj["x"] = pu.position.x;
-            puObj["y"] = pu.position.y;
-            puObj["active"] = pu.active;
-            puObj["type"] = static_cast<int>(pu.type);
-            powerUpsArr.push_back(puObj);
-        }
-        j["powerUps"] = powerUpsArr;
-
-        json particlesArr = json::array();
-        for (auto& p : particles) {
-            json pObj;
-            pObj["x"] = p.pos.x;
-            pObj["y"] = p.pos.y;
-            pObj["vx"] = p.vel.x;
-            pObj["vy"] = p.vel.y;
-            pObj["life"] = p.life;
-            particlesArr.push_back(pObj);
-        }
-        j["particles"] = particlesArr;
-
-        std::string data = j.dump();
-        network.sendPacket(data);
-    }
-}
-
-void Game::handleNetworkPackets() {
-    network.pollEvents();
-
-    auto packets = network.getPackets();
-    for (auto& packet : packets) {
-        if (packet.type == "CLIENT_PADDLE") {
-            remotePaddle->MoveTo(packet.data[0], packet.data[1]);
-        }
-        else if (packet.type == "FULLSTATE") {
-            try {
-                json j = json::parse(packet.jsonData);
-                score = j["score"];
-                lives = j["lives"];
-                int newLevel = j["level"];
-                if (newLevel != level) {
-                    level = newLevel;
-                    CreateBricks(level);
-                }
-                ballSpeed = j["ballSpeed"];
-                slowBallEffectTime = j["slowBallEffectTime"];
-
-                balls.clear();
-                for (auto& ballObj : j["balls"]) {
-                    balls.emplace_back(
-                        Vector2{(float)ballObj["x"], (float)ballObj["y"]},
-                        Vector2{(float)ballObj["vx"], (float)ballObj["vy"]},
-                        ballRadius, RED);
-                }
-
-                paddleTop.MoveTo(j["paddleTop"]["x"], j["paddleTop"]["y"]);
-                paddleTop.SetWidth(j["paddleTop"]["w"]);
-
-                int idx = 0;
-                for (auto& brickObj : j["bricks"]) {
-                    if (idx < (int)bricks.size()) {
-                        if (!brickObj["active"] && bricks[idx].IsActive()) {
-                            bricks[idx].SetActive(false);
-                        }
-                        bricks[idx].SetHealth(brickObj["health"]);
-                    }
-                    idx++;
-                }
-
-                powerUps.clear();
-                for (auto& puObj : j["powerUps"]) {
-                    PowerUp pu{(float)puObj["x"], (float)puObj["y"],
-                               static_cast<PowerUpType>((int)puObj["type"]), *this};
-                    pu.active = puObj["active"];
-                    powerUps.push_back(pu);
-                }
-
-                particles.clear();
-                for (auto& pObj : j["particles"]) {
-                    Particle p;
-                    p.pos = {(float)pObj["x"], (float)pObj["y"]};
-                    p.vel = {(float)pObj["vx"], (float)pObj["vy"]};
-                    p.life = pObj["life"];
-                    p.color = RED;
-                    particles.push_back(p);
-                }
-            } catch (...) {}
-        }
-    }
-    network.clearPackets();
-}
-
 void Game::Update() {
-    gameTime += GetFrameTime();
-
-    if (currentState == MENU) {
-        if (IsKeyPressed(KEY_ENTER)) {
-            currentState = PLAYING;
-            gameMode = SINGLE_PLAYER;
-            score = 0;
-            lives = initialLives;
-            level = 1;
-            ballSpeed = 3;
-            balls.clear();
-            balls.emplace_back((Vector2){windowWidth / 2.0f, windowHeight / 2.0f}, (Vector2){ballSpeed, ballSpeed}, ballRadius, RED);
-            powerUps.clear();
-            particles.clear();
-            CreateBricks(level);
-        }
-        else if (IsKeyPressed(KEY_H)) {
-            startTwoPlayerHost();
-        }
-        else if (IsKeyPressed(KEY_K)) {
-            startTwoPlayerClient();
-        }
-    }
-
-    else if (currentState == PLAYING) {
-        if (IsKeyPressed(KEY_P)) {
-            currentState = PAUSED;
-        }
-
-        if (gameMode == TWO_PLAYER_HOST) {
-            handleNetworkPackets();
-
-            for (size_t i = 0; i < balls.size(); i++) {
-                Ball& ball = balls[i];
-                ball.Move();
-
-                if (ball.BounceEdge(windowWidth, windowHeight)) {
-                    if (ball.GetPosition().y + ball.GetRadius() >= windowHeight) {
-                        balls.erase(balls.begin() + i);
-                        i--;
-
-                        if (balls.empty()) {
-                            lives--;
-                            if (lives <= 0) {
-                                currentState = GAME_OVER;
-                            } else {
-                                balls.emplace_back((Vector2){windowWidth / 2.0f, windowHeight / 2.0f}, (Vector2){ballSpeed, ballSpeed}, ballRadius, RED);
-                            }
-                        }
-                    }
-                }
-            }
-
-            if (IsKeyDown(KEY_LEFT)) localPaddle->MoveLeft(paddleSpeed);
-            if (IsKeyDown(KEY_RIGHT)) localPaddle->MoveRight(paddleSpeed);
-            localPaddle->Update(GetFrameTime());
-
-            char buffer[64];
-            snprintf(buffer, sizeof(buffer), "CLIENT_PADDLE:%.2f,%.2f",
-                     localPaddle->GetRect().x, localPaddle->GetRect().y);
-            network.sendPacket(buffer);
-
-            bool allBricksDestroyed = true;
-            for (auto& brick : bricks) {
-                if (brick.IsActive()) {
-                    allBricksDestroyed = false;
-                    for (auto& ball : balls) {
-                        if (brick.CheckCollision(ball)) {
-                            ball.ReverseY();
-                            score += brick.GetPoints();
-
-                            if (!brick.IsActive()) {
-                                for (int i = 0; i < 10; i++) {
-                                    Particle p;
-                                    p.pos = { brick.GetRect().x + rand() % (int)brick.GetRect().width,
-                                              brick.GetRect().y + rand() % (int)brick.GetRect().height };
-                                    p.vel = { (rand() % 100 - 50) / 10.0f, (rand() % 100 - 50) / 10.0f };
-                                    p.color = brick.GetColor();
-                                    p.life = 0.5f;
-                                    particles.push_back(p);
-                                }
-
-                                PowerUpType type = static_cast<PowerUpType>(rand() % 3);
-                                float dropRate = powerUpConfig[static_cast<int>(type)].dropRate * 100;
-                                if (rand() % 100 < dropRate) {
-                                    powerUps.emplace_back(brick.GetRect().x + brick.GetRect().width / 2,
-                                                          brick.GetRect().y, type, *this);
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-
-            if (allBricksDestroyed) {
-                level++;
-                ballSpeed += 0.5;
-                balls.clear();
-                balls.emplace_back((Vector2){windowWidth / 2.0f, windowHeight / 2.0f},
-                                   (Vector2){ballSpeed, ballSpeed}, ballRadius, RED);
-                CreateBricks(level);
-
-                if (level > 5) {
-                    currentState = VICTORY;
-                }
-            }
-
-            for (auto& powerUp : powerUps) {
-                powerUp.Update(GetFrameTime());
-
-                if (powerUp.active && CheckCollisionCircleRec(powerUp.position, 10, paddle.GetRect())) {
-                    powerUp.Apply(*this, paddle);
-                    powerUp.active = false;
-                }
-                if (powerUp.active && CheckCollisionCircleRec(powerUp.position, 10, paddleTop.GetRect())) {
-                    powerUp.Apply(*this, paddleTop);
-                    powerUp.active = false;
-                }
-            }
-
-            for (auto& ball : balls) {
-                ball.CheckPaddleCollision(paddle.GetRect());
-                ball.CheckPaddleCollision(paddleTop.GetRect());
-            }
-
-            if (slowBallEffectTime > 0) {
-                slowBallEffectTime -= GetFrameTime();
-                if (slowBallEffectTime <= 0) {
-                    for (auto& ball : balls) {
-                        Vector2 vel = ball.GetVelocity();
-                        float speed = sqrt(vel.x * vel.x + vel.y * vel.y);
-                        float normalizedSpeed = speed / 0.7f;
-                        float angle = atan2(vel.y, vel.x);
-                        ball.SetVelocity((Vector2){cos(angle) * normalizedSpeed, sin(angle) * normalizedSpeed});
-                    }
-                }
-            }
-
-            for (size_t i = 0; i < particles.size(); i++) {
-                particles[i].Update(GetFrameTime());
-                if (particles[i].life <= 0) {
-                    particles.erase(particles.begin() + i);
-                    i--;
-                }
-            }
-
-            sendGameState();
-        }
-        else if (gameMode == TWO_PLAYER_CLIENT) {
-            handleNetworkPackets();
-
-            if (IsKeyDown(KEY_LEFT)) localPaddle->MoveLeft(paddleSpeed);
-            if (IsKeyDown(KEY_RIGHT)) localPaddle->MoveRight(paddleSpeed);
-            localPaddle->Update(GetFrameTime());
-
-            char buffer[64];
-            snprintf(buffer, sizeof(buffer), "CLIENT_PADDLE:%.2f,%.2f",
-                     localPaddle->GetRect().x, localPaddle->GetRect().y);
-            network.sendPacket(buffer);
-
-            for (auto& p : particles) {
-                p.Update(GetFrameTime());
-            }
-        }
-    }
-
-    else if (currentState == PAUSED) {
-        if (IsKeyPressed(KEY_P)) {
-            currentState = PLAYING;
-        }
-    }
-
-    else if (currentState == GAME_OVER || currentState == VICTORY) {
-        if (IsKeyPressed(KEY_ENTER)) {
-            if (gameMode == TWO_PLAYER_HOST || gameMode == TWO_PLAYER_CLIENT) {
-                network.disconnect();
-                gameMode = SINGLE_PLAYER;
-            }
-            currentState = MENU;
-        }
-    }
+    
 }
 
 void Game::Draw() {
@@ -430,9 +78,7 @@ void Game::Draw() {
 
     if (currentState == MENU) {
         DrawText("BREAKOUT GAME", 180, 150, 60, DARKBLUE);
-        DrawText("Press ENTER for Single Player", 180, 280, 30, GRAY);
-        DrawText("Press H for Two Player (Host)", 180, 330, 30, GRAY);
-        DrawText("Press K for Two Player (Client)", 180, 380, 30, GRAY);
+        DrawText("Press ENTER to Start Game", 180, 280, 30, GRAY);
         DrawText("Press P to Pause", 280, 450, 20, LIGHTGRAY);
     }
 
@@ -441,7 +87,9 @@ void Game::Draw() {
             ball.Draw();
         }
         paddle.Draw();
-        paddleTop.Draw();
+        if (gameMode == TWO_PLAYER_HOST || gameMode == TWO_PLAYER_CLIENT) {
+            paddleTop.Draw();
+        }
         for (auto& brick : bricks) brick.Draw();
 
         for (auto& powerUp : powerUps) {
@@ -452,20 +100,16 @@ void Game::Draw() {
             particle.Draw();
         }
 
-        std::string modeStr = (gameMode == SINGLE_PLAYER) ? "SINGLE" :
-                              (gameMode == TWO_PLAYER_HOST) ? "HOST" : "CLIENT";
+        std::string modeStr = "SINGLE";
+        if (gameMode == TWO_PLAYER_HOST) {
+            modeStr = "HOST";
+        } else if (gameMode == TWO_PLAYER_CLIENT) {
+            modeStr = "CLIENT";
+        }
         DrawText(("Mode: " + modeStr).c_str(), 20, 20, 20, DARKBLUE);
         DrawText(("Score: " + std::to_string(score)).c_str(), 150, 20, 20, DARKGRAY);
         DrawText(("Lives: " + std::to_string(lives)).c_str(), 300, 20, 20, DARKGRAY);
         DrawText(("Level: " + std::to_string(level)).c_str(), 450, 20, 20, DARKGRAY);
-
-        if (gameMode == TWO_PLAYER_HOST) {
-            DrawText(network.isConnected() ? "Client Connected" : "Waiting for client...",
-                     windowWidth / 2 - 80, 50, 20, network.isConnected() ? GREEN : ORANGE);
-        } else if (gameMode == TWO_PLAYER_CLIENT) {
-            DrawText(network.isConnected() ? "Connected" : "Connecting...",
-                     windowWidth / 2 - 60, 50, 20, network.isConnected() ? GREEN : ORANGE);
-        }
 
         if (currentState == PAUSED) {
             DrawRectangle(0, 0, windowWidth, windowHeight, Fade(BLACK, 0.5f));
@@ -529,7 +173,14 @@ void Game::LoadConfig(const std::string& path) {
     powerUpConfig[2].dropRate = config["powerups"]["slow_ball"]["drop_rate"];
 }
 
+bool Game::ShouldClose() const {
+    return WindowShouldClose();
+}
+
+void Game::Close() {
+    Shutdown();
+}
+
 void Game::Shutdown() {
     bricks.clear();
-    network.disconnect();
 }
