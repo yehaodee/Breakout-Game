@@ -10,13 +10,16 @@
 #include "Particle.h"
 #include <vector>
 #include <string>
+#include <future>
+#include <mutex>
 
 enum GameState {
     MENU,
     PLAYING,
     GAME_OVER,
     VICTORY,
-    PAUSED
+    PAUSED,
+    LOADING
 };
 enum GameMode {
     SINGLE_PLAYER,
@@ -33,6 +36,14 @@ protected:
     GameMode gameMode;
     Paddle* localPaddle;
     Paddle* remotePaddle;
+    std::future<void> loadingFuture;
+    bool isLoading;
+    std::mutex loadingMutex;
+
+    void SimulateTextureLoading();
+    void ResetGame();
+    void UpdatePlayingState();
+    void LoadTexture();
 public:
     Paddle paddle;
     Paddle paddleTop;

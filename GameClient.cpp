@@ -16,15 +16,7 @@ void GameClient::Init() {
     if (network.initClient("127.0.0.1", 12345)) {
         connected = true;
         currentState = PLAYING;
-        score = 0;
-        lives = initialLives;
-        level = 1;
-        ballSpeed = 3;
-        balls.clear();
-        balls.emplace_back((Vector2){windowWidth / 2.0f, windowHeight / 2.0f}, (Vector2){ballSpeed, ballSpeed}, ballRadius, RED);
-        powerUps.clear();
-        particles.clear();
-        CreateBricks(level);
+        ResetGame();
         paddle = Paddle(350, windowHeight - 40, paddleWidth, paddleHeight);
         paddleTop = Paddle(350, 30, paddleWidth, paddleHeight);
         localPaddle = &paddleTop;
@@ -33,16 +25,33 @@ void GameClient::Init() {
 }
 
 void GameClient::Update() {
-    if (connected) {
-        handleServerPackets();
+    if (!connected) return;
 
-        if (currentState == PLAYING) {
-            if (IsKeyDown(KEY_LEFT)) localPaddle->MoveLeft(paddleSpeed);
-            if (IsKeyDown(KEY_RIGHT)) localPaddle->MoveRight(paddleSpeed);
-            localPaddle->Update(GetFrameTime());
+    handleServerPackets();
 
-            sendPaddlePosition();
+    if (currentState == PLAYING) {
+        {
+            std::lock_guard<std::mutex> lock(loadingMutex);
+            if (IsKeyPressed(KEY_L) && !isLoading) {
+                isLoading = true;
+                loadingFuture = std::async(std::launch::async, [this]() {
+                    SimulateTextureLoading();
+                });
+            }
         }
+
+        {
+            std::lock_guard<std::mutex> lock(loadingMutex);
+            if (isLoading && loadingFuture.wait_for(std::chrono::seconds(0)) == std::future_status::ready) {
+                loadingFuture.get();
+                isLoading = false;
+            }
+        }
+
+        if (IsKeyDown(KEY_LEFT)) localPaddle->MoveLeft(paddleSpeed);
+        if (IsKeyDown(KEY_RIGHT)) localPaddle->MoveRight(paddleSpeed);
+        localPaddle->Update(GetFrameTime());
+        sendPaddlePosition();
     }
 }
 
@@ -86,11 +95,8 @@ void GameClient::handleServerPackets() {
                 slowBallEffectTime = header.slowBallEffectTime;
 
                 PaddleData paddleBottomData = Serializer::DeserializePaddle(buffer);
-                // PaddleData paddleTopData = Serializer::DeserializePaddle(buffer);
                 paddle.MoveTo(paddleBottomData.x, paddleBottomData.y);
                 paddle.SetWidth(paddleBottomData.width);
-                // paddleTop.MoveTo(paddleTopData.x, paddleTopData.y);
-                // paddleTop.SetWidth(paddleTopData.width);
 
                 balls.clear();
                 for (int i = 0; i < header.ballCount; i++) {

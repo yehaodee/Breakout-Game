@@ -4,10 +4,12 @@
 #include <nlohmann/json.hpp>
 #include <sstream>
 #include <iostream>
+#include <thread>
+#include <chrono>
 
 using json = nlohmann::json;
 
-Game::Game() // 这些初始化参数相当于默认值
+Game::Game()
     : paddle(350, 550, 100, 20),
       paddleTop(350, 30, 100, 20),
       score(0),
@@ -15,6 +17,7 @@ Game::Game() // 这些初始化参数相当于默认值
       level(1),
       currentState(MENU),
       gameMode(SINGLE_PLAYER),
+      isLoading(false),
       slowBallEffectTime(0.0f),
       windowWidth(800),
       windowHeight(600),
@@ -82,7 +85,7 @@ void Game::Draw() {
         DrawText("Press P to Pause", 280, 450, 20, LIGHTGRAY);
     }
 
-    else if (currentState == PLAYING || currentState == PAUSED) {
+    else if (currentState == PLAYING || currentState == PAUSED || currentState == LOADING) {
         for (auto& ball : balls) {
             ball.Draw();
         }
@@ -110,6 +113,14 @@ void Game::Draw() {
         DrawText(("Score: " + std::to_string(score)).c_str(), 150, 20, 20, DARKGRAY);
         DrawText(("Lives: " + std::to_string(lives)).c_str(), 300, 20, 20, DARKGRAY);
         DrawText(("Level: " + std::to_string(level)).c_str(), 450, 20, 20, DARKGRAY);
+
+        {
+            std::lock_guard<std::mutex> lock(loadingMutex);
+            if (isLoading) {
+                DrawRectangle(0, windowHeight/2 - 30, windowWidth, 60, Fade(BLACK, 0.5f));
+                DrawText("Loading...", windowWidth/2 - 50, windowHeight/2 - 10, 30, WHITE);
+            }
+        }
 
         if (currentState == PAUSED) {
             DrawRectangle(0, 0, windowWidth, windowHeight, Fade(BLACK, 0.5f));
@@ -179,6 +190,151 @@ bool Game::ShouldClose() const {
 
 void Game::Close() {
     Shutdown();
+}
+
+void Game::SimulateTextureLoading() {
+    std::this_thread::sleep_for(std::chrono::seconds(3));
+}
+
+void Game::ResetGame() {
+    score = 0;
+    lives = initialLives;
+    level = 1;
+    ballSpeed = 3;
+    balls.clear();
+    balls.emplace_back((Vector2){windowWidth / 2.0f, windowHeight / 2.0f}, (Vector2){ballSpeed, ballSpeed}, ballRadius, RED);
+    powerUps.clear();
+    particles.clear();
+    CreateBricks(level);
+}
+
+void Game::UpdatePlayingState() {
+    if (IsKeyPressed(KEY_P)) {
+        currentState = PAUSED;
+        return;
+    }
+
+    {
+        std::lock_guard<std::mutex> lock(loadingMutex);
+        if (IsKeyPressed(KEY_L) && !isLoading) {
+            isLoading = true;
+            loadingFuture = std::async(std::launch::async, [this]() {
+                SimulateTextureLoading();
+            });
+        }
+    }
+
+    {
+        std::lock_guard<std::mutex> lock(loadingMutex);
+        if (isLoading && loadingFuture.wait_for(std::chrono::seconds(0)) == std::future_status::ready) {
+            loadingFuture.get();
+            isLoading = false;
+        }
+    }
+
+    for (size_t i = 0; i < balls.size(); i++) {
+        Ball& ball = balls[i];
+        ball.Move();
+
+        if (ball.BounceEdge(windowWidth, windowHeight)) {
+            if (ball.GetPosition().y + ball.GetRadius() >= windowHeight) {
+                balls.erase(balls.begin() + i);
+                i--;
+
+                if (balls.empty()) {
+                    lives--;
+                    if (lives <= 0) {
+                        currentState = GAME_OVER;
+                    } else {
+                        balls.emplace_back((Vector2){windowWidth / 2.0f, windowHeight / 2.0f}, (Vector2){ballSpeed, ballSpeed}, ballRadius, RED);
+                    }
+                }
+            }
+        }
+    }
+
+    if (IsKeyDown(KEY_LEFT)) localPaddle->MoveLeft(paddleSpeed);
+    if (IsKeyDown(KEY_RIGHT)) localPaddle->MoveRight(paddleSpeed);
+    localPaddle->Update(GetFrameTime());
+
+    bool allBricksDestroyed = true;
+    for (auto& brick : bricks) {
+        if (brick.IsActive()) {
+            allBricksDestroyed = false;
+            for (auto& ball : balls) {
+                if (brick.CheckCollision(ball)) {
+                    ball.ReverseY();
+                    score += brick.GetPoints();
+
+                    if (!brick.IsActive()) {
+                        for (int i = 0; i < 10; i++) {
+                            Particle p;
+                            p.pos = { brick.GetRect().x + rand() % (int)brick.GetRect().width,
+                                      brick.GetRect().y + rand() % (int)brick.GetRect().height };
+                            p.vel = { (rand() % 100 - 50) / 10.0f, (rand() % 100 - 50) / 10.0f };
+                            p.color = brick.GetColor();
+                            p.life = 0.5f;
+                            particles.push_back(p);
+                        }
+
+                        PowerUpType type = static_cast<PowerUpType>(rand() % 3);
+                        float dropRate = powerUpConfig[static_cast<int>(type)].dropRate * 100;
+                        if (rand() % 100 < dropRate) {
+                            powerUps.emplace_back(brick.GetRect().x + brick.GetRect().width / 2,
+                                                  brick.GetRect().y, type, *this);
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    if (allBricksDestroyed) {
+        level++;
+        ballSpeed += 0.5;
+        balls.clear();
+        balls.emplace_back((Vector2){windowWidth / 2.0f, windowHeight / 2.0f},
+                           (Vector2){ballSpeed, ballSpeed}, ballRadius, RED);
+        CreateBricks(level);
+
+        if (level > 5) {
+            currentState = VICTORY;
+        }
+    }
+
+    for (auto& powerUp : powerUps) {
+        powerUp.Update(GetFrameTime());
+
+        if (powerUp.active && CheckCollisionCircleRec(powerUp.position, 10, paddle.GetRect())) {
+            powerUp.Apply(*this, paddle);
+            powerUp.active = false;
+        }
+    }
+
+    for (auto& ball : balls) {
+        ball.CheckPaddleCollision(paddle.GetRect());
+    }
+
+    if (slowBallEffectTime > 0) {
+        slowBallEffectTime -= GetFrameTime();
+        if (slowBallEffectTime <= 0) {
+            for (auto& ball : balls) {
+                Vector2 vel = ball.GetVelocity();
+                float speed = sqrt(vel.x * vel.x + vel.y * vel.y);
+                float normalizedSpeed = speed / 0.7f;
+                float angle = atan2(vel.y, vel.x);
+                ball.SetVelocity((Vector2){cos(angle) * normalizedSpeed, sin(angle) * normalizedSpeed});
+            }
+        }
+    }
+
+    for (size_t i = 0; i < particles.size(); i++) {
+        particles[i].Update(GetFrameTime());
+        if (particles[i].life <= 0) {
+            particles.erase(particles.begin() + i);
+            i--;
+        }
+    }
 }
 
 void Game::Shutdown() {
