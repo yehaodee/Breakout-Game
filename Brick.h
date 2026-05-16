@@ -13,10 +13,10 @@ private:
 public:
     Brick(float x, float y, float w, float h, Color col, int hp, int pts);
     void Draw();
-    bool IsActive() { return visible; }
+    bool IsActive() const { return visible; }
     void SetActive(bool a) { visible = a; }
     void SetHealth(int h) { health = h; }
-    int GetHealth() { return health; }
+    int GetHealth() const { return health; }
     bool CheckCollision(Ball ball);
     int GetPoints() { return points; }
 };

@@ -7,6 +7,7 @@
 #include <thread>
 #include <chrono>
 #include <algorithm>
+#include <unordered_map>
 
 using json = nlohmann::json;
 
@@ -97,7 +98,7 @@ void Game::Draw() {
         if (gameMode == TWO_PLAYER_HOST || gameMode == TWO_PLAYER_CLIENT) {
             paddleTop.Draw();
         }
-        for (auto& brick : bricks) brick.Draw();
+        DrawBricksBatch();
 
         for (auto& powerUp : powerUps) {
             powerUp.Draw();
@@ -390,6 +391,41 @@ void Game::BuildGrid() {
             gy = std::max(0, std::min(GRID_HEIGHT - 1, gy));
             
             grid[gx][gy].push_back(&brick);
+        }
+    }
+}
+
+void Game::DrawBricksBatch() {
+    std::unordered_map<unsigned int, std::vector<const Brick*>> bricksByColor;
+    
+    for (const auto& brick : bricks) {
+        if (brick.IsActive()) {
+            Color col = brick.GetColor();
+            unsigned int colorKey = 
+                (static_cast<unsigned int>(col.r) << 24) |
+                (static_cast<unsigned int>(col.g) << 16) |
+                (static_cast<unsigned int>(col.b) << 8) |
+                static_cast<unsigned int>(col.a);
+            bricksByColor[colorKey].push_back(&brick);
+        }
+    }
+    
+    for (const auto& [colorKey, brickList] : bricksByColor) {
+        Color col = {
+            static_cast<unsigned char>((colorKey >> 24) & 0xFF),
+            static_cast<unsigned char>((colorKey >> 16) & 0xFF),
+            static_cast<unsigned char>((colorKey >> 8) & 0xFF),
+            static_cast<unsigned char>(colorKey & 0xFF)
+        };
+        
+        for (const Brick* brick : brickList) {
+            DrawRectangleRec(brick->GetRect(), col);
+        }
+    }
+    
+    for (const auto& brick : bricks) {
+        if (brick.IsActive() && brick.GetHealth() > 1) {
+            DrawRectangleLinesEx(brick.GetRect(), 2, DARKGRAY);
         }
     }
 }

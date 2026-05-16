@@ -55,6 +55,7 @@ protected:
     void LoadTexture();
     void BuildGrid();     // 构建网格
     void ClearGrid();     // 清空网格
+    void DrawBricksBatch();  // 批绘制砖块
 public:
     Paddle paddle;
     Paddle paddleTop;
