@@ -104,9 +104,7 @@ void Game::Draw() {
             powerUp.Draw();
         }
 
-        for (auto& particle : particles) {
-            particle.Draw();
-        }
+        particlePool.Draw();
 
         std::string modeStr = "SINGLE";
         if (gameMode == TWO_PLAYER_HOST) {
@@ -209,7 +207,7 @@ void Game::ResetGame() {
     balls.clear();
     balls.emplace_back((Vector2){windowWidth / 2.0f, windowHeight / 2.0f}, (Vector2){ballSpeed, ballSpeed}, ballRadius, RED);
     powerUps.clear();
-    particles.clear();
+    particlePool.Clear();
     CreateBricks(level);
 }
 
@@ -297,14 +295,11 @@ void Game::UpdatePlayingState() {
                             
                             if (!brick->IsActive()) {
                                 for (int i = 0; i < 10; i++) {
-                                    Particle p;
                                     Rectangle rect = brick->GetRect();
-                                    p.pos = { rect.x + rand() % (int)rect.width,
-                                              rect.y + rand() % (int)rect.height };
-                                    p.vel = { (rand() % 100 - 50) / 10.0f, (rand() % 100 - 50) / 10.0f };
-                                    p.color = brick->GetColor();
-                                    p.life = 0.5f;
-                                    particles.push_back(p);
+                                    Vector2 pos = { rect.x + rand() % (int)rect.width,
+                                                    rect.y + rand() % (int)rect.height };
+                                    Vector2 vel = { (rand() % 100 - 50) / 10.0f, (rand() % 100 - 50) / 10.0f };
+                                    particlePool.Create(pos, vel, brick->GetColor(), 0.5f);
                                 }
                                 
                                 PowerUpType type = static_cast<PowerUpType>(rand() % 3);
@@ -361,13 +356,7 @@ void Game::UpdatePlayingState() {
         }
     }
 
-    for (size_t i = 0; i < particles.size(); i++) {
-        particles[i].Update(GetFrameTime());
-        if (particles[i].life <= 0) {
-            particles.erase(particles.begin() + i);
-            i--;
-        }
-    }
+    particlePool.Update(GetFrameTime());
 }
 
 void Game::ClearGrid() {

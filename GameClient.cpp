@@ -134,15 +134,12 @@ void GameClient::handleServerPackets() {
                     powerUps.push_back(pu);
                 }
 
-                particles.clear();
+                particlePool.Clear();
                 for (int i = 0; i < header.particleCount; i++) {
                     ParticleData pData = Serializer::DeserializeParticle(buffer);
-                    Particle p;
-                    p.pos = {pData.x, pData.y};
-                    p.vel = {pData.vx, pData.vy};
-                    p.life = pData.life;
-                    p.color = RED;
-                    particles.push_back(p);
+                    Vector2 pos = {pData.x, pData.y};
+                    Vector2 vel = {pData.vx, pData.vy};
+                    particlePool.Create(pos, vel, RED, pData.life);
                 }
 
             } catch (std::exception& e) {

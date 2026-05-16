@@ -8,6 +8,7 @@
 #include "PowerUpEffect.h"
 #include "PowerUp.h"
 #include "Particle.h"
+#include "ParticlePool.h"
 #include <vector>
 #include <string>
 #include <future>
@@ -62,7 +63,7 @@ public:
     std::vector<Ball> balls;
     std::vector<Brick> bricks;
     std::vector<PowerUp> powerUps;
-    std::vector<Particle> particles;
+    ParticlePool particlePool;
     float slowBallEffectTime;
     float ballSpeed;
 

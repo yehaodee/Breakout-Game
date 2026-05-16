@@ -93,7 +93,7 @@ void GameServer::handleClientPackets() {
 void GameServer::sendGameState() {
     if (network.isConnected()) {
         size_t bufferSize = Serializer::CalculateBufferSize(
-            balls.size(), bricks.size(), powerUps.size(), particles.size());
+            balls.size(), bricks.size(), powerUps.size(), particlePool.GetActiveCount());
         std::vector<char> buffer(bufferSize + 64);
         char* ptr = buffer.data();
 
@@ -108,7 +108,7 @@ void GameServer::sendGameState() {
         header.paddleTopCount = 1;
         header.brickCount = bricks.size();
         header.powerUpCount = powerUps.size();
-        header.particleCount = particles.size();
+        header.particleCount = particlePool.GetActiveCount();
         Serializer::SerializeHeader(header, ptr);
 
         PaddleData paddleBottomData;
@@ -148,15 +148,18 @@ void GameServer::sendGameState() {
             Serializer::SerializePowerUp(puData, ptr);
         }
 
-        for (auto& p : particles) {
-            ParticleData pData;
-            pData.x = p.pos.x;
-            pData.y = p.pos.y;
-            pData.vx = p.vel.x;
-            pData.vy = p.vel.y;
-            pData.life = p.life;
-            pData.color = 0xFFFFFFFF;
-            Serializer::SerializeParticle(pData, ptr);
+        for (int i = 0; i < particlePool.GetMaxParticles(); i++) {
+            if (particlePool.IsActive(i)) {
+                const Particle* p = particlePool.GetParticle(i);
+                ParticleData pData;
+                pData.x = p->pos.x;
+                pData.y = p->pos.y;
+                pData.vx = p->vel.x;
+                pData.vy = p->vel.y;
+                pData.life = p->life;
+                pData.color = 0xFFFFFFFF;
+                Serializer::SerializeParticle(pData, ptr);
+            }
         }
 
         std::string data = "FULLSTATE";
