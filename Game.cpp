@@ -6,6 +6,7 @@
 #include <iostream>
 #include <thread>
 #include <chrono>
+#include <algorithm>
 
 using json = nlohmann::json;
 
@@ -36,7 +37,10 @@ Game::Game()
       brickHeight(25),
       initialLives(3),
       scorePerBrick(10),
-      timeMultiplierDecay(0.05f) {
+      timeMultiplierDecay(0.05f),
+      cellWidth(800.0f / GRID_WIDTH),   // 计算网格单元宽度
+      cellHeight(600.0f / GRID_HEIGHT)  // 计算网格单元高度
+      {
     LoadConfig("config.json");
     balls.emplace_back((Vector2){400, 300}, (Vector2){3, 3}, 10, RED);
     localPaddle = &paddle;
@@ -257,31 +261,59 @@ void Game::UpdatePlayingState() {
     if (IsKeyDown(KEY_RIGHT)) localPaddle->MoveRight(paddleSpeed);
     localPaddle->Update(GetFrameTime());
 
+    BuildGrid();
+    
     bool allBricksDestroyed = true;
     for (auto& brick : bricks) {
         if (brick.IsActive()) {
             allBricksDestroyed = false;
-            for (auto& ball : balls) {
-                if (brick.CheckCollision(ball)) {
-                    ball.ReverseY();
-                    score += brick.GetPoints();
-
-                    if (!brick.IsActive()) {
-                        for (int i = 0; i < 10; i++) {
-                            Particle p;
-                            p.pos = { brick.GetRect().x + rand() % (int)brick.GetRect().width,
-                                      brick.GetRect().y + rand() % (int)brick.GetRect().height };
-                            p.vel = { (rand() % 100 - 50) / 10.0f, (rand() % 100 - 50) / 10.0f };
-                            p.color = brick.GetColor();
-                            p.life = 0.5f;
-                            particles.push_back(p);
-                        }
-
-                        PowerUpType type = static_cast<PowerUpType>(rand() % 3);
-                        float dropRate = powerUpConfig[static_cast<int>(type)].dropRate * 100;
-                        if (rand() % 100 < dropRate) {
-                            powerUps.emplace_back(brick.GetRect().x + brick.GetRect().width / 2,
-                                                  brick.GetRect().y, type, *this);
+            break;
+        }
+    }
+    
+    if (!allBricksDestroyed) {
+        for (auto& ball : balls) {
+            Vector2 ballPos = ball.GetPosition();
+            int ballGx = static_cast<int>(ballPos.x / cellWidth);
+            int ballGy = static_cast<int>(ballPos.y / cellHeight);
+            
+            // 遍历球所在网格及其相邻网格（3x3区域）
+            for (int dx = -1; dx <= 1; dx++) {
+                for (int dy = -1; dy <= 1; dy++) {
+                    int gx = ballGx + dx;
+                    int gy = ballGy + dy;
+                    
+                    // 确保网格索引有效
+                    if (gx < 0 || gx >= GRID_WIDTH || gy < 0 || gy >= GRID_HEIGHT) {
+                        continue;
+                    }
+                    
+                    // 只检测当前网格内的砖块
+                    for (Brick* brick : grid[gx][gy]) {
+                        if (brick->IsActive() && brick->CheckCollision(ball)) {
+                            ball.ReverseY();
+                            score += brick->GetPoints();
+                            
+                            if (!brick->IsActive()) {
+                                for (int i = 0; i < 10; i++) {
+                                    Particle p;
+                                    Rectangle rect = brick->GetRect();
+                                    p.pos = { rect.x + rand() % (int)rect.width,
+                                              rect.y + rand() % (int)rect.height };
+                                    p.vel = { (rand() % 100 - 50) / 10.0f, (rand() % 100 - 50) / 10.0f };
+                                    p.color = brick->GetColor();
+                                    p.life = 0.5f;
+                                    particles.push_back(p);
+                                }
+                                
+                                PowerUpType type = static_cast<PowerUpType>(rand() % 3);
+                                float dropRate = powerUpConfig[static_cast<int>(type)].dropRate * 100;
+                                if (rand() % 100 < dropRate) {
+                                    Rectangle rect = brick->GetRect();
+                                    powerUps.emplace_back(rect.x + rect.width / 2,
+                                                          rect.y, type, *this);
+                                }
+                            }
                         }
                     }
                 }
@@ -333,6 +365,31 @@ void Game::UpdatePlayingState() {
         if (particles[i].life <= 0) {
             particles.erase(particles.begin() + i);
             i--;
+        }
+    }
+}
+
+void Game::ClearGrid() {
+    for (int x = 0; x < GRID_WIDTH; x++) {
+        for (int y = 0; y < GRID_HEIGHT; y++) {
+            grid[x][y].clear();
+        }
+    }
+}
+
+void Game::BuildGrid() {
+    ClearGrid();
+    for (auto& brick : bricks) {
+        if (brick.IsActive()) {
+            Rectangle rect = brick.GetRect();
+            int gx = static_cast<int>(rect.x / cellWidth);
+            int gy = static_cast<int>(rect.y / cellHeight);
+            
+            // 确保网格索引在有效范围内
+            gx = std::max(0, std::min(GRID_WIDTH - 1, gx));
+            gy = std::max(0, std::min(GRID_HEIGHT - 1, gy));
+            
+            grid[gx][gy].push_back(&brick);
         }
     }
 }

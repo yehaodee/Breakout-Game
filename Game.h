@@ -27,6 +27,10 @@ enum GameMode {
     TWO_PLAYER_CLIENT
 };
 
+// 网格空间划分常量
+const int GRID_WIDTH = 8;   // 网格宽度
+const int GRID_HEIGHT = 6;  // 网格高度
+
 class Game {
 protected:
     int score;
@@ -40,10 +44,17 @@ protected:
     bool isLoading;
     std::mutex loadingMutex;
 
+    // 网格空间划分
+    float cellWidth;      // 每个网格单元的宽度
+    float cellHeight;     // 每个网格单元的高度
+    std::vector<Brick*> grid[GRID_WIDTH][GRID_HEIGHT];  // 网格数据结构
+
     void SimulateTextureLoading();
     void ResetGame();
     void UpdatePlayingState();
     void LoadTexture();
+    void BuildGrid();     // 构建网格
+    void ClearGrid();     // 清空网格
 public:
     Paddle paddle;
     Paddle paddleTop;
