@@ -17,6 +17,7 @@ Game::Game()
       score(0),
       lives(3),
       level(1),
+      levelName("Level 1"),
       currentState(MENU),
       gameMode(SINGLE_PLAYER),
       isLoading(false),
@@ -39,8 +40,8 @@ Game::Game()
       initialLives(3),
       scorePerBrick(10),
       timeMultiplierDecay(0.05f),
-      cellWidth(800.0f / GRID_WIDTH),   // 计算网格单元宽度
-      cellHeight(600.0f / GRID_HEIGHT)  // 计算网格单元高度
+      cellWidth(800.0f / GRID_WIDTH),
+      cellHeight(600.0f / GRID_HEIGHT)
       {
     LoadConfig("config.json");
     balls.emplace_back((Vector2){400, 300}, (Vector2){3, 3}, 10, RED);
@@ -57,22 +58,98 @@ void Game::Init() {
 }
 
 void Game::CreateBricks(int level) {
-    bricks.clear();
-    float startX = 50;
-    float startY = 80;
-    float gap = 10;
+    if (!LoadLevel(level)) {
+        bricks.clear();
+        float startX = 50;
+        float startY = 80;
+        float gap = 10;
 
-    Color colors[] = { RED, ORANGE, YELLOW, GREEN, BLUE, PURPLE };
-    int health[] = { 1, 1, 1, 1, 2, 2 };
-    int points[] = { 10, 20, 30, 40, 50, 60 };
+        Color colors[] = { RED, ORANGE, YELLOW, GREEN, BLUE, PURPLE };
+        int health[] = { 1, 1, 1, 1, 2, 2 };
+        int points[] = { 10, 20, 30, 40, 50, 60 };
 
-    for (int row = 0; row < brickRows; row++) {
-        for (int col = 0; col < brickCols; col++) {
-            float x = startX + col * (brickWidth + gap);
-            float y = startY + row * (brickHeight + gap);
-            int brickType = (row + level) % 6;
-            bricks.emplace_back(x, y, brickWidth, brickHeight, colors[brickType], health[brickType], points[brickType]);
+        for (int row = 0; row < brickRows; row++) {
+            for (int col = 0; col < brickCols; col++) {
+                float x = startX + col * (brickWidth + gap);
+                float y = startY + row * (brickHeight + gap);
+                int brickType = (row + level) % 6;
+                bricks.emplace_back(x, y, brickWidth, brickHeight, colors[brickType], health[brickType], points[brickType]);
+            }
         }
+        levelName = "Level " + std::to_string(level);
+    }
+}
+
+bool Game::LoadLevel(int levelNum) {
+    std::ifstream file("levels.json");
+    if (!file.is_open()) {
+        std::cout << "Failed to open levels.json" << std::endl;
+        return false;
+    }
+
+    try {
+        json levelsData = json::parse(file);
+        file.close();
+
+        if (!levelsData.contains("levels") || levelsData["levels"].size() < levelNum) {
+            std::cout << "Level " << levelNum << " not found in levels.json" << std::endl;
+            return false;
+        }
+
+        json& levelData = levelsData["levels"][levelNum - 1];
+        levelName = levelData.value("name", "Level " + std::to_string(levelNum));
+
+        bricks.clear();
+
+        if (!levelData.contains("layout") || !levelData.contains("brick_types")) {
+            return false;
+        }
+
+        auto& layout = levelData["layout"];
+        auto& brickTypes = levelData["brick_types"];
+
+        int rows = layout.size();
+        if (rows == 0) return false;
+        int cols = layout[0].size();
+
+        float startX = (windowWidth - cols * (brickWidth + 10)) / 2.0f + 5;
+        float startY = 80;
+        float gap = 10;
+
+        for (int row = 0; row < rows && row < 10; row++) {
+            for (int col = 0; col < cols && col < 12; col++) {
+                int typeKey = layout[row][col].get<int>();
+                std::string typeStr = std::to_string(typeKey);
+
+                if (brickTypes.contains(typeStr)) {
+                    auto& brickInfo = brickTypes[typeStr];
+                    int health = brickInfo.value("health", 1);
+                    
+                    if (health <= 0) continue;
+
+                    auto& colorArr = brickInfo["color"];
+                    Color brickColor = {
+                        static_cast<unsigned char>(colorArr[0].get<int>()),
+                        static_cast<unsigned char>(colorArr[1].get<int>()),
+                        static_cast<unsigned char>(colorArr[2].get<int>()),
+                        255
+                    };
+
+                    int points = brickInfo.value("points", 10);
+                    float x = startX + col * (brickWidth + gap);
+                    float y = startY + row * (brickHeight + gap);
+
+                    bricks.emplace_back(x, y, brickWidth, brickHeight, brickColor, health, points);
+                }
+            }
+        }
+
+        std::cout << "Loaded level: " << levelName << " with " << bricks.size() << " bricks" << std::endl;
+        return true;
+
+    } catch (const std::exception& e) {
+        std::cout << "Error parsing levels.json: " << e.what() << std::endl;
+        return false;
     }
 }
 
@@ -87,7 +164,11 @@ void Game::Draw() {
     if (currentState == MENU) {
         DrawText("BREAKOUT GAME", 180, 150, 60, DARKBLUE);
         DrawText("Press ENTER to Start Game", 180, 280, 30, GRAY);
+        if (HasSaveFile("save.json")) {
+            DrawText("Press R to Resume Saved Game", 180, 330, 30, GREEN);
+        }
         DrawText("Press P to Pause", 280, 450, 20, LIGHTGRAY);
+        DrawText("Press S to Save Game", 280, 480, 20, LIGHTGRAY);
     }
 
     else if (currentState == PLAYING || currentState == PAUSED || currentState == LOADING) {
@@ -116,6 +197,7 @@ void Game::Draw() {
         DrawText(("Score: " + std::to_string(score)).c_str(), 150, 20, 20, DARKGRAY);
         DrawText(("Lives: " + std::to_string(lives)).c_str(), 300, 20, 20, DARKGRAY);
         DrawText(("Level: " + std::to_string(level)).c_str(), 450, 20, 20, DARKGRAY);
+        DrawText(levelName.c_str(), 550, 20, 18, DARKGRAY);
 
         {
             std::lock_guard<std::mutex> lock(loadingMutex);
@@ -319,14 +401,14 @@ void Game::UpdatePlayingState() {
 
     if (allBricksDestroyed) {
         level++;
-        ballSpeed += 0.5;
-        balls.clear();
-        balls.emplace_back((Vector2){windowWidth / 2.0f, windowHeight / 2.0f},
-                           (Vector2){ballSpeed, ballSpeed}, ballRadius, RED);
-        CreateBricks(level);
-
-        if (level > 5) {
+        if (level > MAX_LEVELS) {
             currentState = VICTORY;
+        } else {
+            ballSpeed += 0.5;
+            balls.clear();
+            balls.emplace_back((Vector2){windowWidth / 2.0f, windowHeight / 2.0f},
+                               (Vector2){ballSpeed, ballSpeed}, ballRadius, RED);
+            CreateBricks(level);
         }
     }
 
@@ -421,4 +503,123 @@ void Game::DrawBricksBatch() {
 
 void Game::Shutdown() {
     bricks.clear();
+}
+
+bool Game::SaveGame(const std::string& path) {
+    try {
+        json saveData;
+        
+        saveData["level"] = level;
+        saveData["score"] = score;
+        saveData["lives"] = lives;
+        saveData["ballSpeed"] = ballSpeed;
+        
+        json ballsArray = json::array();
+        for (const auto& ball : balls) {
+            json ballData;
+            Vector2 pos = ball.GetPosition();
+            Vector2 vel = ball.GetVelocity();
+            ballData["x"] = pos.x;
+            ballData["y"] = pos.y;
+            ballData["vx"] = vel.x;
+            ballData["vy"] = vel.y;
+            ballsArray.push_back(ballData);
+        }
+        saveData["balls"] = ballsArray;
+        
+        json paddleData;
+        Rectangle paddleRect = paddle.GetRect();
+        paddleData["x"] = paddleRect.x;
+        paddleData["y"] = paddleRect.y;
+        paddleData["width"] = paddleRect.width;
+        saveData["paddle"] = paddleData;
+        
+        json bricksArray = json::array();
+        for (const auto& brick : bricks) {
+            json brickData;
+            Rectangle rect = brick.GetRect();
+            Color col = brick.GetColor();
+            brickData["x"] = rect.x;
+            brickData["y"] = rect.y;
+            brickData["width"] = rect.width;
+            brickData["height"] = rect.height;
+            brickData["r"] = col.r;
+            brickData["g"] = col.g;
+            brickData["b"] = col.b;
+            brickData["a"] = col.a;
+            brickData["health"] = brick.GetHealth();
+            brickData["points"] = brick.GetPoints();
+            brickData["active"] = brick.IsActive();
+            bricksArray.push_back(brickData);
+        }
+        saveData["bricks"] = bricksArray;
+        
+        std::ofstream file(path);
+        file << std::setw(4) << saveData << std::endl;
+        
+        return true;
+    } catch (const std::exception& e) {
+        std::cerr << "Save game failed: " << e.what() << std::endl;
+        return false;
+    }
+}
+
+bool Game::LoadGame(const std::string& path) {
+    try {
+        std::ifstream file(path);
+        if (!file.is_open()) {
+            return false;
+        }
+        
+        json saveData = json::parse(file);
+        
+        level = saveData["level"];
+        score = saveData["score"];
+        lives = saveData["lives"];
+        ballSpeed = saveData["ballSpeed"];
+        
+        balls.clear();
+        for (const auto& ballData : saveData["balls"]) {
+            Vector2 pos = {ballData["x"], ballData["y"]};
+            Vector2 vel = {ballData["vx"], ballData["vy"]};
+            balls.emplace_back(pos, vel, ballRadius, RED);
+        }
+        
+        paddle.MoveTo(saveData["paddle"]["x"], saveData["paddle"]["y"]);
+        paddle.SetWidth(saveData["paddle"]["width"]);
+        
+        bricks.clear();
+        for (const auto& brickData : saveData["bricks"]) {
+            Color col = {
+                static_cast<unsigned char>(brickData["r"]),
+                static_cast<unsigned char>(brickData["g"]),
+                static_cast<unsigned char>(brickData["b"]),
+                static_cast<unsigned char>(brickData["a"])
+            };
+            Brick brick(
+                brickData["x"],
+                brickData["y"],
+                brickData["width"],
+                brickData["height"],
+                col,
+                brickData["health"],
+                brickData["points"]
+            );
+            brick.SetActive(brickData["active"]);
+            bricks.push_back(brick);
+        }
+        
+        powerUps.clear();
+        particlePool.Clear();
+        
+        return true;
+    } catch (const std::exception& e) {
+        std::cerr << "Load game failed: " << e.what() << std::endl;
+        return false;
+    }
+}
+
+bool Game::HasSaveFile(const std::string& path) {
+    std::ifstream file(path);
+    return file.good();
 }

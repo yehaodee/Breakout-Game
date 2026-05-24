@@ -29,6 +29,7 @@ add_executable(breakout
     PowerUp.cpp
     PowerUpEffect.cpp
     Particle.cpp
+    ParticlePool.cpp
     Network.cpp
 )
 

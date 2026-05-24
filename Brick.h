@@ -18,7 +18,7 @@ public:
     void SetHealth(int h) { health = h; }
     int GetHealth() const { return health; }
     bool CheckCollision(Ball ball);
-    int GetPoints() { return points; }
+    int GetPoints() const { return points; }
 };
 
 #endif

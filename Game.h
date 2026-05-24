@@ -31,12 +31,14 @@ enum GameMode {
 // 网格空间划分常量
 const int GRID_WIDTH = 8;   // 网格宽度
 const int GRID_HEIGHT = 6;  // 网格高度
+const int MAX_LEVELS = 5;   // 最大关卡数
 
 class Game {
 protected:
     int score;
     int lives;
     int level;
+    std::string levelName;  // 当前关卡名称
     GameState currentState;
     GameMode gameMode;
     Paddle* localPaddle;
@@ -57,6 +59,7 @@ protected:
     void BuildGrid();     // 构建网格
     void ClearGrid();     // 清空网格
     void DrawBricksBatch();  // 批绘制砖块
+    bool LoadLevel(int levelNum);  // 从JSON加载关卡
 public:
     Paddle paddle;
     Paddle paddleTop;
@@ -107,6 +110,10 @@ public:
     void Shutdown();
     bool ShouldClose() const;
     void Close();
+    
+    bool SaveGame(const std::string& path);
+    bool LoadGame(const std::string& path);
+    bool HasSaveFile(const std::string& path);
 };
 
 #endif

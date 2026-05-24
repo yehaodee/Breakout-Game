@@ -33,7 +33,7 @@ bool Ball::BounceEdge(int screenWidth, int screenHeight) {
     return hitBottom;
 }
 
-Vector2 Ball::GetPosition() { 
+Vector2 Ball::GetPosition() const { 
     return position;
 }
 
