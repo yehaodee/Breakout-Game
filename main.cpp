@@ -15,6 +15,7 @@ int main(int argc, char* argv[]) {
     if (mode && strcmp(mode, "server") == 0) {
         GameServer game;
         game.Init();
+        game.SetBackgroundImage("background.jpg");
         while (!game.ShouldClose()) {
             game.Update();
             game.Draw();
@@ -23,6 +24,7 @@ int main(int argc, char* argv[]) {
     } else if (mode && strcmp(mode, "client") == 0) {
         GameClient game;
         game.Init();
+        game.SetBackgroundImage("background.jpg");
         while (!game.ShouldClose()) {
             game.Update();
             game.Draw();
@@ -31,6 +33,7 @@ int main(int argc, char* argv[]) {
     } else {
         GameSingle game;
         game.Init();
+        game.SetBackgroundImage("background.jpg");
         while (!game.ShouldClose()) {
             game.Update();
             game.Draw();

@@ -38,7 +38,7 @@ protected:
     int score;
     int lives;
     int level;
-    std::string levelName;  // 当前关卡名称
+    std::string levelName;
     GameState currentState;
     GameMode gameMode;
     Paddle* localPaddle;
@@ -46,6 +46,9 @@ protected:
     std::future<void> loadingFuture;
     bool isLoading;
     std::mutex loadingMutex;
+    Texture2D backgroundTexture;
+    std::string backgroundImagePath;
+    bool hasBackgroundImage;
 
     // 网格空间划分
     float cellWidth;      // 每个网格单元的宽度
@@ -114,6 +117,7 @@ public:
     bool SaveGame(const std::string& path);
     bool LoadGame(const std::string& path);
     bool HasSaveFile(const std::string& path);
+    void SetBackgroundImage(const std::string& path);
 };
 
 #endif

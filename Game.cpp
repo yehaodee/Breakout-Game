@@ -41,7 +41,8 @@ Game::Game()
       scorePerBrick(10),
       timeMultiplierDecay(0.05f),
       cellWidth(800.0f / GRID_WIDTH),
-      cellHeight(600.0f / GRID_HEIGHT)
+      cellHeight(600.0f / GRID_HEIGHT),
+      hasBackgroundImage(false)
       {
     LoadConfig("config.json");
     balls.emplace_back((Vector2){400, 300}, (Vector2){3, 3}, 10, RED);
@@ -159,7 +160,12 @@ void Game::Update() {
 
 void Game::Draw() {
     BeginDrawing();
-    ClearBackground(RAYWHITE);
+    
+    if (hasBackgroundImage) {
+        DrawTextureEx(backgroundTexture, (Vector2){0, 0}, 0.0f, 1.0f, (Color){255, 255, 255, 80});
+    } else {
+        ClearBackground(RAYWHITE);
+    }
 
     if (currentState == MENU) {
         DrawText("BREAKOUT GAME", 180, 150, 60, DARKBLUE);
@@ -503,6 +509,10 @@ void Game::DrawBricksBatch() {
 
 void Game::Shutdown() {
     bricks.clear();
+    if (hasBackgroundImage) {
+        UnloadTexture(backgroundTexture);
+        hasBackgroundImage = false;
+    }
 }
 
 bool Game::SaveGame(const std::string& path) {
@@ -622,4 +632,15 @@ bool Game::LoadGame(const std::string& path) {
 bool Game::HasSaveFile(const std::string& path) {
     std::ifstream file(path);
     return file.good();
+}
+
+void Game::SetBackgroundImage(const std::string& path) {
+    if (hasBackgroundImage) {
+        UnloadTexture(backgroundTexture);
+    }
+    backgroundImagePath = path;
+    backgroundTexture = ::LoadTexture(path.c_str());
+    if (backgroundTexture.id != 0) {
+        hasBackgroundImage = true;
+    }
 }
